@@ -1,0 +1,662 @@
+genero;nivel_formacion;pais;rubro;dotacion;origen_capital;puesto;funcion_rh;anios_experiencia;tipo_contratacion;sueldo_bruto;satisfaccion;busqueda;tipo_cambio;multiplicador;sueldo_ft;sueldo_dolar;cuenta
+Masculino;Universitario completo;Argentina;"Servicios financieros; seguros";110;Nacional;Gerente;Generalista;20;Full time;250000;5;No,  pero escucho ofertas;83.89;1;250000;2980.0929789009415;1
+Femenino;Universitario completo;Argentina;Comercio;1433;Nacional;Analista;Administración de personal;7;Full time;55700;3;No,  pero escucho ofertas;83.89;1;55700;663.9647156991298;1
+Masculino;Universitario en curso;Argentina;Otros;6000;Multinacional;HRBP;Relaciones laborales;8;Full time;55000;5;No,  pero escucho ofertas;83.89;1;55000;655.6204553582072;1
+Femenino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;270;Nacional;Analista;Reclutamiento y selección;2;Full time;47000;3;No,  pero escucho ofertas;83.89;1;47000;560.2574800333771;1
+Femenino;Secundario completo;Argentina;Hotelería, restauración, turismo;700;Nacional;Gerente;Generalista;10;Full time;86747;5;No estoy buscando cambiar;83.89;1;86747;1034.05650256288;1
+Masculino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";7500;Multinacional;HRBP;Generalista;14;Full time;85500;2;Sí, activamente;83.89;1;85500;1019.191798784122;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;100;Nacional;Analista;Generalista;5;Full time;73600;3;Sí, activamente;83.89;1;73600;877.3393729884373;1
+Femenino;Universitario completo;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";22000;Nacional;Administrativo;Administración de personal;2;Part time;22000;3;Sí, activamente;83.89;1.5;33000;393.3722732149243;1
+Masculino;Universitario completo;Argentina;"Medios de comunicación; cultura; gráficos";700;Multinacional;HRBP;Payroll / Liquidación de sueldos;5;Full time;80000;4;No,  pero escucho ofertas;83.89;1;80000;953.6297532483013;1
+Femenino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;92;Nacional;Responsable;Generalista;4;Full time;98948;NA;NA;83.89;1;98948;1179.4969603051616;1
+Femenino;Maestría completa;Argentina;Minería (carbón, otra minería);500;Multinacional;HRBP;Capacitación y desarrollo;12;Full time;85000;2;Sí, activamente;83.89;1;85000;1013.2316128263202;1
+Masculino;Terciario completo;Argentina;"Textiles; vestido; cuero; calzado";197;Nacional;Analista;Administración de personal;10;Full time;60241;5;No estoy buscando cambiar;83.89;1;60241;718.0951245678865;1
+Masculino;Universitario completo;Argentina;"Servicios financieros; seguros";150;Multinacional;Responsable;Compensaciones y beneficios;13;Full time;142000;2;No,  pero escucho ofertas;83.89;1;142000;1692.692812015735;1
+Masculino;Universitario completo;Argentina;"Textiles; vestido; cuero; calzado";450;Nacional;HRBP;Generalista;9;Full time;65662;3;No,  pero escucho ofertas;83.89;1;65662;782.7154607223746;1
+Masculino;Universitario en curso;Argentina;Función pública;520;Nacional;Director;Generalista;6;Full time;60000;2;Sí, activamente;83.89;1;60000;715.222314936226;1
+Femenino;Universitario en curso;Argentina;Función pública;508;Nacional;Director;Administración de personal;3;Full time;15000;4;No,  pero escucho ofertas;83.89;1;15000;178.8055787340565;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;1600;Multinacional;Analista;Reclutamiento y selección;5;Full time;70000;5;No estoy buscando cambiar;83.89;1;70000;834.4260340922636;1
+Femenino;Universitario completo;Argentina;Función pública;1400;Nacional;Director;Administración de personal;3;Full time;128000;3;No,  pero escucho ofertas;83.89;1;128000;1525.807605197282;1
+Femenino;Maestría completa;Argentina;Servicios de consultoría;10;Nacional;Gerente;Diseño organizacional;10;Full time;150000;5;No estoy buscando cambiar;83.89;1;150000;1788.055787340565;1
+Femenino;Universitario completo;Argentina;Hotelería, restauración, turismo;360;Nacional;Analista;Reclutamiento y selección;3;Full time;65000;4;Sí, activamente;83.89;1;65000;774.8241745142449;1
+Femenino;Secundario completo;Argentina;Tecnologías de Información, Sistemas, y afines;300;Multinacional;Director;Reclutamiento y selección;14;Full time;288000;4;No,  pero escucho ofertas;83.89;1;288000;3433.0671116938847;1
+Masculino;Universitario completo;Argentina;Función pública;100;Nacional;Responsable;Administración de personal;3;Full time;35000;4;No,  pero escucho ofertas;83.89;1;35000;417.2130170461318;1
+Femenino;Terciario completo;Argentina;Otros;170;Multinacional;Analista;Administración de personal;12;Plazo Fijo;100000;NA;NA;83.89;1;100000;1192.0371915603766;1
+Femenino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;180;Nacional;Analista;Capacitación y desarrollo;2;Full time;52000;4;No estoy buscando cambiar;83.89;1;52000;619.8593396113959;1
+Femenino;Terciario completo;Argentina;Tecnologías de Información, Sistemas, y afines;52;Nacional;Responsable;Todo;3;Full time;98000;4;No,  pero escucho ofertas;83.89;1;98000;1168.1964477291692;1
+Femenino;Universitario completo;Argentina;Hotelería, restauración, turismo;450;Nacional;Jefe;Generalista;12;Full time;73000;4;No,  pero escucho ofertas;83.89;1;73000;870.187149839075;1
+Masculino;Maestría completa;Argentina;Minería (carbón, otra minería);15;Nacional;Jefe;Generalista;7;Full time;190000;4;No,  pero escucho ofertas;83.89;1;190000;2264.8706639647157;1
+Masculino;Universitario completo;Argentina;"Agricultura; plantaciones,otros sectores rurales";320;Nacional;Gerente;Generalista;10;Full time;230000;NA;NA;83.89;1;230000;2741.6855405888664;1
+Femenino;Universitario completo;Argentina;Minería (carbón, otra minería);150;Nacional;Jefe;Gestión de expatriados;8;Full time;70800;3;Sí, activamente;83.89;1;70800;843.9623316247466;1
+Masculino;Universitario en curso;Argentina;Función pública;520;Nacional;Director;Generalista;6;Full time;60000;2;Sí, activamente;83.89;1;60000;715.222314936226;1
+Femenino;Universitario completo;Argentina;Función pública;400;Nacional;Administrativo;Administración de personal;8;Full time;41000;2;No,  pero escucho ofertas;83.89;1;41000;488.7352485397544;1
+Femenino;Universitario completo;Argentina;Construcción;50;Nacional;Responsable;Generalista;14;Full time;30000;3;No,  pero escucho ofertas;83.89;1;30000;357.611157468113;1
+Femenino;Universitario completo;Argentina;"Agricultura; plantaciones,otros sectores rurales";65;Nacional;Responsable;Generalista;2;Full time;55000;4;No,  pero escucho ofertas;83.89;1;55000;655.6204553582072;1
+Femenino;Universitario completo;Argentina;Comercio;110;Nacional;Responsable;Generalista;20;Full time;40000;3;Sí, activamente;83.89;1;40000;476.81487662415066;1
+Masculino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";120;Nacional;Gerente;Generalista;13;Full time;245000;5;No estoy buscando cambiar;83.89;1;245000;2920.4911193229227;1
+Femenino;Universitario completo;Argentina;Construcción;120;Nacional;Jefe;Generalista;14;Full time;100000;3;Sí, activamente;83.89;1;100000;1192.0371915603766;1
+Femenino;Universitario completo;Argentina;Comercio;65;Multinacional;Jefe;Generalista;12;Full time;68000;2;Sí, activamente;83.89;1;68000;810.5852902610561;1
+Femenino;Secundario completo;Argentina;"Alimentación; bebidas; tabaco";150;Nacional;Administrativo;Administración de personal;9;Full time;40000;4;No,  pero escucho ofertas;83.89;1;40000;476.81487662415066;1
+Masculino;Universitario completo;Argentina;Educación;80;Nacional;Jefe;Generalista;4;Full time;30900;3;No,  pero escucho ofertas;83.89;1;30900;368.3394921921564;1
+Femenino;Maestría en curso;Argentina;"Agricultura; plantaciones,otros sectores rurales";352;Nacional;Jefe;Generalista;12;Full time;105000;4;No,  pero escucho ofertas;83.89;1;105000;1251.6390511383954;1
+Masculino;Maestría en curso;Ecuador;Industrias químicas;406;Multinacional;HRBP;Generalista;14;Full time;1400;4;No,  pero escucho ofertas;1;1;1400;1400;1
+Masculino;Terciario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;360;Nacional;Gerente;Generalista;3;Full time;110000;5;No estoy buscando cambiar;83.89;1;110000;1311.2409107164144;1
+Femenino;Universitario completo;Argentina;"Servicios públicos (agua;gas; electricidad)";143;Nacional;Responsable;Administración de personal;5;Full time;54000;3;Sí, activamente;83.89;1;54000;643.7000834426034;1
+Femenino;Maestría completa;Argentina;"Servicios financieros; seguros";250;Nacional;Responsable;Generalista;8;Full time;62000;2;Sí, activamente;83.89;1;62000;739.0630587674335;1
+Masculino;Secundario completo;Argentina;"Agricultura; plantaciones,otros sectores rurales";150;Nacional;Analista;Administración de personal;9;Full time;110000;4;Sí, activamente;83.89;1;110000;1311.2409107164144;1
+Femenino;Universitario completo;Argentina;Industrias químicas;10;Multinacional;HRBP;Al ser HRBP un poco de todo payroll, capacitacion, comunicacion interna,;5;Tercerizado / Outsourced;60565;3;No,  pero escucho ofertas;83.89;1;60565;721.9573250685421;1
+Femenino;Universitario completo;Argentina;Comercio;46;Nacional;Responsable;Generalista;8;Full time;50000;3;No,  pero escucho ofertas;83.89;1;50000;596.0185957801883;1
+Masculino;Secundario completo;Argentina;"Petróleo y producción de gas; refinación de petróleo";200;Nacional;Responsable;Relaciones laborales;14;Full time;140000;3;No,  pero escucho ofertas;83.89;1;140000;1668.8520681845273;1
+Femenino;Terciario completo;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";1000;Nacional;Analista;Generalista;15;Full time;49000;3;Sí, activamente;83.89;1;49000;584.0982238645846;1
+Femenino;Universitario completo;Argentina;Servicios de consultoría;3000;Nacional;Responsable;Generalista;8;Full time;45000;NA;NA;83.89;1;45000;536.4167362021695;1
+Femenino;Maestría en curso;Argentina;Servicios de salud;800;Nacional;Jefe;Generalista;9;Full time;106024;4;No,  pero escucho ofertas;83.89;1;106024;1263.8455119799737;1
+Femenino;Universitario completo;Argentina;Comercio;75;Nacional;Analista;Administración de personal;10;Full time;71500;3;No,  pero escucho ofertas;83.89;1;71500;852.3065919656693;1
+Femenino;Secundario completo;Argentina;Servicios de salud;183;Nacional;Analista;Administración de personal;2;Full time;48200;3;Sí, activamente;83.89;1;48200;574.5619263321015;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";1700;Multinacional;Jefe;Administración de personal;18;Full time;107000;NA;NA;83.89;1;107000;1275.479794969603;1
+Femenino;Universitario completo;Argentina;Servicios de salud;500;Nacional;Responsable;Compensaciones y beneficios;2;Full time;62000;5;No estoy buscando cambiar;83.89;1;62000;739.0630587674335;1
+Femenino;Universitario completo;Argentina;Producción de metales básicos;5350;Multinacional;Analista;People Analytics;3;Full time;218000;4;No estoy buscando cambiar;83.89;1;218000;2598.641077601621;1
+Masculino;Terciario completo;Argentina;Construcción;350;Nacional;Responsable;Payroll / Liquidación de sueldos;12;Full time;73000;3;No estoy buscando cambiar;83.89;1;73000;870.187149839075;1
+Femenino;Universitario en curso;Argentina;Comercio;85;Nacional;Responsable;Generalista;10;Full time;75000;3;Sí, activamente;83.89;1;75000;894.0278936702825;1
+Femenino;Universitario completo;Argentina;Servicios de salud;556;Nacional;Gerente;Diseño organizacional;4;Full time;80000;NA;NA;83.89;1;80000;953.6297532483013;1
+Femenino;Universitario completo;Argentina;Educación;900;Nacional;HRBP;Generalista;4;Full time;56600;4;No estoy buscando cambiar;83.89;1;56600;674.6930504231732;1
+Femenino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;80;Multinacional;Analista;Reclutamiento y selección;3;Full time;56000;2;No,  pero escucho ofertas;83.89;1;56000;667.5408272738109;1
+Femenino;Universitario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;45;Nacional;Responsable;Administración de personal;5;Full time;69500;2;Sí, activamente;83.89;1;69500;828.4658481344618;1
+Femenino;Universitario completo;Argentina;Otros;3000;Nacional;Analista;Administración de personal;5;Plazo Fijo;60000;4;No,  pero escucho ofertas;83.89;1;60000;715.222314936226;1
+Femenino;Maestría en curso;Argentina;"Alimentación; bebidas; tabaco";450;Nacional;Gerente;Generalista;15;Full time;225000;3;No,  pero escucho ofertas;83.89;1;225000;2682.0836810108476;1
+Masculino;Secundario completo;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";215;Nacional;Responsable;Generalista;10;Full time;84000;5;No,  pero escucho ofertas;83.89;1;84000;1001.3112409107164;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;200;Nacional;Analista;Reclutamiento y selección;5;Full time;29000;4;No,  pero escucho ofertas;83.89;1;29000;345.6907855525092;1
+Masculino;Universitario completo;Argentina;Comercio;86;Nacional;Responsable;Generalista;12;Full time;38500;3;Sí, activamente;83.89;1;38500;458.93431875074504;1
+Masculino;Maestría en curso;Argentina;Función pública;25000;Nacional;Jefe;People Analytics;6;Full time;92000;4;No,  pero escucho ofertas;83.89;1;92000;1096.6742162355465;1
+Masculino;Universitario completo;Argentina;Minería (carbón, otra minería);186;Nacional;Administrativo;Administración de personal;2;Full time;43954.43;3;No,  pero escucho ofertas;83.89;1;43954.43;523.9531529383717;1
+Femenino;Maestría completa;Argentina;"Agricultura; plantaciones,otros sectores rurales";1600;Nacional;Responsable;Reclutamiento y selección;9;Full time;103000;4;Sí, activamente;83.89;1;103000;1227.798307307188;1
+Femenino;Maestría en curso;Argentina;Tecnologías de Información, Sistemas, y afines;300;Nacional;Analista;Capacitación y desarrollo;10;Full time;29400;3;Sí, activamente;83.89;1;29400;350.4589343187507;1
+Femenino;Universitario en curso;Argentina;Comercio;94;Nacional;Administrativo;Administración de personal;1;Part time;30000;4;No,  pero escucho ofertas;83.89;1.5;45000;536.4167362021695;1
+Femenino;Universitario en curso;Argentina;Comercio;94;Nacional;Administrativo;Administración de personal;1;Part time;30000;4;No,  pero escucho ofertas;83.89;1.5;45000;536.4167362021695;1
+Femenino;Universitario completo;Argentina;Comercio;30;Nacional;Responsable;Administración de personal;2;Part time;22000;2;Sí, activamente;83.89;1.5;33000;393.3722732149243;1
+Femenino;Universitario completo;Argentina;Servicios de salud;117;Nacional;Administrativo;Generalista;4;Full time;44840;1;No,  pero escucho ofertas;83.89;1;44840;534.5094766956729;1
+Masculino;Universitario en curso;Argentina;"Textiles; vestido; cuero; calzado";450;Multinacional;Analista;Administración de personal;10;Full time;35000;3;No,  pero escucho ofertas;83.89;1;35000;417.2130170461318;1
+Femenino;Universitario completo;Argentina;Otros;50;Multinacional;Analista;Reclutamiento y selección;4;Plazo Fijo;30000;2;Sí, activamente;83.89;1;30000;357.611157468113;1
+Femenino;Universitario en curso;Argentina;Otros;350;Nacional;Analista;Generalista;3;Full time;50282;4;No,  pero escucho ofertas;83.89;1;50282;599.3801406603886;1
+Femenino;Universitario completo;Ecuador;Otros;318;Nacional;Pasante;Reclutamiento y selección;1;Pasante;400;4;Sí, activamente;1;1;400;400;1
+Masculino;Maestría completa;Guatemala;"Agricultura; plantaciones,otros sectores rurales";4000;Multinacional;Jefe;Generalista;18;Full time;43000;5;No,  pero escucho ofertas;7.79624;1;43000;5515.479256667317;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;20;Nacional;Responsable;Generalista;10;Full time;95000;5;No estoy buscando cambiar;83.89;1;95000;1132.4353319823579;1
+Femenino;Universitario completo;Argentina;Construcción;200;Nacional;Analista;Administración de personal;5;Full time;60000;3;No,  pero escucho ofertas;83.89;1;60000;715.222314936226;1
+Femenino;Universitario completo;Argentina;Construcción;80;Nacional;Responsable;Administración de personal;2;Full time;50000;3;Sí, activamente;83.89;1;50000;596.0185957801883;1
+Femenino;Universitario completo;Argentina;Servicios de correos, y de telecomunicaciones;400;Nacional;Responsable;Payroll / Liquidación de sueldos;13;Full time;120000;4;Sí, activamente;83.89;1;120000;1430.444629872452;1
+Masculino;Universitario en curso;Argentina;Servicios de salud;400;Nacional;Analista;Payroll / Liquidación de sueldos;5;Full time;55000;3;No,  pero escucho ofertas;83.89;1;55000;655.6204553582072;1
+Masculino;Universitario en curso;Argentina;Construcción;600;Nacional;Analista;Administración de personal;15;Full time;75000;4;No,  pero escucho ofertas;83.89;1;75000;894.0278936702825;1
+Femenino;Universitario completo;Argentina;"Petróleo y producción de gas; refinación de petróleo";60000;Multinacional;Analista;Reclutamiento y selección;10;Full time;105000;4;No,  pero escucho ofertas;83.89;1;105000;1251.6390511383954;1
+Femenino;Universitario completo;Argentina;Otros;250;Nacional;Gerente;La mayoría de los nombrados con iguales condiciones de importancia y prioridad;12;Full time;140000;5;No estoy buscando cambiar;83.89;1;140000;1668.8520681845273;1
+Masculino;Universitario completo;Argentina;Industrias químicas;460;Nacional;Responsable;Administración de personal;10;Full time;116000;1;Sí, activamente;83.89;1;116000;1382.763142210037;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;250;Multinacional;Analista;Reclutamiento y selección;5;Full time;80000;4;No estoy buscando cambiar;83.89;1;80000;953.6297532483013;1
+Femenino;Universitario completo;Argentina;Servicios de consultoría;400;Multinacional;Analista;Capacitación y Desarrollo + Bienestar + RSE;8;Full time;67000;4;No estoy buscando cambiar;83.89;1;67000;798.6649183454524;1
+Femenino;Universitario completo;Argentina;"Petróleo y producción de gas; refinación de petróleo";225;Multinacional;Administrativo;Administración de personal;5;Full time;65000;3;Sí, activamente;83.89;1;65000;774.8241745142449;1
+Masculino;Universitario completo;Argentina;Construcción;322;Nacional;Jefe;Generalista;15;Full time;89800;3;Sí, activamente;83.89;1;89800;1070.4493980212183;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;120;Nacional;Analista;Reclutamiento y selección;5;Full time;78000;4;No estoy buscando cambiar;83.89;1;78000;929.7890094170938;1
+Masculino;Maestría completa;Argentina;Otros;600;Nacional;Gerente;Generalista;15;Full time;250000;NA;NA;83.89;1;250000;2980.0929789009415;1
+Femenino;Universitario completo;Argentina;"Textiles; vestido; cuero; calzado";30;Nacional;Responsable;Generalista;17;Part time;32000;2;Sí, activamente;83.89;1.5;48000;572.1778519489808;1
+Femenino;Secundario completo;Argentina;Producción de metales básicos;100;Nacional;Analista;Administración de personal;11;Full time;35000;3;No,  pero escucho ofertas;83.89;1;35000;417.2130170461318;1
+Femenino;Maestría completa;Panamá;Industrias químicas;175;Multinacional;HRBP;Administración de personal;10;Full time;3200;2;Sí, activamente;1;1;3200;3200;1
+Masculino;Universitario completo;Argentina;Servicios de consultoría;350;Multinacional;Gerente;Generalista;10;Full time;140000;4;No,  pero escucho ofertas;83.89;1;140000;1668.8520681845273;1
+Femenino;Universitario completo;Argentina;"Textiles; vestido; cuero; calzado";300;Multinacional;Responsable;Generalista;15;Full time;63000;NA;NA;83.89;1;63000;750.9834306830373;1
+Femenino;Terciario completo;Argentina;Servicios de consultoría;300;Multinacional;Analista;Generalista;5;Full time;650000;5;No,  pero escucho ofertas;83.89;1;650000;7748.241745142448;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";57;Multinacional;Responsable;Generalista;4;Full time;73000;3;No,  pero escucho ofertas;83.89;1;73000;870.187149839075;1
+Femenino;Maestría completa;Perú;"Textiles; vestido; cuero; calzado";300;Nacional;Jefe;Generalista;5;Plazo Fijo;5000;NA;NA;3.615;1;5000;1383.1258644536651;1
+Femenino;Universitario completo;Argentina;Servicios de consultoría;20;Nacional;Analista;Reclutamiento y selección;2;Full time;20900;3;Sí, activamente;83.89;1;20900;249.13577303611874;1
+Femenino;Universitario completo;Argentina;Servicios profesionales;15;Nacional;Responsable;Reclutamiento y selección;1;Part time;34000;5;No,  pero escucho ofertas;83.89;1.5;51000;607.9389676957921;1
+Masculino;Maestría completa;Bolivia;Comercio;39;Multinacional;Jefe;Generalista;9;Full time;14400;5;No estoy buscando cambiar;6.96;1;14400;2068.9655172413795;1
+Femenino;Universitario completo;Argentina;Otros;126;Multinacional;Analista;Administración de personal;9;Full time;59000;3;Sí, activamente;83.89;1;59000;703.3019430206223;1
+Masculino;Universitario completo;Argentina;Servicios de correos, y de telecomunicaciones;5000;Nacional;HRBP;Generalista;7;Full time;81000;3;No,  pero escucho ofertas;83.89;1;81000;965.5501251639051;1
+Femenino;Universitario completo;Argentina;Servicios de correos, y de telecomunicaciones;80;Nacional;Analista;Administración de personal;2;Full time;38000;4;Sí, activamente;83.89;1;38000;452.9741327929431;1
+Femenino;Universitario completo;Argentina;Servicios de salud;740;Nacional;Administrativo;Administración de personal;4;Full time;62600;3;Sí, activamente;83.89;1;62600;746.2152819167958;1
+Femenino;Universitario completo;Argentina;"Servicios financieros; seguros";125;Nacional;Jefe;Generalista;10;Full time;162000;5;No estoy buscando cambiar;83.89;1;162000;1931.1002503278103;1
+Femenino;Secundario completo;Argentina;Comercio;120;Multinacional;Responsable;Generalista;11;Full time;81000;4;No,  pero escucho ofertas;83.89;1;81000;965.5501251639051;1
+Femenino;Universitario completo;Argentina;"Agricultura; plantaciones,otros sectores rurales";80;Nacional;Responsable;Generalista;4;Full time;51282;3;Sí, activamente;83.89;1;51282;611.3005125759923;1
+Femenino;Universitario completo;Argentina;Construcción;500;Nacional;Analista;Generalista;9;Full time;90000;3;No,  pero escucho ofertas;83.89;1;90000;1072.833472404339;1
+Femenino;Universitario completo;Argentina;Servicios de salud;44;Nacional;Analista;Administración de personal;1;Full time;37000;3;Sí, activamente;83.89;1;37000;441.05376087733936;1
+Femenino;Universitario completo;Argentina;"Textiles; vestido; cuero; calzado";270;Multinacional;Jefe;Todo lo anterior;10;Full time;93000;3;No,  pero escucho ofertas;83.89;1;93000;1108.5945881511502;1
+Femenino;Universitario completo;Uruguay;Comercio;45;Nacional;Responsable;Administración de personal, compensaciones, comunicación interna, diseño organizacional, generalista, reclutamiento y selección;1.5;Full time;55000;NA;NA;43.003;1;55000;1278.9805362416575;1
+Femenino;Maestría en curso;Bolivia;Servicios profesionales;800;Multinacional;Jefe;Reclutamiento y selección;10;Full time;8000;2;Sí, activamente;6.96;1;8000;1149.4252873563219;1
+Masculino;Universitario completo;Argentina;"Petróleo y producción de gas; refinación de petróleo";500;Nacional;Analista;Payroll / Liquidación de sueldos;8;Full time;70000;3;No estoy buscando cambiar;83.89;1;70000;834.4260340922636;1
+Masculino;Maestría en curso;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";150;Nacional;Responsable;Payroll / Liquidación de sueldos;2;Full time;66266;3;Sí, activamente;83.89;1;66266;789.9153653593992;1
+Femenino;Universitario en curso;Argentina;Servicios de salud;6500;Nacional;Analista;Generalista;3;Full time;54000;3;Sí, activamente;83.89;1;54000;643.7000834426034;1
+Masculino;Universitario completo;Argentina;Construcción;250;Nacional;Administrativo;Administración de personal;18;Full time;65000;4;No estoy buscando cambiar;83.89;1;65000;774.8241745142449;1
+Femenino;Universitario completo;Argentina;Servicios de salud;460;Nacional;Gerente;Generalista;12;Full time;190000;3;No,  pero escucho ofertas;83.89;1;190000;2264.8706639647157;1
+Femenino;Universitario completo;Argentina;Servicios de salud;7;Nacional;Jefe;Administración de personal;1;Part time;36500;5;No,  pero escucho ofertas;83.89;1.5;54750;652.6403623793062;1
+Femenino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;100;Nacional;Jefe;Administración de personal;3;Full time;45000;3;No,  pero escucho ofertas;83.89;1;45000;536.4167362021695;1
+Femenino;Secundario completo;Argentina;Otros;70;Nacional;Analista;Administración de personal;7;Full time;39000;1;Sí, activamente;83.89;1;39000;464.8945047085469;1
+Femenino;Universitario completo;Perú;"Bancos; banca online;";1800;Multinacional;Administrativo;Capacitación y desarrollo;4;Plazo Fijo;1800;2;Sí, activamente;3.615;1;1800;497.9253112033195;1
+Femenino;Terciario completo;Argentina;Servicios profesionales;4;Nacional;Administrativo;Payroll / Liquidación de sueldos;3;Full time;40000;3;Sí, activamente;83.89;1;40000;476.81487662415066;1
+Masculino;Secundario completo;Argentina;Producción de metales básicos;3000;Multinacional;Gerente;Generalista;14;Full time;140000;NA;NA;83.89;1;140000;1668.8520681845273;1
+Femenino;Universitario completo;Argentina;Construcción;80;Nacional;Administrativo;Generalista;1;Full time;15000;2;Sí, activamente;83.89;1;15000;178.8055787340565;1
+Femenino;Universitario en curso;Argentina;Servicios de salud;135;Nacional;Administrativo;Generalista;6;Full time;57000;3;Sí, activamente;83.89;1;57000;679.4611991894147;1
+Femenino;Universitario completo;Argentina;Otros;350;Nacional;Analista;Administración de personal;6;Full time;39600;1;Sí, activamente;83.89;1;39600;472.04672785790916;1
+Femenino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;92;Nacional;Responsable;Generalista;4;Full time;98948;NA;NA;83.89;1;98948;1179.4969603051616;1
+Masculino;Universitario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;800;Multinacional;HRBP;Generalista;5;Full time;90000;5;No,  pero escucho ofertas;83.89;1;90000;1072.833472404339;1
+Femenino;Maestría completa;Argentina;Servicios de salud;250;Nacional;Jefe;Diseño organizacional;13;Full time;178000;NA;NA;83.89;1;178000;2121.8262009774703;1
+Masculino;Maestría completa;Argentina;Tecnologías de Información, Sistemas, y afines;4000;Multinacional;Analista;Capacitación y desarrollo;12;Full time;75000;NA;NA;83.89;1;75000;894.0278936702825;1
+Femenino;Maestría completa;Bolivia;Servicios de correos, y de telecomunicaciones;3000;Multinacional;Analista;Reclutamiento y selección;8;Full time;9000;5;No,  pero escucho ofertas;6.96;1;9000;1293.103448275862;1
+Femenino;Universitario completo;Argentina;Otros;800;Nacional;Analista;Payroll / Liquidación de sueldos;3;Full time;46900;2;Sí, activamente;83.89;1;46900;559.0654428418167;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;23;Nacional;Analista;Generalista;5;Full time;65000;4;No estoy buscando cambiar;83.89;1;65000;774.8241745142449;1
+Masculino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";600;Nacional;Jefe;Generalista;12;Full time;85000;3;Sí, activamente;83.89;1;85000;1013.2316128263202;1
+Masculino;Secundario completo;Costa Rica;Fabricación de material de transporte;99;Multinacional;Director;Comunicación interna;8;Pasante;8;1;No,  pero escucho ofertas;616.32;1;8;0.012980269989615783;1
+Masculino;Universitario en curso;Argentina;Terminales automotrices, fábricas autopartistas, y afines;382;Multinacional;Analista;Administración de personal;12;Full time;78000;5;No estoy buscando cambiar;83.89;1;78000;929.7890094170938;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;50;Nacional;Responsable;Reclutamiento y selección;7;Full time;120000;5;No estoy buscando cambiar;83.89;1;120000;1430.444629872452;1
+Femenino;Terciario completo;Argentina;Otros;66;Nacional;Analista;Generalista;9;Full time;79000;NA;NA;83.89;1;79000;941.7093813326976;1
+Masculino;Universitario completo;Argentina;Comercio;30;Nacional;Responsable;Administración de personal;2;Full time;48000;3;No estoy buscando cambiar;83.89;1;48000;572.1778519489808;1
+Femenino;Secundario completo;Argentina;Comercio;120;Multinacional;Responsable;Generalista;11;Full time;81000;4;No,  pero escucho ofertas;83.89;1;81000;965.5501251639051;1
+Femenino;Universitario completo;Argentina;Servicios profesionales;22;Nacional;Responsable;Payroll / Liquidación de sueldos;6;Full time;60000;4;No,  pero escucho ofertas;83.89;1;60000;715.222314936226;1
+Femenino;Terciario completo;Argentina;Construcción;70;Nacional;Responsable;Payroll / Liquidación de sueldos;7;Full time;50000;NA;NA;83.89;1;50000;596.0185957801883;1
+Femenino;Maestría en curso;Perú;Minería (carbón, otra minería);500;Nacional;Analista;Administración de personal;4;Plazo Fijo;3500;3;Sí, activamente;3.615;1;3500;968.1881051175657;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;24;Nacional;Responsable;Reclutamiento y selección;5;Full time;70000;4;No,  pero escucho ofertas;83.89;1;70000;834.4260340922636;1
+Masculino;Universitario en curso;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";4000;Nacional;Analista;Reclutamiento y selección;9;Full time;85000;NA;NA;83.89;1;85000;1013.2316128263202;1
+Femenino;Universitario completo;Argentina;Servicios de consultoría;10000;Multinacional;Analista;Payroll / Liquidación de sueldos;4;Full time;67000;1;Sí, activamente;83.89;1;67000;798.6649183454524;1
+Femenino;Maestría completa;Argentina;Tecnologías de Información, Sistemas, y afines;15000;Multinacional;HRBP;Onboarding, clima, cultura, liderazgo;8;Full time;130000;4;No,  pero escucho ofertas;83.89;1;130000;1549.6483490284897;1
+Femenino;Terciario completo;Argentina;Tecnologías de Información, Sistemas, y afines;15;Nacional;Administrativo;Generalista;6;Full time;66700;4;No estoy buscando cambiar;83.89;1;66700;795.0888067707713;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";57;Multinacional;Responsable;Generalista;4;Full time;73000;3;No,  pero escucho ofertas;83.89;1;73000;870.187149839075;1
+Femenino;Universitario en curso;Argentina;Servicios de consultoría;200;Nacional;Analista;Reclutamiento y selección;2;Full time;34086;4;No estoy buscando cambiar;83.89;1;34086;406.31779711526997;1
+Masculino;Universitario completo;Argentina;"Petróleo y producción de gas; refinación de petróleo";300;Nacional;Analista;Payroll / Liquidación de sueldos;5;Full time;70000;NA;NA;83.89;1;70000;834.4260340922636;1
+Femenino;Universitario completo;Argentina;Servicios de salud;1000;Nacional;Analista;Comunicación interna;5;Full time;65000;3;No,  pero escucho ofertas;83.89;1;65000;774.8241745142449;1
+Masculino;Maestría en curso;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";5500;Nacional;Jefe;Generalista;7;Full time;82500;3;No,  pero escucho ofertas;83.89;1;82500;983.4306830373108;1
+Femenino;Universitario completo;Argentina;"Servicios públicos (agua;gas; electricidad)";1400;Nacional;Analista;Reclutamiento y selección;12;Full time;130000;3;No,  pero escucho ofertas;83.89;1;130000;1549.6483490284897;1
+Masculino;Universitario completo;Argentina;Otros;170;Nacional;Jefe;Generalista;8;Full time;185000;4;No,  pero escucho ofertas;83.89;1;185000;2205.268804386697;1
+Masculino;Universitario completo;Argentina;"Medios de comunicación; cultura; gráficos";700;Nacional;Responsable;Payroll / Liquidación de sueldos;10;Full time;102000;3;No,  pero escucho ofertas;83.89;1;102000;1215.8779353915843;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;90;Nacional;Analista;Generalista;5;Full time;64000;NA;NA;83.89;1;64000;762.903802598641;1
+Femenino;Universitario completo;Argentina;Servicios de salud;270;Nacional;Analista;Generalista;5;Full time;56000;2;Sí, activamente;83.89;1;56000;667.5408272738109;1
+Femenino;Universitario completo;Argentina;Servicios de salud;270;Nacional;Analista;Compensaciones y beneficios;3;Full time;51500;3;No,  pero escucho ofertas;83.89;1;51500;613.899153653594;1
+Femenino;Maestría en curso;Argentina;Tecnologías de Información, Sistemas, y afines;3500;Multinacional;Analista;Legal;8;Full time;76000;1;Sí, activamente;83.89;1;76000;905.9482655858862;1
+Masculino;Universitario completo;Uruguay;Servicios de consultoría;50;Nacional;Jefe;Payroll / Liquidación de sueldos;8;Full time;86000;5;No,  pero escucho ofertas;43.003;1;86000;1999.8604748505918;1
+Femenino;Universitario en curso;Argentina;Educación;1300;Nacional;Analista;Reclutamiento y selección;3;Full time;62000;4;No,  pero escucho ofertas;83.89;1;62000;739.0630587674335;1
+Femenino;Universitario completo;Argentina;Otros;200;Nacional;Gerente;Generalista;10;Full time;148000;4;No,  pero escucho ofertas;83.89;1;148000;1764.2150435093574;1
+Masculino;Secundario completo;Argentina;Función pública;60000;Nacional;Responsable;No me desempeño en el área de RRHH. Trabajo en el área de Sistemas.;0;Part time;54000;NA;NA;83.89;1.5;81000;965.5501251639051;1
+Femenino;Maestría completa;Argentina;Comercio;135;Multinacional;Jefe;Generalista;15;Full time;61697;3;Sí, activamente;83.89;1;61697;735.4511860770056;1
+Femenino;Universitario en curso;Argentina;Comercio;150;Nacional;Responsable;Reclutamiento y selección;2;Full time;40000;3;No,  pero escucho ofertas;83.89;1;40000;476.81487662415066;1
+Femenino;Maestría completa;Argentina;Servicios de consultoría;3;Nacional;Analista;Diseño organizacional;2;Part time;40000;4;No,  pero escucho ofertas;83.89;1.5;60000;715.222314936226;1
+Femenino;Maestría en curso;Argentina;Comercio;350;Nacional;Responsable;Administración de personal;2;Full time;85000;NA;NA;83.89;1;85000;1013.2316128263202;1
+Femenino;Universitario completo;Argentina;Otros;180;Nacional;Responsable;Comunicación interna;7;Full time;40000;4;Sí, activamente;83.89;1;40000;476.81487662415066;1
+Masculino;Universitario completo;Argentina;Servicios de correos, y de telecomunicaciones;1850;Nacional;Analista;Administración de personal;4;Full time;58000;NA;NA;83.89;1;58000;691.3815711050185;1
+Masculino;Universitario completo;Chile;Tecnologías de Información, Sistemas, y afines;170;Nacional;Jefe;Diseño organizacional;9;Full time;2300000;4;No,  pero escucho ofertas;770.45;1;2300000;2985.2683496657796;1
+Femenino;Universitario completo;Argentina;Otros;308;Nacional;Analista;Reclutamiento y selección;8;Full time;93000;2;No,  pero escucho ofertas;83.89;1;93000;1108.5945881511502;1
+Femenino;Universitario completo;Argentina;Construcción;137;Nacional;Responsable;Administración de personal;14;Full time;118000;2;Sí, activamente;83.89;1;118000;1406.6038860412446;1
+Masculino;Terciario completo;Argentina;Otros;265;Multinacional;Analista;Administración de personal;12;Full time;79000;NA;NA;83.89;1;79000;941.7093813326976;1
+Femenino;Universitario completo;Argentina;Comercio;100;Nacional;Responsable;Generalista;13;Full time;50000;NA;NA;83.89;1;50000;596.0185957801883;1
+Femenino;Maestría completa;Argentina;Hotelería, restauración, turismo;45;Nacional;Responsable;Generalista;9;Full time;70000;2;Sí, activamente;83.89;1;70000;834.4260340922636;1
+Masculino;Universitario en curso;Argentina;Terminales automotrices, fábricas autopartistas, y afines;500;Multinacional;HRBP;Relaciones laborales;10;Full time;110000;4;No,  pero escucho ofertas;83.89;1;110000;1311.2409107164144;1
+Femenino;Universitario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;300;Nacional;Analista;Administración de personal;5;Full time;55000;3;No,  pero escucho ofertas;83.89;1;55000;655.6204553582072;1
+Femenino;Universitario en curso;Argentina;Comercio;134;Nacional;Jefe;Generalista;11;Full time;75000;3;Sí, activamente;83.89;1;75000;894.0278936702825;1
+Masculino;Maestría completa;México;Comercio;100000;Nacional;Analista;People Analytics;4;Full time;10110;2;No,  pero escucho ofertas;21.24;1;10110;475.9887005649718;1
+Femenino;Universitario completo;Paraguay;Servicios de consultoría;130;Nacional;Responsable;Human Resources Project Leader;8;Full time;8000000;4;No estoy buscando cambiar;7027.74;1;8000000;1138.3460401210061;1
+Femenino;Universitario en curso;Argentina;"Transporte marítimo; puertos;";1600;Multinacional;Analista;Administración de personal;2;Full time;60000;NA;NA;83.89;1;60000;715.222314936226;1
+Femenino;Universitario completo;Argentina;Otros;200;Multinacional;Analista;Generalista;7;Full time;72500;4;No,  pero escucho ofertas;83.89;1;72500;864.226963881273;1
+Femenino;Universitario completo;Argentina;Función pública;4000;Nacional;Analista;Desarrollo laboral: procesos Sofi, capacitacion, evaluación, desarrollo;12;Full time;66000;3;No,  pero escucho ofertas;83.89;1;66000;786.7445464298486;1
+Femenino;Universitario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;300;Nacional;Analista;Administración de personal;5;Full time;55000;3;No,  pero escucho ofertas;83.89;1;55000;655.6204553582072;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;1600;Multinacional;Analista;Reclutamiento y selección;5;Full time;70000;5;No estoy buscando cambiar;83.89;1;70000;834.4260340922636;1
+Femenino;Secundario completo;Argentina;Función pública;800;Nacional;Administrativo;Administración de personal;6;Full time;37000;4;No estoy buscando cambiar;83.89;1;37000;441.05376087733936;1
+Femenino;Universitario en curso;Argentina;"Textiles; vestido; cuero; calzado";83;Nacional;Analista;Generalista;4;Full time;28000;2;Sí, activamente;83.89;1;28000;333.77041363690546;1
+Femenino;Secundario completo;Argentina;Servicios de salud;55;Nacional;Responsable;Generalista;3;Full time;87000;3;No,  pero escucho ofertas;83.89;1;87000;1037.0723566575277;1
+Femenino;Universitario en curso;Argentina;Servicios de salud;1200;Nacional;HRBP;Generalista;10;Full time;100000;1;Sí, activamente;83.89;1;100000;1192.0371915603766;1
+Femenino;Universitario completo;Argentina;Comercio;30;Nacional;Responsable;Administración de personal;2;Part time;22000;2;Sí, activamente;83.89;1.5;33000;393.3722732149243;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;70;Multinacional;HRBP;Capacitación y desarrollo;2;Full time;57000;4;Sí, activamente;83.89;1;57000;679.4611991894147;1
+Masculino;Secundario completo;Argentina;Educación;105;Nacional;Analista;Generalista;4;Full time;40000;3;No,  pero escucho ofertas;83.89;1;40000;476.81487662415066;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;44;Nacional;HRBP;Generalista;2;Full time;84000;5;No,  pero escucho ofertas;83.89;1;84000;1001.3112409107164;1
+Femenino;Universitario completo;Argentina;"Petróleo y producción de gas; refinación de petróleo";10;Nacional;Responsable;Payroll / Liquidación de sueldos;4;Part time;48000;NA;NA;83.89;1.5;72000;858.2667779234712;1
+Masculino;Universitario completo;Argentina;Servicios de consultoría;250;Multinacional;Analista;Payroll / Liquidación de sueldos;2;Tercerizado / Outsourced;65500;3;No,  pero escucho ofertas;83.89;1;65500;780.7843604720467;1
+Masculino;Universitario completo;Argentina;Otros;120;Multinacional;Responsable;Administración de personal;6;Full time;72000;NA;NA;83.89;1;72000;858.2667779234712;1
+Femenino;Terciario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;65;Nacional;Responsable;Generalista;5;Full time;48192;4;No,  pero escucho ofertas;83.89;1;48192;574.4665633567768;1
+Masculino;Universitario completo;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";95;Nacional;Jefe;Generalista;12;Full time;181000;2;No,  pero escucho ofertas;83.89;1;181000;2157.5873167242817;1
+Femenino;Universitario completo;Argentina;Función pública;4000;Nacional;Analista;Generalista;7;Full time;38;3;No,  pero escucho ofertas;83.89;1;38;0.45297413279294313;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;14000;Nacional;Analista;People Analytics;7;Full time;110000;2;Sí, activamente;83.89;1;110000;1311.2409107164144;1
+Femenino;Universitario completo;Uruguay;Tecnologías de Información, Sistemas, y afines;100;Nacional;HRBP;Reclutamiento y selección;6;Full time;56000;3;Sí, activamente;43.003;1;56000;1302.2347278096877;1
+Femenino;Universitario completo;Argentina;Otros;370;Nacional;HRBP;Generalista;7;Full time;105000;3;Sí, activamente;83.89;1;105000;1251.6390511383954;1
+Masculino;Maestría completa;Chile;"Bancos; banca online;";5200;Multinacional;Jefe;Compensaciones y beneficios;7;Full time;3600000;5;No,  pero escucho ofertas;770.45;1;3600000;4672.593938607307;1
+Masculino;Terciario completo;Argentina;Otros;500;Nacional;Responsable;Capacitación y desarrollo;5;Full time;75000;4;No,  pero escucho ofertas;83.89;1;75000;894.0278936702825;1
+Femenino;Universitario completo;Argentina;Otros;2400;Nacional;HRBP;Payroll / Liquidación de sueldos;8;Full time;50000;3;Sí, activamente;83.89;1;50000;596.0185957801883;1
+Femenino;Universitario completo;Argentina;"Agricultura; plantaciones,otros sectores rurales";600;Nacional;Analista;Payroll / Liquidación de sueldos;7;Plazo Fijo;60000;4;No,  pero escucho ofertas;83.89;1;60000;715.222314936226;1
+Femenino;Maestría en curso;Argentina;Otros;250;Nacional;Jefe;Generalista;18;Full time;75000;4;No,  pero escucho ofertas;83.89;1;75000;894.0278936702825;1
+Femenino;Maestría completa;Argentina;Minería (carbón, otra minería);500;Multinacional;HRBP;Capacitación y desarrollo;12;Full time;85000;2;Sí, activamente;83.89;1;85000;1013.2316128263202;1
+Femenino;Universitario en curso;Argentina;Comercio;94;Nacional;Administrativo;Administración de personal;1;Part time;30000;4;No,  pero escucho ofertas;83.89;1.5;45000;536.4167362021695;1
+Femenino;Universitario completo;Argentina;Servicios de salud;30;Nacional;Responsable;Administración de personal;15;Full time;60000;3;Sí, activamente;83.89;1;60000;715.222314936226;1
+Femenino;Universitario en curso;Argentina;"Alimentación; bebidas; tabaco";4000;Multinacional;Pasante;Generalista;0;Part time;25000;4;No,  pero escucho ofertas;83.89;1.5;37500;447.01394683514127;1
+Femenino;Maestría completa;Argentina;"Alimentación; bebidas; tabaco";600;Nacional;Jefe;Generalista;20;Full time;150000;1;Sí, activamente;83.89;1;150000;1788.055787340565;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";10000;Nacional;Administrativo;Administración de personal;3;Full time;54506;3;No,  pero escucho ofertas;83.89;1;54506;649.7317916318989;1
+Femenino;Maestría completa;Argentina;"Silvicultura; madera; celulosa; papel";80;Nacional;Jefe;General;24;Full time;96000;1;Sí, activamente;83.89;1;96000;1144.3557038979616;1
+Femenino;Universitario completo;Argentina;Servicios de salud;1900;Nacional;Administrativo;Administración de personal;3;Full time;58000;3;No,  pero escucho ofertas;83.89;1;58000;691.3815711050185;1
+Femenino;Universitario completo;Argentina;Servicios de consultoría;6;Nacional;Administrativo;Reclutamiento y selección;6;Full time;39000;2;Sí, activamente;83.89;1;39000;464.8945047085469;1
+Masculino;Secundario completo;Argentina;Servicios de salud;15000;Nacional;Gerente;Diseño organizacional;18;Full time;145000;NA;NA;83.89;1;145000;1728.453927762546;1
+Femenino;Maestría completa;Argentina;Industrias químicas;200;Nacional;Jefe;Relaciones laborales;15;Full time;140000;4;No estoy buscando cambiar;83.89;1;140000;1668.8520681845273;1
+Femenino;Universitario completo;Argentina;Construcción;20;Nacional;Responsable;Payroll / Liquidación de sueldos;12;Full time;61000;1;Sí, activamente;83.89;1;61000;727.1426868518298;1
+Femenino;Universitario completo;Argentina;Otros;250;Nacional;Analista;Generalista;9;Full time;60000;3;Sí, activamente;83.89;1;60000;715.222314936226;1
+Femenino;Universitario en curso;Argentina;Servicios de consultoría;6;Multinacional;Administrativo;Reclutamiento y selección;3;Full time;55000;3;Sí, activamente;83.89;1;55000;655.6204553582072;1
+Femenino;Universitario completo;Argentina;Servicios profesionales;190;Nacional;Responsable;Reclutamiento y selección;14;Full time;110000;4;No,  pero escucho ofertas;83.89;1;110000;1311.2409107164144;1
+Femenino;Universitario completo;Argentina;Servicios de consultoría;200;Multinacional;HRBP;Generalista;8;Full time;101000;2;No,  pero escucho ofertas;83.89;1;101000;1203.9575634759804;1
+Femenino;Universitario completo;Argentina;Servicios de salud;300;Nacional;Analista;Generalista;10;Full time;109000;3;No estoy buscando cambiar;83.89;1;109000;1299.3205388008105;1
+Masculino;Maestría completa;Argentina;Servicios de salud;1000;Nacional;Gerente;Administración de personal;18;Full time;200000;4;No,  pero escucho ofertas;83.89;1;200000;2384.0743831207533;1
+Masculino;Universitario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;1000;Multinacional;HRBP;Generalista;7;Full time;85000;5;No,  pero escucho ofertas;83.89;1;85000;1013.2316128263202;1
+Femenino;Universitario completo;Argentina;Función pública;200;Nacional;Responsable;Capacitación y desarrollo;10;Full time;52000;4;No estoy buscando cambiar;83.89;1;52000;619.8593396113959;1
+Masculino;Secundario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;600;Nacional;Analista;Administración de personal;10;Full time;60200;4;Sí, activamente;83.89;1;60200;717.6063893193467;1
+Masculino;Universitario en curso;Argentina;Hotelería, restauración, turismo;3500;Multinacional;Analista;People Analytics;1;Full time;90000;5;No estoy buscando cambiar;83.89;1;90000;1072.833472404339;1
+Femenino;Universitario en curso;Argentina;"Servicios financieros; seguros";230;Nacional;Analista;Diseño organizacional;4;Full time;50600;3;No,  pero escucho ofertas;83.89;1;50600;603.1708189295506;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;100;Nacional;Analista;People Analytics;14;Part time;48000;5;No estoy buscando cambiar;83.89;1.5;72000;858.2667779234712;1
+Femenino;Secundario completo;Argentina;"Bancos; banca online;";110;Nacional;Analista;Administración de personal;7;Full time;75000;5;No estoy buscando cambiar;83.89;1;75000;894.0278936702825;1
+Femenino;Terciario completo;Argentina;Educación;300;Nacional;Administrativo;Generalista;5;Tercerizado / Outsourced;21450;NA;NA;83.89;1;21450;255.6919775897008;1
+Masculino;Maestría en curso;Argentina;Otros;2800;Multinacional;Jefe;Relaciones laborales;10;Full time;127000;3;Sí, activamente;83.89;1;127000;1513.8872332816784;1
+Femenino;Secundario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;250;Multinacional;Administrativo;Generalista;1;Full time;42000;2;No,  pero escucho ofertas;83.89;1;42000;500.6556204553582;1
+Masculino;Universitario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;600;Nacional;Responsable;Administración de personal;15;Full time;75000;3;No,  pero escucho ofertas;83.89;1;75000;894.0278936702825;1
+Femenino;Universitario en curso;Argentina;Otros;400;Nacional;Analista;Administración de personal;7;Full time;39323;2;Sí, activamente;83.89;1;39323;468.74478483728694;1
+Femenino;Universitario completo;Argentina;Comercio;2500;Multinacional;Analista;Generalista;16;Full time;76000;NA;NA;83.89;1;76000;905.9482655858862;1
+Masculino;Universitario en curso;Argentina;Otros;63;Multinacional;Pasante;Relaciones laborales;1;Part time;29740;5;No estoy buscando cambiar;83.89;1.5;44610;531.7677911550841;1
+Masculino;Maestría en curso;Argentina;Función pública;250;Nacional;Administrativo;Capacitación y desarrollo;1;Full time;47000;2;Sí, activamente;83.89;1;47000;560.2574800333771;1
+Femenino;Terciario completo;Argentina;"Agricultura; plantaciones,otros sectores rurales";100;Nacional;Administrativo;Generalista;4;Full time;41000;1;Sí, activamente;83.89;1;41000;488.7352485397544;1
+Femenino;Terciario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;90;Nacional;Gerente;Generalista;20;Full time;160000;NA;NA;83.89;1;160000;1907.2595064966026;1
+Femenino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;300;Nacional;Analista;Administración de personal;2;Full time;37000;4;No,  pero escucho ofertas;83.89;1;37000;441.05376087733936;1
+Femenino;Universitario completo;Argentina;Otros;50;Nacional;Analista;Payroll / Liquidación de sueldos;10;Full time;45000;2;Sí, activamente;83.89;1;45000;536.4167362021695;1
+Masculino;Terciario completo;Chile;"Bancos; banca online;";5600;Multinacional;Analista;Capacitación y desarrollo;8;Full time;1050000;4;No,  pero escucho ofertas;770.45;1;1050000;1362.8398987604646;1
+Femenino;Maestría completa;Argentina;"Petróleo y producción de gas; refinación de petróleo";75000;Multinacional;Responsable;People Analytics;7;Full time;150000;4;No,  pero escucho ofertas;83.89;1;150000;1788.055787340565;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";136;Nacional;Analista;Payroll / Liquidación de sueldos;10;Full time;81500;4;No,  pero escucho ofertas;83.89;1;81500;971.510311121707;1
+Femenino;Terciario completo;Argentina;"Alimentación; bebidas; tabaco";1300;Nacional;Analista;Reclutamiento y selección;1;Full time;37000;3;Sí, activamente;83.89;1;37000;441.05376087733936;1
+Femenino;Universitario completo;Argentina;Otros;3500;Multinacional;Responsable;RRHH;25;Full time;71000;3;Sí, activamente;83.89;1;71000;846.3464060078675;1
+Femenino;Universitario en curso;Argentina;Servicios de salud;30;Nacional;Administrativo;Administración de personal;2;Full time;2;1;Sí, activamente;83.89;1;2;0.023840743831207534;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";6000;Multinacional;Jefe;Generalista;5;Full time;120000;NA;NA;83.89;1;120000;1430.444629872452;1
+Masculino;Universitario en curso;Argentina;Servicios de salud;80;Nacional;Jefe;Administración de personal;2;Full time;55000;4;No,  pero escucho ofertas;83.89;1;55000;655.6204553582072;1
+Masculino;Universitario completo;Argentina;Otros;120;Multinacional;Responsable;Administración de personal;6;Full time;72000;NA;NA;83.89;1;72000;858.2667779234712;1
+Masculino;Universitario completo;Argentina;Educación;2000;Nacional;HRBP;Generalista;6;Full time;75000;NA;NA;83.89;1;75000;894.0278936702825;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;400;Nacional;HRBP;Generalista;6;Full time;60000;NA;NA;83.89;1;60000;715.222314936226;1
+Femenino;Universitario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;300;Nacional;Analista;Generalista;4;Full time;40700;3;No,  pero escucho ofertas;83.89;1;40700;485.1591369650733;1
+Femenino;Universitario completo;Argentina;Hotelería, restauración, turismo;350;Nacional;Responsable;Administración de personal;6;Full time;51100;2;No,  pero escucho ofertas;83.89;1;51100;609.1310048873524;1
+Masculino;Maestría en curso;Argentina;"Servicios financieros; seguros";760;Nacional;Analista;Generalista;10;Full time;96684.6;2;Sí, activamente;83.89;1;96684.6;1152.516390511384;1
+Masculino;Universitario completo;Argentina;Construcción;235;Multinacional;Analista;Generalista;20;Full time;110000;3;Sí, activamente;83.89;1;110000;1311.2409107164144;1
+Masculino;Universitario completo;Argentina;Función pública;4000;Nacional;Responsable;People Analytics;8;Full time;62700;2;Sí, activamente;83.89;1;62700;747.4073191083562;1
+Masculino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;2500;Multinacional;HRBP;Generalista;6;Full time;156000;4;No,  pero escucho ofertas;83.89;1;156000;1859.5780188341876;1
+Femenino;Universitario completo;Argentina;Otros;250;Nacional;Analista;Reclutamiento y selección;2;Full time;45000;3;No,  pero escucho ofertas;83.89;1;45000;536.4167362021695;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;24000;Nacional;Analista;Generalista;22;Plazo Fijo;65000;NA;NA;83.89;1;65000;774.8241745142449;1
+Femenino;Maestría completa;Argentina;Industrias químicas;122;Multinacional;Gerente;Generalista;20;Remoto (para otros países);290000;5;No,  pero escucho ofertas;83.89;1;290000;3456.907855525092;1
+Femenino;Universitario completo;Argentina;"Servicios financieros; seguros";900;Nacional;Analista;Comunicación interna;10;Full time;78000;NA;NA;83.89;1;78000;929.7890094170938;1
+Femenino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;360;Multinacional;Analista;Reclutamiento y selección;2;Plazo Fijo;66000;5;No estoy buscando cambiar;83.89;1;66000;786.7445464298486;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;200;Nacional;Gerente;Generalista;15;Full time;186000;NA;NA;83.89;1;186000;2217.1891763023004;1
+Femenino;Universitario completo;Argentina;Servicios profesionales;650;Multinacional;Analista;Capacitación y desarrollo;6;Full time;59800;4;No,  pero escucho ofertas;83.89;1;59800;712.8382405531053;1
+Masculino;Maestría en curso;Argentina;"Petróleo y producción de gas; refinación de petróleo";5500;Nacional;Jefe;Compensaciones y beneficios;5;Full time;270000;4;No,  pero escucho ofertas;83.89;1;270000;3218.500417213017;1
+Femenino;Universitario completo;Argentina;Servicios de consultoría;200;Multinacional;HRBP;Generalista;8;Full time;101000;2;No,  pero escucho ofertas;83.89;1;101000;1203.9575634759804;1
+Masculino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";13000;Nacional;Jefe;Generalista;12;Full time;182000;NA;NA;83.89;1;182000;2169.5076886398856;1
+Masculino;Universitario completo;Argentina;"Transporte marítimo; puertos;";500;Nacional;Analista;Administración de personal;5;Full time;90000;4;No,  pero escucho ofertas;83.89;1;90000;1072.833472404339;1
+Masculino;Universitario completo;Argentina;Servicios de salud;1950;Nacional;Jefe;People Analytics;11;Full time;145000;5;No,  pero escucho ofertas;83.89;1;145000;1728.453927762546;1
+Femenino;Universitario completo;Argentina;Servicios de salud;30;Multinacional;HRBP;HRBP;7;Full time;71000;3;No,  pero escucho ofertas;83.89;1;71000;846.3464060078675;1
+Femenino;Maestría en curso;Argentina;"Servicios públicos (agua;gas; electricidad)";1700;Nacional;HRBP;Capacitación y desarrollo;17;Full time;150000;3;No,  pero escucho ofertas;83.89;1;150000;1788.055787340565;1
+Femenino;Maestría completa;Argentina;Servicios de correos, y de telecomunicaciones;23000;Nacional;Analista;Capacitación y desarrollo;5;Full time;86400;3;No,  pero escucho ofertas;83.89;1;86400;1029.9201335081655;1
+Femenino;Universitario completo;Argentina;Educación;250;Multinacional;Director;Generalista;15;Full time;350000;NA;NA;83.89;1;350000;4172.130170461319;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;230;Multinacional;Analista;Administración de personal;3;Full time;76046;NA;NA;83.89;1;76046;906.4966026940041;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;70;Nacional;HRBP;Reclutamiento y selección;10;Full time;82000;3;No,  pero escucho ofertas;83.89;1;82000;977.4704970795088;1
+Masculino;Universitario completo;Argentina;Otros;115;Nacional;Responsable;Generalista;11;Full time;80000;4;No,  pero escucho ofertas;83.89;1;80000;953.6297532483013;1
+Femenino;Universitario completo;Argentina;Comercio;312;Nacional;Gerente;Generalista;7;Full time;147000;4;No,  pero escucho ofertas;83.89;1;147000;1752.2946715937537;1
+Femenino;Universitario completo;Argentina;Servicios de consultoría;16;Nacional;Responsable;Reclutamiento y selección;15;Full time;150000;NA;NA;83.89;1;150000;1788.055787340565;1
+Femenino;Universitario completo;Argentina;Otros;1100;Multinacional;Analista;Administración de personal;2;Full time;45500;2;Sí, activamente;83.89;1;45500;542.3769221599714;1
+Femenino;Universitario completo;Chile;Comercio;478;Nacional;Jefe;Payroll / Liquidación de sueldos;5;Full time;1600000;NA;NA;770.45;1;1600000;2076.708417158803;1
+Masculino;Terciario completo;Argentina;Otros;150;Nacional;Analista;Administración de personal;5;Full time;125000;4;No,  pero escucho ofertas;83.89;1;125000;1490.0464894504707;1
+Femenino;Universitario completo;Argentina;Otros;800;Nacional;HRBP;Generalista;7;Full time;72250;3;Sí, activamente;83.89;1;72250;861.2468709023722;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;4000;Multinacional;HRBP;Generalista;10;Full time;150000;3;No,  pero escucho ofertas;83.89;1;150000;1788.055787340565;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";2400;Multinacional;Analista;Reclutamiento y selección;5;Full time;69000;NA;NA;83.89;1;69000;822.5056621766599;1
+Femenino;Universitario completo;Argentina;Industrias químicas;28;Nacional;Responsable;Generalista;8;Full time;75000;3;No,  pero escucho ofertas;83.89;1;75000;894.0278936702825;1
+Femenino;Universitario completo;Argentina;Servicios profesionales;10;Nacional;Analista;Payroll / Liquidación de sueldos;6;Full time;89156;4;No,  pero escucho ofertas;83.89;1;89156;1062.7726785075695;1
+Masculino;Universitario completo;Argentina;Servicios de salud;500;Nacional;Analista;Generalista;8;Full time;52000;3;Sí, activamente;83.89;1;52000;619.8593396113959;1
+Masculino;Maestría completa;Bolivia;Minería (carbón, otra minería);320;Multinacional;Gerente;Relaciones laborales;19;Full time;32348;5;No,  pero escucho ofertas;6.96;1;32348;4647.701149425287;1
+Femenino;Universitario completo;Argentina;Función pública;7000;Nacional;Analista;Administración de personal;0;Full time;60000;3;No,  pero escucho ofertas;83.89;1;60000;715.222314936226;1
+Femenino;Universitario completo;Chile;Otros;1200;Nacional;Analista;Compensaciones y beneficios;6;Full time;590000;NA;NA;770.45;1;590000;765.7862288273087;1
+Femenino;Maestría completa;Argentina;Tecnologías de Información, Sistemas, y afines;100;Nacional;Responsable;Reclutamiento y selección;3;Full time;72000;NA;NA;83.89;1;72000;858.2667779234712;1
+Masculino;Universitario completo;Argentina;Servicios de salud;2500;Nacional;HRBP;Generalista;3;Full time;180000;4;No,  pero escucho ofertas;83.89;1;180000;2145.666944808678;1
+Femenino;Universitario completo;Argentina;Servicios de salud;150;Nacional;Jefe;Generalista;14;Full time;118000;1;Sí, activamente;83.89;1;118000;1406.6038860412446;1
+Femenino;Maestría completa;Chile;Comercio;34;Nacional;Jefe;Generalista;5;Full time;1500000;2;No,  pero escucho ofertas;770.45;1;1500000;1946.9141410863779;1
+Femenino;Maestría completa;Argentina;"Silvicultura; madera; celulosa; papel";80;Nacional;Jefe;General;24;Full time;96000;1;Sí, activamente;83.89;1;96000;1144.3557038979616;1
+Masculino;Universitario completo;Argentina;Servicios de correos, y de telecomunicaciones;30;Multinacional;Gerente;Generalista;30;Full time;2140000;4;No,  pero escucho ofertas;83.89;1;2140000;25509.59589939206;1
+Masculino;Universitario completo;Argentina;"Medios de comunicación; cultura; gráficos";40;Nacional;Analista;Generalista;8;Full time;78600;3;Sí, activamente;83.89;1;78600;936.941232566456;1
+Femenino;Terciario completo;Venezuela;Servicios de correos, y de telecomunicaciones;800;Multinacional;Responsable;Compensaciones y beneficios;6;Plazo Fijo;86000000;2;No,  pero escucho ofertas;506541.78;1;86000000;169.77869031849653;1
+Masculino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";100;Nacional;Responsable;Generalista;8;Full time;75000;4;Sí, activamente;83.89;1;75000;894.0278936702825;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;20;Nacional;Responsable;Generalista;4;Full time;80360;5;No estoy buscando cambiar;83.89;1;80360;957.9210871379187;1
+Femenino;Universitario en curso;Argentina;Servicios de salud;1100;Nacional;Analista;People Analytics;3;Full time;82170;2;Sí, activamente;83.89;1;82170;979.4969603051616;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;40;Nacional;HRBP;Generalista;1;Full time;55000;4;No estoy buscando cambiar;83.89;1;55000;655.6204553582072;1
+Femenino;Universitario completo;Uruguay;"Alimentación; bebidas; tabaco";146;Multinacional;Analista;Generalista;3;Full time;34537;1;Sí, activamente;43.003;1;34537;803.1300141850569;1
+Masculino;Maestría completa;Bolivia;Servicios de correos, y de telecomunicaciones;3000;Multinacional;HRBP;Compensaciones y beneficios;7;Full time;11500;5;No,  pero escucho ofertas;6.96;1;11500;1652.2988505747126;1
+Masculino;Maestría en curso;Bolivia;Construcción;250;Nacional;Jefe;Administración de personal;5;Full time;9000;4;Sí, activamente;6.96;1;9000;1293.103448275862;1
+Masculino;Secundario completo;Argentina;"Medios de comunicación; cultura; gráficos";260;Multinacional;Administrativo;Asistente;2;Full time;60000;5;No,  pero escucho ofertas;83.89;1;60000;715.222314936226;1
+Femenino;Universitario en curso;Argentina;"Bancos; banca online;";500;Multinacional;Analista;Reclutamiento y selección;2;Full time;56000;4;No,  pero escucho ofertas;83.89;1;56000;667.5408272738109;1
+Femenino;Universitario completo;Argentina;Educación;250;Multinacional;Director;Generalista;15;Full time;350000;NA;NA;83.89;1;350000;4172.130170461319;1
+Femenino;Universitario completo;Argentina;Servicios profesionales;450;Multinacional;Analista;Payroll / Liquidación de sueldos;4;Full time;97000;4;No,  pero escucho ofertas;83.89;1;97000;1156.2760758135653;1
+Femenino;Terciario completo;Chile;"Agricultura; plantaciones,otros sectores rurales";409;Multinacional;Responsable;Payroll / Liquidación de sueldos;6;Full time;850000;2;Sí, activamente;770.45;1;850000;1103.2513466156142;1
+Femenino;Universitario completo;Argentina;Educación;250;Multinacional;Director;Generalista;15;Full time;350000;NA;NA;83.89;1;350000;4172.130170461319;1
+Masculino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";520;Nacional;Responsable;Compensaciones y beneficios;15;Full time;109000;4;No,  pero escucho ofertas;83.89;1;109000;1299.3205388008105;1
+Masculino;Maestría completa;Argentina;Tecnologías de Información, Sistemas, y afines;635;Nacional;Jefe;Compensaciones y beneficios;15;Full time;200;2;Sí, activamente;83.89;1;200;2.3840743831207534;1
+Femenino;Universitario completo;Argentina;Otros;1300;Nacional;Analista;Administración de personal;6;Full time;43000;3;Sí, activamente;83.89;1;43000;512.575992370962;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;1600;Multinacional;Analista;Reclutamiento y selección;5;Full time;70000;5;No estoy buscando cambiar;83.89;1;70000;834.4260340922636;1
+Femenino;Maestría completa;Argentina;Comercio;320;Nacional;Gerente;Generalista;16;Full time;180000;4;No estoy buscando cambiar;83.89;1;180000;2145.666944808678;1
+Femenino;Universitario completo;Argentina;"Medios de comunicación; cultura; gráficos";170;Multinacional;Gerente;Generalista;9;Full time;185000;4;No,  pero escucho ofertas;83.89;1;185000;2205.268804386697;1
+Femenino;Universitario completo;Argentina;Servicios de salud;65;Nacional;Administrativo;Administración de personal;6;Full time;50000;NA;NA;83.89;1;50000;596.0185957801883;1
+Femenino;Universitario en curso;Argentina;Servicios de consultoría;50;Multinacional;Analista;Generalista;0;Plazo Fijo;22500;NA;NA;83.89;1;22500;268.2083681010848;1
+Femenino;Universitario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;140;Multinacional;Analista;Administración de personal;15;Full time;80000;3;Sí, activamente;83.89;1;80000;953.6297532483013;1
+Femenino;Universitario en curso;Uruguay;Construcción;200;Multinacional;Analista;Generalista;6;Full time;80000;3;No,  pero escucho ofertas;43.003;1;80000;1860.335325442411;1
+Femenino;Universitario en curso;Uruguay;Servicios de salud;400;Nacional;Analista;Generalista;5;Full time;70000;3;Sí, activamente;43.003;1;70000;1627.7934097621096;1
+Masculino;Universitario completo;Argentina;Comercio;870;Nacional;Gerente;Administración de personal;30;Full time;150000;4;No,  pero escucho ofertas;83.89;1;150000;1788.055787340565;1
+Femenino;Universitario completo;Argentina;Comercio;200;Nacional;Gerente;Hard;121;Full time;135000;3;Sí, activamente;83.89;1;135000;1609.2502086065085;1
+Masculino;Universitario completo;Bolivia;Otros;3000;Multinacional;Analista;Capacitación y desarrollo;6;Full time;10000;NA;NA;6.96;1;10000;1436.7816091954023;1
+Masculino;Universitario completo;Bolivia;"Petróleo y producción de gas; refinación de petróleo";80;Nacional;Jefe;Reclutamiento y selección;10;Full time;22100;NA;NA;6.96;1;22100;3175.287356321839;1
+Masculino;Universitario completo;Argentina;Hotelería, restauración, turismo;300;Nacional;Analista;Administración de personal;6;Full time;70000;4;No,  pero escucho ofertas;83.89;1;70000;834.4260340922636;1
+Femenino;Secundario completo;Argentina;Hotelería, restauración, turismo;28;Multinacional;Responsable;Generalista;16;Full time;86000;4;No,  pero escucho ofertas;83.89;1;86000;1025.151984741924;1
+Masculino;Maestría completa;Perú;Minería (carbón, otra minería);130;Nacional;Jefe;Administración de personal;6;Full time;6500;4;No,  pero escucho ofertas;3.615;1;6500;1798.0636237897647;1
+Masculino;Universitario completo;Chile;Servicios de consultoría;1500;Nacional;Jefe;Reclutamiento y selección;10;Full time;1500000;3;Sí, activamente;770.45;1;1500000;1946.9141410863779;1
+Femenino;Universitario completo;Argentina;Servicios de salud;10000;Nacional;Responsable;Generalista;10;Full time;123000;4;No,  pero escucho ofertas;83.89;1;123000;1466.2057456192633;1
+Femenino;Universitario completo;Argentina;Servicios profesionales;10000;Multinacional;Administrativo;Payroll / Liquidación de sueldos;5;Full time;94050;4;No,  pero escucho ofertas;83.89;1;94050;1121.1109786625343;1
+Masculino;Secundario completo;Argentina;Servicios de salud;1300;Nacional;Analista;Administración de personal;12;Full time;60600;4;No,  pero escucho ofertas;83.89;1;60600;722.3745380855883;1
+Masculino;Universitario en curso;Argentina;"Petróleo y producción de gas; refinación de petróleo";3000;Multinacional;Gerente;Generalista;25;Full time;250;NA;NA;83.89;1;250;2.9800929789009416;1
+Femenino;Maestría en curso;Argentina;Otros;115;Nacional;Jefe;Generalista;4;Full time;100000;1;Sí, activamente;83.89;1;100000;1192.0371915603766;1
+Femenino;Universitario completo;Argentina;"Servicios financieros; seguros";25;Nacional;Responsable;Reclutamiento y selección;5;Full time;50600;3;No,  pero escucho ofertas;83.89;1;50600;603.1708189295506;1
+Masculino;Universitario completo;Argentina;"Servicios financieros; seguros";75;Nacional;Gerente;Generalista;12;Full time;147000;1;Sí, activamente;83.89;1;147000;1752.2946715937537;1
+Femenino;Maestría completa;Argentina;Otros;300;Nacional;Director;Generalista;15;Full time;360000;3;No,  pero escucho ofertas;83.89;1;360000;4291.333889617356;1
+Masculino;Universitario completo;Argentina;Otros;5000;Nacional;Responsable;payroll y adminsitracion de personal;28;Full time;150000;1;Sí, activamente;83.89;1;150000;1788.055787340565;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;70;Nacional;Responsable;Generalista;15;Full time;112000;3;No,  pero escucho ofertas;83.89;1;112000;1335.0816545476218;1
+Femenino;Maestría en curso;Argentina;Tecnologías de Información, Sistemas, y afines;250;Multinacional;Analista;Reclutamiento y selección;4;Full time;90100;4;No estoy buscando cambiar;83.89;1;90100;1074.0255095958994;1
+Masculino;Universitario en curso;Argentina;Otros;70;Nacional;Jefe;Administración de personal;30;Full time;75610;1;Sí, activamente;83.89;1;75610;901.2993205388008;1
+Femenino;Maestría en curso;Argentina;Otros;1800;Nacional;Analista;Capacitación y desarrollo;5;Full time;40000;3;No,  pero escucho ofertas;83.89;1;40000;476.81487662415066;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;6500;Multinacional;Analista;Reclutamiento y selección;6;Full time;60200;4;No estoy buscando cambiar;83.89;1;60200;717.6063893193467;1
+Femenino;Terciario completo;Argentina;Tecnologías de Información, Sistemas, y afines;6200;Multinacional;HRBP;Reclutamiento y selección;3.5;Full time;66000;4;No,  pero escucho ofertas;83.89;1;66000;786.7445464298486;1
+Femenino;Universitario completo;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";10000;Nacional;Jefe;Mejora continua proyectos de innovación;20;Full time;115000;4;No,  pero escucho ofertas;83.89;1;115000;1370.8427702944332;1
+Masculino;Universitario completo;Argentina;"Bancos; banca online;";60;Nacional;HRBP;Generalista;16;Full time;220000;NA;NA;83.89;1;220000;2622.481821432829;1
+Masculino;Universitario completo;Argentina;"Servicios financieros; seguros";1200;Multinacional;Analista;Payroll / Liquidación de sueldos;15;Full time;140000;1;No,  pero escucho ofertas;83.89;1;140000;1668.8520681845273;1
+Femenino;Universitario en curso;Argentina;Servicios de salud;3000;Nacional;Analista;Reclutamiento y selección;9;Full time;64497;3;No,  pero escucho ofertas;83.89;1;64497;768.8282274406962;1
+Femenino;Universitario en curso;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";63;Nacional;Analista;Generalista;1.5;Full time;40000;2;Sí, activamente;83.89;1;40000;476.81487662415066;1
+Femenino;Universitario completo;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";10000;Nacional;Jefe;Mejora continua proyectos de innovación;20;Full time;115000;4;No,  pero escucho ofertas;83.89;1;115000;1370.8427702944332;1
+Femenino;Universitario completo;Argentina;Servicios profesionales;15;Nacional;HRBP;Generalista;6;Full time;47;1;Sí, activamente;83.89;1;47;0.560257480033377;1
+Masculino;Universitario completo;Argentina;Servicios de consultoría;3000;Multinacional;HRBP;Diseño organizacional;2;Full time;84000;NA;NA;83.89;1;84000;1001.3112409107164;1
+Femenino;Maestría completa;Argentina;"Medios de comunicación; cultura; gráficos";40;Nacional;Director;Generalista;10;Full time;157500;5;No estoy buscando cambiar;83.89;1;157500;1877.4585767075932;1
+Masculino;Maestría en curso;Argentina;Industrias químicas;138;Multinacional;Gerente;Generalista;18;Full time;201300;4;No,  pero escucho ofertas;83.89;1;201300;2399.570866611038;1
+Masculino;Universitario completo;Argentina;Construcción;3000;Nacional;Jefe;Capacitación y desarrollo;10;Full time;103000;NA;NA;83.89;1;103000;1227.798307307188;1
+Femenino;Universitario completo;Argentina;Otros;500;Multinacional;HRBP;Generalista;11;Full time;205000;3;Sí, activamente;83.89;1;205000;2443.676242698772;1
+Femenino;Universitario en curso;Argentina;Servicios de correos, y de telecomunicaciones;175;Nacional;Analista;Reclutamiento y selección;10;Full time;97700;3;No,  pero escucho ofertas;83.89;1;97700;1164.620336154488;1
+Masculino;Universitario completo;Argentina;"Transporte marítimo; puertos;";90;Nacional;Gerente;Generalista;15;Full time;125000;NA;NA;83.89;1;125000;1490.0464894504707;1
+Masculino;Universitario completo;Argentina;"Petróleo y producción de gas; refinación de petróleo";490;Multinacional;Jefe;Relaciones laborales;19;Full time;256000;5;No,  pero escucho ofertas;83.89;1;256000;3051.615210394564;1
+Prefiero no responder;Maestría completa;Bolivia;Otros;160;Nacional;Responsable;Compensaciones y beneficios;15;Full time;9000;3;No,  pero escucho ofertas;6.96;1;9000;1293.103448275862;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;70;Nacional;Analista;Generalista;5;Full time;60000;4;No,  pero escucho ofertas;83.89;1;60000;715.222314936226;1
+Masculino;Universitario completo;Argentina;Servicios de salud;400;Nacional;Jefe;Generalista;14;Full time;89000;5;No estoy buscando cambiar;83.89;1;89000;1060.9131004887352;1
+Femenino;Terciario completo;Argentina;Tecnologías de Información, Sistemas, y afines;250;Multinacional;HRBP;Reclutamiento y selección;3;Full time;93000;5;No,  pero escucho ofertas;83.89;1;93000;1108.5945881511502;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;2700;Multinacional;Gerente;HRBP;13;Full time;221000;NA;NA;83.89;1;221000;2634.4021933484323;1
+Masculino;Universitario completo;Argentina;Servicios de salud;190;Nacional;Jefe;Generalista;15;Full time;160000;3;No,  pero escucho ofertas;83.89;1;160000;1907.2595064966026;1
+Femenino;Universitario en curso;Paraguay;Construcción;350;Nacional;Jefe;Administración de personal;7;Full time;7000000;3;No,  pero escucho ofertas;7027.74;1;7000000;996.0527851058804;1
+Femenino;Universitario en curso;Argentina;Servicios de consultoría;700;Nacional;Analista;Reclutamiento y selección;10;Full time;75000;NA;NA;83.89;1;75000;894.0278936702825;1
+Femenino;Universitario en curso;Argentina;Otros;100;Nacional;Analista;Reclutamiento y selección;10;Full time;85000;1;Sí, activamente;83.89;1;85000;1013.2316128263202;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;750;Nacional;HRBP;Generalista;11;Full time;120000;3;Sí, activamente;83.89;1;120000;1430.444629872452;1
+Femenino;Maestría completa;Argentina;Otros;350;Nacional;Analista;Capacitación y desarrollo;10;Full time;77000;4;No,  pero escucho ofertas;83.89;1;77000;917.8686375014901;1
+Masculino;Maestría completa;Argentina;Terminales automotrices, fábricas autopartistas, y afines;1200;Multinacional;Director;Generalista;15;Full time;338000;4;No,  pero escucho ofertas;83.89;1;338000;4029.0857074740734;1
+Masculino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";300;Multinacional;Jefe;Generalista;10;Full time;106000;4;No estoy buscando cambiar;83.89;1;106000;1263.5594230539994;1
+Masculino;Universitario completo;Argentina;Servicios de salud;2500;Nacional;HRBP;Generalista;3;Full time;180000;4;No,  pero escucho ofertas;83.89;1;180000;2145.666944808678;1
+Masculino;Maestría completa;Argentina;Tecnologías de Información, Sistemas, y afines;200;Nacional;Director;Generalista;28;Full time;250000;3;No,  pero escucho ofertas;83.89;1;250000;2980.0929789009415;1
+Masculino;Universitario en curso;Argentina;Otros;700;Nacional;Analista;Generalista;6;Full time;60000;3;No,  pero escucho ofertas;83.89;1;60000;715.222314936226;1
+Femenino;Universitario completo;Argentina;"Servicios financieros; seguros";500;Nacional;Analista;Payroll / Liquidación de sueldos;7;Full time;45000;2;Sí, activamente;83.89;1;45000;536.4167362021695;1
+Femenino;Universitario completo;Argentina;Servicios de consultoría;300;Multinacional;Analista;Payroll / Liquidación de sueldos;3;Full time;57000;3;No,  pero escucho ofertas;83.89;1;57000;679.4611991894147;1
+Femenino;Universitario completo;Argentina;Servicios profesionales;86;Multinacional;Responsable;Payroll / Liquidación de sueldos;4;Full time;74000;NA;NA;83.89;1;74000;882.1075217546787;1
+Masculino;Maestría en curso;Argentina;Otros;150;Nacional;Responsable;Administración de personal;8;Full time;120000;NA;NA;83.89;1;120000;1430.444629872452;1
+Femenino;Universitario en curso;Argentina;Otros;4000;Nacional;Analista;Administración de personal;1;Full time;30000;1;Sí, activamente;83.89;1;30000;357.611157468113;1
+Femenino;Universitario en curso;Argentina;Servicios de consultoría;200;Nacional;Jefe;Payroll / Liquidación de sueldos;8;Full time;44000;1;Sí, activamente;83.89;1;44000;524.4963642865657;1
+Masculino;Universitario completo;Argentina;Educación;2000;Nacional;HRBP;Generalista;6;Full time;75000;NA;NA;83.89;1;75000;894.0278936702825;1
+Femenino;Universitario completo;Chile;"Servicios públicos (agua;gas; electricidad)";66;Nacional;Jefe;Payroll / Liquidación de sueldos;20;Full time;1800000;4;No,  pero escucho ofertas;770.45;1;1800000;2336.2969693036534;1
+Masculino;Secundario completo;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";450;Nacional;Analista;Generalista;5;Full time;55000;NA;NA;83.89;1;55000;655.6204553582072;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;100;Nacional;Analista;Administración de personal;6;Full time;70000;4;No estoy buscando cambiar;83.89;1;70000;834.4260340922636;1
+Masculino;Universitario completo;Argentina;Función pública;360;Nacional;Analista;Payroll / Liquidación de sueldos;11;Plazo Fijo;115000;3;No,  pero escucho ofertas;83.89;1;115000;1370.8427702944332;1
+Masculino;Universitario completo;Argentina;Educación;150;Nacional;Responsable;Generalista;10;Plazo Fijo;85000;4;No,  pero escucho ofertas;83.89;1;85000;1013.2316128263202;1
+Masculino;Universitario en curso;Argentina;Servicios de consultoría;10000;Multinacional;Analista;Generalista;2;Full time;52500;2;No,  pero escucho ofertas;83.89;1;52500;625.8195255691977;1
+Femenino;Universitario completo;Argentina;Función pública;180;Nacional;Gerente;Diseño organizacional;7;Full time;110600;NA;NA;83.89;1;110600;1318.3931338657767;1
+Femenino;Maestría completa;Bolivia;Educación;36;Nacional;Administrativo;Administración de personal;7;Part time;3500;2;Sí, activamente;6.96;1.5;5250;754.3103448275862;1
+Masculino;Universitario en curso;Argentina;"Servicios públicos (agua;gas; electricidad)";4800;Nacional;Analista;Comunicación interna;1;Full time;56000;4;No,  pero escucho ofertas;83.89;1;56000;667.5408272738109;1
+Masculino;Terciario completo;Argentina;"Servicios financieros; seguros";3000;Nacional;Analista;Reclutamiento y selección;5;Full time;68000;4;No estoy buscando cambiar;83.89;1;68000;810.5852902610561;1
+Femenino;Universitario completo;Argentina;Servicios profesionales;460;Multinacional;Responsable;Compensaciones y beneficios;8;Full time;96300;5;No,  pero escucho ofertas;83.89;1;96300;1147.9318154726427;1
+Masculino;Maestría completa;Argentina;Hotelería, restauración, turismo;300;Nacional;Jefe;Generalista;15;Full time;120000;4;No estoy buscando cambiar;83.89;1;120000;1430.444629872452;1
+Femenino;Universitario completo;Paraguay;Industrias químicas;350;Nacional;Analista;Administración de personal;11;Full time;5500000;4;No,  pero escucho ofertas;7027.74;1;5500000;782.6129025831917;1
+Femenino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;300;Multinacional;Analista;Reclutamiento y selección;3;Full time;49000;3;No,  pero escucho ofertas;83.89;1;49000;584.0982238645846;1
+Femenino;Universitario completo;Argentina;Comercio;3500;Multinacional;Analista;Capacitación y desarrollo;10;Full time;53346;NA;NA;83.89;1;53346;635.9041602097985;1
+Masculino;Universitario completo;Paraguay;"Transporte marítimo; puertos;";250;Multinacional;Analista;Compensaciones y beneficios;9;Full time;7000000;4;No,  pero escucho ofertas;7027.74;1;7000000;996.0527851058804;1
+Masculino;Universitario completo;Paraguay;"Bancos; banca online;";1100;Nacional;Gerente;Generalista;15;Full time;18000000;1;Sí, activamente;7027.74;1;18000000;2561.278590272264;1
+Masculino;Maestría completa;Argentina;"Agricultura; plantaciones,otros sectores rurales";350;Nacional;Responsable;Payroll / Liquidación de sueldos;7;Full time;75000;4;Sí, activamente;83.89;1;75000;894.0278936702825;1
+Femenino;Secundario completo;Argentina;Servicios de salud;8500;Nacional;Analista;Administración de personal;1;Full time;43000;4;No,  pero escucho ofertas;83.89;1;43000;512.575992370962;1
+Masculino;Universitario completo;Paraguay;Otros;134;Nacional;Responsable;Generalista;5;Full time;5000000;2;Sí, activamente;7027.74;1;5000000;711.4662750756289;1
+Femenino;Universitario en curso;Argentina;Servicios de consultoría;20;Nacional;HRBP;Reclutamiento y selección;0;Full time;30000;3;No estoy buscando cambiar;83.89;1;30000;357.611157468113;1
+Femenino;Terciario completo;Argentina;Comercio;150;Nacional;Responsable;Reclutamiento y selección;4;Full time;40009;2;Sí, activamente;83.89;1;40009;476.9221599713911;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";2500;Nacional;Jefe;Reclutamiento y selección;20;Full time;113000;4;No estoy buscando cambiar;83.89;1;113000;1347.0020264632255;1
+Femenino;Universitario completo;Argentina;Función pública;1900;Nacional;Responsable;Reclutamiento y selección;6;Full time;79000;4;No,  pero escucho ofertas;83.89;1;79000;941.7093813326976;1
+Género Diverso;Universitario completo;Argentina;"Medios de comunicación; cultura; gráficos";600;Multinacional;Responsable;Payroll / Liquidación de sueldos;12;Full time;90000;5;Sí, activamente;83.89;1;90000;1072.833472404339;1
+Femenino;Universitario en curso;Argentina;Servicios de salud;2000;Nacional;Analista;Administración de personal;3;Full time;70000;3;No,  pero escucho ofertas;83.89;1;70000;834.4260340922636;1
+Femenino;Maestría en curso;Argentina;Tecnologías de Información, Sistemas, y afines;190;Multinacional;Analista;Payroll / Liquidación de sueldos;4;Full time;58000;2;Sí, activamente;83.89;1;58000;691.3815711050185;1
+Femenino;Universitario completo;Argentina;Comercio;3000;Multinacional;Responsable;Capacitación y desarrollo;8;Full time;88000;3;No,  pero escucho ofertas;83.89;1;88000;1048.9927285731314;1
+Masculino;Universitario completo;Argentina;Servicios de salud;25;Nacional;Responsable;Administración de personal;3;Full time;80000;3;Sí, activamente;83.89;1;80000;953.6297532483013;1
+Femenino;Universitario completo;Argentina;Educación;5000;Nacional;Responsable;Capacitación y desarrollo;3;Part time;55000;3;No,  pero escucho ofertas;83.89;1.5;82500;983.4306830373108;1
+Femenino;Terciario completo;Argentina;Tecnologías de Información, Sistemas, y afines;170;Nacional;Analista;Reclutamiento y selección;3;Full time;54200;3;No,  pero escucho ofertas;83.89;1;54200;646.0841578257241;1
+Femenino;Universitario completo;Paraguay;"Alimentación; bebidas; tabaco";160;Nacional;Jefe;Administración de personal;9;Full time;8000000;4;No,  pero escucho ofertas;7027.74;1;8000000;1138.3460401210061;1
+Femenino;Maestría en curso;Argentina;Otros;408;Multinacional;HRBP;Generalista;15;Full time;131000;3;Sí, activamente;83.89;1;131000;1561.5687209440935;1
+Femenino;Maestría en curso;Argentina;Otros;408;Multinacional;HRBP;Generalista;15;Full time;131000;3;Sí, activamente;83.89;1;131000;1561.5687209440935;1
+Femenino;Universitario completo;Uruguay;"Servicios públicos (agua;gas; electricidad)";149;Nacional;Analista;Generalista;9;Full time;85900;3;Sí, activamente;43.003;1;85900;1997.5350556937888;1
+Femenino;Maestría en curso;Paraguay;"Servicios financieros; seguros";170;Nacional;Jefe;Administración de personal;2;Plazo Fijo;4000000;NA;NA;7027.74;1;4000000;569.1730200605031;1
+Femenino;Maestría en curso;Argentina;Otros;44000;Multinacional;HRBP;Reclutamiento y selección;9;Full time;106000;2;Sí, activamente;83.89;1;106000;1263.5594230539994;1
+Femenino;Universitario completo;Argentina;Función pública;6500;Nacional;Director;Compensaciones y beneficios;8;Plazo Fijo;129528;3;No,  pero escucho ofertas;83.89;1;129528;1544.0219334843248;1
+Masculino;Maestría completa;Argentina;Tecnologías de Información, Sistemas, y afines;750;Multinacional;Gerente;People Analytics;14;Full time;165000;4;No,  pero escucho ofertas;83.89;1;165000;1966.8613660746216;1
+Masculino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";1100;Nacional;HRBP;People Analytics;4;Full time;130000;3;Sí, activamente;83.89;1;130000;1549.6483490284897;1
+Masculino;Universitario completo;Argentina;Otros;100;Nacional;Analista;Reclutamiento y selección;2;Plazo Fijo;48000;3;No,  pero escucho ofertas;83.89;1;48000;572.1778519489808;1
+Femenino;Universitario completo;Argentina;"Servicios públicos (agua;gas; electricidad)";450;Multinacional;Jefe;Capacitación y desarrollo;18;Full time;220000;3;No,  pero escucho ofertas;83.89;1;220000;2622.481821432829;1
+Masculino;Universitario en curso;Argentina;Otros;1200;Nacional;Analista;Generalista;14;Full time;134000;4;No estoy buscando cambiar;83.89;1;134000;1597.3298366909048;1
+Femenino;Universitario completo;Argentina;Servicios de salud;900;Nacional;Analista;Reclutamiento y selección;1;Tercerizado / Outsourced;40000;2;Sí, activamente;83.89;1;40000;476.81487662415066;1
+Masculino;Maestría completa;Argentina;Tecnologías de Información, Sistemas, y afines;1100;Multinacional;Gerente;Payroll / Liquidación de sueldos;10;Full time;232000;3;No,  pero escucho ofertas;83.89;1;232000;2765.526284420074;1
+Masculino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;700;Multinacional;Responsable;People Analytics;8;Full time;105000;NA;NA;83.89;1;105000;1251.6390511383954;1
+Femenino;Universitario completo;Argentina;Educación;1500;Nacional;Analista;Generalista;9;Full time;90000;3;No,  pero escucho ofertas;83.89;1;90000;1072.833472404339;1
+Femenino;Universitario en curso;Argentina;Servicios profesionales;3400;Multinacional;Analista;Reclutamiento y selección;4;Full time;67000;3;No,  pero escucho ofertas;83.89;1;67000;798.6649183454524;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;50;Multinacional;Administrativo;Generalista;4;Full time;54000;3;No,  pero escucho ofertas;83.89;1;54000;643.7000834426034;1
+Femenino;Universitario en curso;Argentina;Hotelería, restauración, turismo;56;Nacional;Responsable;Generalista;6;Plazo Fijo;31000;3;No,  pero escucho ofertas;83.89;1;31000;369.53152938371676;1
+Femenino;Universitario en curso;Paraguay;Tecnologías de Información, Sistemas, y afines;18;Nacional;Responsable;Administración de personal;3;Full time;3500000;1;Sí, activamente;7027.74;1;3500000;498.0263925529402;1
+Femenino;Terciario completo;Argentina;Tecnologías de Información, Sistemas, y afines;200;Multinacional;Analista;Administración de personal;10;Full time;72000;3;No,  pero escucho ofertas;83.89;1;72000;858.2667779234712;1
+Masculino;Maestría completa;Argentina;Construcción;350;Nacional;Responsable;Generalista;4;Full time;70500;2;Sí, activamente;83.89;1;70500;840.3862200500655;1
+Masculino;Maestría en curso;Argentina;Función pública;500;Nacional;Responsable;Generalista;15;Full time;150;NA;NA;83.89;1;150;1.788055787340565;1
+Masculino;Universitario completo;Argentina;Otros;130;Nacional;Responsable;Administración de personal;11;Full time;102000;4;No,  pero escucho ofertas;83.89;1;102000;1215.8779353915843;1
+Femenino;Universitario completo;Argentina;Comercio;50;Nacional;Responsable;Generalista;10;Part time;30000;3;Sí, activamente;83.89;1.5;45000;536.4167362021695;1
+Femenino;Universitario completo;Argentina;Servicios de salud;30;Nacional;Gerente;Administración de personal;20;Plazo Fijo;78000;3;Sí, activamente;83.89;1;78000;929.7890094170938;1
+Femenino;Universitario en curso;Argentina;Otros;1900;Nacional;Analista;Capacitación y desarrollo;5;Full time;100000;3;No,  pero escucho ofertas;83.89;1;100000;1192.0371915603766;1
+Femenino;Maestría en curso;Argentina;Comercio;600;Nacional;Responsable;Comunicación interna;5;Full time;88020;3;No,  pero escucho ofertas;83.89;1;88020;1049.2311360114436;1
+Femenino;Maestría completa;Paraguay;"Alimentación; bebidas; tabaco";500;Nacional;Gerente;Capacitación y desarrollo;16;Full time;21000000;4;No,  pero escucho ofertas;7027.74;1;21000000;2988.1583553176415;1
+Femenino;Universitario en curso;Argentina;Otros;23000;Multinacional;HRBP;Generalista;7;Plazo Fijo;10700;NA;NA;83.89;1;10700;127.54797949696031;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";2000;Multinacional;Analista;Compensaciones y beneficios;10;Full time;12000;NA;NA;83.89;1;12000;143.0444629872452;1
+Femenino;Universitario en curso;Argentina;Servicios profesionales;2500;Multinacional;Analista;Compensaciones y beneficios;3;Full time;79000;NA;NA;83.89;1;79000;941.7093813326976;1
+Femenino;Maestría completa;Argentina;Servicios de salud;284;Nacional;Analista;Generalista;6;Full time;78000;3;No,  pero escucho ofertas;83.89;1;78000;929.7890094170938;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;120;Nacional;Analista;Reclutamiento y selección;5;Full time;60375;2;No,  pero escucho ofertas;83.89;1;60375;719.6924544045775;1
+Femenino;Universitario en curso;Argentina;Servicios profesionales;3500;Multinacional;Analista;Reclutamiento y selección;3;Full time;55000;4;No,  pero escucho ofertas;83.89;1;55000;655.6204553582072;1
+Femenino;Secundario completo;Argentina;Servicios de salud;500;Nacional;Administrativo;No trabajo en el área;0;Plazo Fijo;68000;2;No,  pero escucho ofertas;83.89;1;68000;810.5852902610561;1
+Masculino;Maestría en curso;Argentina;Servicios de consultoría;4000;Multinacional;HRBP;Payroll / Liquidación de sueldos;15;Full time;55000;2;Sí, activamente;83.89;1;55000;655.6204553582072;1
+Femenino;Universitario completo;Argentina;"Servicios financieros; seguros";1000;Nacional;Analista;Capacitación y desarrollo;7;Full time;95000;NA;NA;83.89;1;95000;1132.4353319823579;1
+Femenino;Universitario completo;Argentina;Construcción;450;Nacional;Responsable;Generalista;3;Full time;45800;4;No,  pero escucho ofertas;83.89;1;45800;545.9530337346525;1
+Femenino;Universitario completo;Argentina;Servicios profesionales;65;Nacional;HRBP;Reclutamiento y selección;20;Full time;74200;3;Sí, activamente;83.89;1;74200;884.4915961377995;1
+Femenino;Universitario en curso;Argentina;Otros;60;Nacional;Responsable;Generalista;4;Full time;44000;3;No,  pero escucho ofertas;83.89;1;44000;524.4963642865657;1
+Femenino;Secundario completo;Argentina;Comercio;100;Multinacional;Responsable;Generalista;8;Full time;83000;5;No,  pero escucho ofertas;83.89;1;83000;989.3908689951127;1
+Femenino;Terciario completo;Argentina;Servicios de consultoría;120;Multinacional;Administrativo;Administración de personal;8;Full time;42345;3;Sí, activamente;83.89;1;42345;504.7681487662415;1
+Femenino;Universitario completo;Argentina;Comercio;80;Nacional;Analista;Generalista;4;Full time;55000;4;Sí, activamente;83.89;1;55000;655.6204553582072;1
+Masculino;Secundario completo;Argentina;Tecnologías de Información, Sistemas, y afines;200;Nacional;Gerente;Generalista;12;Full time;240000;4;No,  pero escucho ofertas;83.89;1;240000;2860.889259744904;1
+Femenino;Universitario completo;Argentina;Otros;65;Nacional;Responsable;Administración de personal;2;Full time;49000;3;No,  pero escucho ofertas;83.89;1;49000;584.0982238645846;1
+Género Diverso;Universitario completo;Argentina;Servicios profesionales;50;Nacional;HRBP;Generalista;7;Full time;20000;NA;NA;83.89;1;20000;238.40743831207533;1
+Femenino;Universitario completo;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";570;Nacional;Analista;Comunicación interna;1;Full time;37000;3;No,  pero escucho ofertas;83.89;1;37000;441.05376087733936;1
+Femenino;Universitario completo;Paraguay;Comercio;1500;Nacional;Gerente;Generalista;28;Full time;40000000;5;No estoy buscando cambiar;7027.74;1;40000000;5691.730200605031;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;130;Nacional;Jefe;Generalista;7;Full time;60250;3;Sí, activamente;83.89;1;60250;718.202407915127;1
+Femenino;Secundario completo;Argentina;Otros;1000;Nacional;Jefe;Administración de personal;15;Full time;94389;4;No,  pero escucho ofertas;83.89;1;94389;1125.151984741924;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;6000;Nacional;Analista;Reclutamiento y selección;2;Full time;48000;2;Sí, activamente;83.89;1;48000;572.1778519489808;1
+Femenino;Universitario completo;Argentina;Minería (carbón, otra minería);600;Multinacional;Jefe;Reclutamiento y Selección. Comunicación.  RRLL. RSE. Compliance. Adm Personal. Compensaciones.;13;Full time;160000;4;No,  pero escucho ofertas;83.89;1;160000;1907.2595064966026;1
+Femenino;Universitario completo;Argentina;Servicios profesionales;95;Nacional;Responsable;Generalista;12;Full time;80000;4;No,  pero escucho ofertas;83.89;1;80000;953.6297532483013;1
+Femenino;Universitario completo;Argentina;Función pública;50000;Nacional;Analista;Diseño organizacional;4;Full time;58770;3;No,  pero escucho ofertas;83.89;1;58770;700.5602574800333;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;16;Nacional;Analista;Reclutamiento y selección;3;Part time;30250;3;No,  pero escucho ofertas;83.89;1.5;45375;540.8868756705209;1
+Femenino;Secundario completo;Argentina;Otros;650;Nacional;Analista;Administración de personal;15;Full time;55000;NA;NA;83.89;1;55000;655.6204553582072;1
+Masculino;Universitario completo;Argentina;Construcción;1700;Nacional;Gerente;Compensaciones y beneficios;15;Full time;325000;3;No,  pero escucho ofertas;83.89;1;325000;3874.120872571224;1
+Femenino;Universitario completo;Argentina;Servicios de salud;44;Nacional;Responsable;Todas las anteriores;4;Full time;78000;2;No,  pero escucho ofertas;83.89;1;78000;929.7890094170938;1
+Femenino;Maestría completa;México;Otros;200;Multinacional;Gerente;Administración de personal;22;Full time;105000;5;No estoy buscando cambiar;21.24;1;105000;4943.502824858758;1
+Masculino;Universitario en curso;Argentina;Fabricación de material de transporte;300;Multinacional;Pasante;Capacitación y desarrollo;2.4;Pasante;20700;4;No,  pero escucho ofertas;83.89;1;20700;246.75169865299796;1
+Femenino;Universitario completo;Argentina;Otros;65;Nacional;Responsable;Administración de personal;2;Full time;49000;3;No,  pero escucho ofertas;83.89;1;49000;584.0982238645846;1
+Masculino;Universitario completo;Colombia;"Agricultura; plantaciones,otros sectores rurales";11000;Multinacional;HRBP;Administración de personal;9;Full time;3600000;3;Sí, activamente;3849.43;1;3600000;935.2033937492045;1
+Femenino;Secundario completo;Argentina;Servicios de salud;125;Nacional;Analista;Generalista;10;Full time;66045;4;No,  pero escucho ofertas;83.89;1;66045;787.2809631660508;1
+Femenino;Maestría completa;Uruguay;Tecnologías de Información, Sistemas, y afines;1900;Multinacional;Jefe;Compliance;8;Full time;90000;3;Sí, activamente;43.003;1;90000;2092.8772411227123;1
+Masculino;Maestría completa;Argentina;"Servicios públicos (agua;gas; electricidad)";1350;Multinacional;Gerente;Generalista;33;Full time;316000;3;No,  pero escucho ofertas;83.89;1;316000;3766.8375253307904;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";51;Multinacional;Responsable;Generalista;15;Full time;98500;5;No estoy buscando cambiar;83.89;1;98500;1174.156633686971;1
+Femenino;Maestría completa;Argentina;Comercio;1500;Nacional;Analista;Payroll / Liquidación de sueldos;10;Full time;51000;2;Sí, activamente;83.89;1;51000;607.9389676957921;1
+Femenino;Maestría completa;Argentina;Otros;30;Nacional;Jefe;Generalista;30;Tercerizado / Outsourced;120000;NA;NA;83.89;1;120000;1430.444629872452;1
+Femenino;Universitario en curso;Argentina;Construcción;200;Nacional;Analista;Generalista;4;Full time;52000;3;Sí, activamente;83.89;1;52000;619.8593396113959;1
+Femenino;Universitario completo;Argentina;Otros;25;Nacional;Responsable;Administración de personal;5;Full time;60000;NA;NA;83.89;1;60000;715.222314936226;1
+Femenino;Universitario en curso;Argentina;Servicios de salud;200;Nacional;Director;Diseño organizacional;15;Full time;115000;4;No,  pero escucho ofertas;83.89;1;115000;1370.8427702944332;1
+Masculino;Terciario completo;Argentina;Otros;60;Nacional;Administrativo;Generalista;4;Full time;72000;3;Sí, activamente;83.89;1;72000;858.2667779234712;1
+Femenino;Maestría completa;Argentina;"Textiles; vestido; cuero; calzado";122;Nacional;Jefe;Generalista;17;Full time;70000;3;No,  pero escucho ofertas;83.89;1;70000;834.4260340922636;1
+Masculino;Universitario en curso;Argentina;Servicios de consultoría;4000;Multinacional;Analista;Payroll / Liquidación de sueldos;6;Full time;125000;2;No,  pero escucho ofertas;83.89;1;125000;1490.0464894504707;1
+Femenino;Universitario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;100;Nacional;Jefe;Generalista;35;Full time;73000;3;No,  pero escucho ofertas;83.89;1;73000;870.187149839075;1
+Femenino;Terciario completo;Argentina;Otros;10000;Nacional;Administrativo;Administrativa en área;5;Full time;34000;2;No,  pero escucho ofertas;83.89;1;34000;405.29264513052806;1
+Femenino;Universitario en curso;Argentina;"Alimentación; bebidas; tabaco";5000;Multinacional;Analista;Capacitación y desarrollo;6;Full time;74000;5;No estoy buscando cambiar;83.89;1;74000;882.1075217546787;1
+Femenino;Universitario completo;Estados Unidos;Construcción;3000;Nacional;Administrativo;Generalista;4;Full time;4800;3;No,  pero escucho ofertas;1;1;4800;4800;1
+Femenino;Universitario en curso;Argentina;Servicios profesionales;10000;Nacional;Analista;Payroll / Liquidación de sueldos;11;Full time;52000;5;Sí, activamente;83.89;1;52000;619.8593396113959;1
+Masculino;Terciario completo;Argentina;Servicios de salud;2000;Nacional;Analista;Administración de personal;8;Full time;65000;3;No,  pero escucho ofertas;83.89;1;65000;774.8241745142449;1
+Masculino;Universitario completo;Argentina;"Servicios financieros; seguros";250;Nacional;Responsable;Compensaciones y beneficios;15;Full time;135000;4;No,  pero escucho ofertas;83.89;1;135000;1609.2502086065085;1
+Femenino;Maestría completa;Argentina;Tecnologías de Información, Sistemas, y afines;40;Multinacional;Gerente;Generalista;10;Full time;194000;3;No,  pero escucho ofertas;83.89;1;194000;2312.5521516271306;1
+Femenino;Universitario completo;Argentina;Otros;65;Nacional;Responsable;Administración de personal;2;Full time;49000;3;No,  pero escucho ofertas;83.89;1;49000;584.0982238645846;1
+Femenino;Secundario completo;Argentina;"Alimentación; bebidas; tabaco";2000;Nacional;Analista;Administración de personal;9;Full time;92740;5;No,  pero escucho ofertas;83.89;1;92740;1105.4952914530934;1
+Femenino;Universitario en curso;Argentina;Otros;600;Multinacional;Administrativo;Administración de personal;1;Full time;36501;3;No,  pero escucho ofertas;83.89;1;36501;435.1054952914531;1
+Femenino;Maestría en curso;Argentina;Terminales automotrices, fábricas autopartistas, y afines;220;Nacional;Gerente;Generalista;25;Full time;290000;4;Sí, activamente;83.89;1;290000;3456.907855525092;1
+Femenino;Maestría completa;Argentina;Comercio;2000;Multinacional;Analista;Generalista;5;Full time;54000;NA;NA;83.89;1;54000;643.7000834426034;1
+Femenino;Universitario completo;Argentina;"Petróleo y producción de gas; refinación de petróleo";3000;Multinacional;Analista;Administración de personal;3;Full time;80000;4;No estoy buscando cambiar;83.89;1;80000;953.6297532483013;1
+Femenino;Universitario completo;Argentina;Función pública;200;Nacional;Jefe;Generalista;12;Full time;111000;3;No,  pero escucho ofertas;83.89;1;111000;1323.1612826320181;1
+Femenino;Secundario completo;Argentina;"Servicios financieros; seguros";270;Multinacional;Analista;Generalista;5;Full time;90000;5;No,  pero escucho ofertas;83.89;1;90000;1072.833472404339;1
+Masculino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;70;Multinacional;Analista;Reclutamiento y selección;3;Full time;60000;NA;NA;83.89;1;60000;715.222314936226;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;100;Nacional;Analista;Reclutamiento y selección;2;Full time;48998;3;No estoy buscando cambiar;83.89;1;48998;584.0743831207534;1
+Femenino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;80;Nacional;Analista;Generalista;3;Part time;38500;4;No,  pero escucho ofertas;83.89;1.5;57750;688.4014781261176;1
+Femenino;Universitario en curso;Argentina;"Bancos; banca online;";300;Nacional;Analista;Payroll / Liquidación de sueldos;2;Full time;75000;3;No,  pero escucho ofertas;83.89;1;75000;894.0278936702825;1
+Femenino;Terciario completo;Argentina;Otros;5000;Multinacional;Analista;Relaciones laborales;8;Full time;50000;1;No,  pero escucho ofertas;83.89;1;50000;596.0185957801883;1
+Masculino;Universitario en curso;Argentina;Otros;200;Multinacional;Responsable;Payroll / Liquidación de sueldos;15;Full time;120000;5;No,  pero escucho ofertas;83.89;1;120000;1430.444629872452;1
+Femenino;Maestría completa;Argentina;Comercio;64;Nacional;Responsable;Generalista;6.5;Full time;87136;3;No,  pero escucho ofertas;83.89;1;87136;1038.69352723805;1
+Femenino;Universitario en curso;Argentina;Servicios de salud;50;Nacional;Jefe;Generalista;5;Full time;72000;4;No,  pero escucho ofertas;83.89;1;72000;858.2667779234712;1
+Femenino;Universitario en curso;Argentina;Servicios de salud;150;Nacional;Analista;Administración de personal;6;Full time;82215;NA;NA;83.89;1;82215;980.0333770413637;1
+Femenino;Universitario completo;Argentina;Terminales automotrices, fábricas autopartistas, y afines;400;Multinacional;Responsable;Generalista;13;Full time;140000;3;Sí, activamente;83.89;1;140000;1668.8520681845273;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";400;Nacional;Responsable;Reclutamiento y selección;12;Full time;68064;3;Sí, activamente;83.89;1;68064;811.3481940636548;1
+Femenino;Maestría en curso;Paraguay;"Bancos; banca online;";500;Nacional;Analista;Capacitación y desarrollo;0;Full time;8000000;3;Sí, activamente;7027.74;1;8000000;1138.3460401210061;1
+Masculino;Universitario completo;Argentina;Servicios de consultoría;10000;Multinacional;Analista;Todos, los descriptos;0;Full time;50000;2;Sí, activamente;83.89;1;50000;596.0185957801883;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";350;Nacional;HRBP;Generalista;4;Plazo Fijo;85500;4;No estoy buscando cambiar;83.89;1;85500;1019.191798784122;1
+Femenino;Secundario completo;Argentina;Tecnologías de Información, Sistemas, y afines;80;Nacional;Analista;Reclutamiento y selección;9;Full time;85000;4;No estoy buscando cambiar;83.89;1;85000;1013.2316128263202;1
+Femenino;Universitario completo;Argentina;"Textiles; vestido; cuero; calzado";200;Nacional;Jefe;Administración de personal;21;Full time;160000;4;No,  pero escucho ofertas;83.89;1;160000;1907.2595064966026;1
+Femenino;Universitario completo;Argentina;"Agricultura; plantaciones,otros sectores rurales";35;Nacional;Responsable;Relaciones laborales;2;Full time;35000;5;No,  pero escucho ofertas;83.89;1;35000;417.2130170461318;1
+Femenino;Maestría completa;Venezuela;"Petróleo y producción de gas; refinación de petróleo";600;Nacional;Responsable;Administración de personal;0;Plazo Fijo;2900000;1;No,  pero escucho ofertas;506541.78;1;2900000;5.725095371205115;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;86;Nacional;Gerente;Generalista;2;Full time;170000;4;No,  pero escucho ofertas;83.89;1;170000;2026.4632256526404;1
+Femenino;Maestría en curso;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";1000;Multinacional;Analista;Administración de personal;12;Full time;90000;3;No,  pero escucho ofertas;83.89;1;90000;1072.833472404339;1
+Femenino;Secundario completo;Argentina;"Textiles; vestido; cuero; calzado";270;Multinacional;Administrativo;Administración de personal;4;Full time;42000;1;Sí, activamente;83.89;1;42000;500.6556204553582;1
+Femenino;Universitario completo;Argentina;"Textiles; vestido; cuero; calzado";350;Nacional;Responsable;Generalista;7;Full time;40000;NA;NA;83.89;1;40000;476.81487662415066;1
+Femenino;Universitario completo;Argentina;Otros;1500;Nacional;Analista;Generalista;3;Full time;42000;3;No,  pero escucho ofertas;83.89;1;42000;500.6556204553582;1
+Femenino;Universitario completo;Argentina;Otros;350;Nacional;Analista;Administración de personal;6;Full time;52000;1;Sí, activamente;83.89;1;52000;619.8593396113959;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;9;Multinacional;Analista;Generalista;30;Full time;49000;NA;NA;83.89;1;49000;584.0982238645846;1
+Masculino;Universitario completo;Argentina;Servicios de salud;1000;Nacional;Responsable;Payroll / Liquidación de sueldos;17;Full time;130000;3;No,  pero escucho ofertas;83.89;1;130000;1549.6483490284897;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;230;Nacional;Analista;Reclutamiento y selección;12;Part time;40000;3;Sí, activamente;83.89;1.5;60000;715.222314936226;1
+Femenino;Universitario completo;Argentina;Comercio;500;Nacional;Responsable;Capacitación y desarrollo;9;Full time;60000;3;Sí, activamente;83.89;1;60000;715.222314936226;1
+Masculino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;65;Nacional;HRBP;Generalista;6;Full time;90000;5;No estoy buscando cambiar;83.89;1;90000;1072.833472404339;1
+Masculino;Secundario completo;Argentina;Tecnologías de Información, Sistemas, y afines;2000;Multinacional;Analista;Payroll / Liquidación de sueldos;20;Full time;79000;3;Sí, activamente;83.89;1;79000;941.7093813326976;1
+Femenino;Universitario completo;Argentina;Otros;11000;Multinacional;Analista;Payroll / Liquidación de sueldos;5;Full time;51230;2;Sí, activamente;83.89;1;51230;610.680653236381;1
+Masculino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";140;Multinacional;Jefe;Relaciones laborales;10;Full time;162313;4;No,  pero escucho ofertas;83.89;1;162313;1934.8313267373942;1
+Femenino;Terciario completo;Chile;Construcción;20;Nacional;Administrativo;Administración de personal;13;Plazo Fijo;950000;3;Sí, activamente;770.45;1;950000;1233.0456226880394;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;300;Multinacional;Analista;Reclutamiento y selección;9;Full time;80000;4;No estoy buscando cambiar;83.89;1;80000;953.6297532483013;1
+Femenino;Terciario completo;Argentina;Comercio;200;Nacional;Responsable;Administración de personal;746;Full time;46000;NA;NA;83.89;1;46000;548.3371081177733;1
+Femenino;Universitario completo;Argentina;Servicios de salud;250;Nacional;Analista;Generalista;4;Full time;60000;3;No,  pero escucho ofertas;83.89;1;60000;715.222314936226;1
+Masculino;Universitario en curso;Argentina;Servicios de salud;150;Nacional;Administrativo;Payroll / Liquidación de sueldos;23;Part time;25000;4;No,  pero escucho ofertas;83.89;1.5;37500;447.01394683514127;1
+Masculino;Universitario completo;México;Otros;300;Nacional;Jefe;Relaciones laborales;20;Full time;17000;1;Sí, activamente;21.24;1;17000;800.376647834275;1
+Femenino;Universitario completo;Argentina;Otros;176;Nacional;Gerente;Administración de personal;5;Full time;70000;5;No,  pero escucho ofertas;83.89;1;70000;834.4260340922636;1
+Masculino;Universitario completo;México;Tecnologías de Información, Sistemas, y afines;50;Nacional;Responsable;Generalista;10;Full time;14000;5;No,  pero escucho ofertas;21.24;1;14000;659.1337099811676;1
+Masculino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;9000;Multinacional;Analista;Reclutamiento y selección;3;Full time;53000;4;No,  pero escucho ofertas;83.89;1;53000;631.7797115269997;1
+Femenino;Maestría en curso;Argentina;"Bancos; banca online;";10000;Nacional;Analista;Administración de personal;3;Full time;92000;2;No,  pero escucho ofertas;83.89;1;92000;1096.6742162355465;1
+Femenino;Universitario en curso;Argentina;"Alimentación; bebidas; tabaco";90;Nacional;Responsable;Relaciones laborales;3;Full time;70000;4;Sí, activamente;83.89;1;70000;834.4260340922636;1
+Masculino;Universitario completo;Argentina;Construcción;5000;Nacional;Analista;Generalista;5;Full time;160000;3;No,  pero escucho ofertas;83.89;1;160000;1907.2595064966026;1
+Masculino;Universitario en curso;Argentina;"Servicios públicos (agua;gas; electricidad)";500;Multinacional;HRBP;Payroll / Liquidación de sueldos;5;Full time;65000;3;Sí, activamente;83.89;1;65000;774.8241745142449;1
+Femenino;Universitario completo;Argentina;"Servicios públicos (agua;gas; electricidad)";5000;Nacional;Analista;Administración de personal;5;Full time;60;NA;NA;83.89;1;60;0.715222314936226;1
+Femenino;Terciario completo;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";300;Nacional;Responsable;Generalista;14;Full time;54000;3;Sí, activamente;83.89;1;54000;643.7000834426034;1
+Masculino;Universitario completo;Argentina;Comercio;3000;Nacional;Analista;Reclutamiento y selección;5;Full time;75000;4;No estoy buscando cambiar;83.89;1;75000;894.0278936702825;1
+Femenino;Universitario en curso;Argentina;Hotelería, restauración, turismo;180;Nacional;Administrativo;Generalista;2;Full time;36000;3;Sí, activamente;83.89;1;36000;429.1333889617356;1
+Femenino;Terciario completo;Argentina;Tecnologías de Información, Sistemas, y afines;250;Multinacional;HRBP;Comunicación interna;5;Full time;82000;4;No,  pero escucho ofertas;83.89;1;82000;977.4704970795088;1
+Femenino;Universitario completo;Argentina;Servicios de salud;100;Nacional;Analista;Generalista;5;Full time;68312.3;3;No,  pero escucho ofertas;83.89;1;68312.3;814.3080224102993;1
+Femenino;Maestría completa;Argentina;Construcción;210;Multinacional;Responsable;Capacitación y desarrollo;12;Full time;100000;2;No,  pero escucho ofertas;83.89;1;100000;1192.0371915603766;1
+Masculino;Universitario en curso;Argentina;Servicios profesionales;300;Multinacional;Administrativo;Payroll / Liquidación de sueldos;0;Full time;48200;5;No estoy buscando cambiar;83.89;1;48200;574.5619263321015;1
+Femenino;Universitario en curso;Argentina;Servicios de salud;1350;Nacional;Analista;Reclutamiento y selección;3;Full time;60900;NA;NA;83.89;1;60900;725.9506496602694;1
+Femenino;Universitario completo;Argentina;"Servicios públicos (agua;gas; electricidad)";608;Nacional;Analista;Capacitación y desarrollo;4;Full time;50000;NA;NA;83.89;1;50000;596.0185957801883;1
+Masculino;Universitario completo;Argentina;"Transporte (incluyendo aviación civil; ferrocarriles por carretera)";210;Multinacional;Responsable;Payroll / Liquidación de sueldos;11;Full time;112000;NA;NA;83.89;1;112000;1335.0816545476218;1
+Masculino;Universitario completo;Argentina;Educación;25;Nacional;Analista;Administración de personal;6;Part time;30000;1;No,  pero escucho ofertas;83.89;1.5;45000;536.4167362021695;1
+Masculino;Universitario en curso;Argentina;Comercio;300;Nacional;Analista;Generalista;11;Full time;110000;3;Sí, activamente;83.89;1;110000;1311.2409107164144;1
+Femenino;Universitario completo;Argentina;Función pública;190;Nacional;Gerente;Generalista;8;Full time;110500;1;Sí, activamente;83.89;1;110500;1317.2010966742162;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;250;Multinacional;HRBP;Capacitación y desarrollo;3;Full time;85400;3;Sí, activamente;83.89;1;85400;1017.9997615925616;1
+Masculino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";1500;Nacional;Analista;Generalista;2;Eventual;30000;3;Sí, activamente;83.89;1;30000;357.611157468113;1
+Femenino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;1500;Multinacional;Administrativo;Reclutamiento y selección;0;Full time;25000;NA;NA;83.89;1;25000;298.00929789009416;1
+Femenino;Universitario en curso;Argentina;Servicios de consultoría;25;Nacional;Responsable;Administración de personal;3;Full time;82000;NA;NA;83.89;1;82000;977.4704970795088;1
+Masculino;Universitario en curso;Argentina;Servicios de salud;140;Multinacional;Pasante;Generalista;1;Pasante;19500;4;Sí, activamente;83.89;1;19500;232.44725235427345;1
+Femenino;Universitario en curso;Argentina;Función pública;300;Nacional;Administrativo;Generalista;5;Full time;49766;1;No,  pero escucho ofertas;83.89;1;49766;593.2292287519371;1
+Femenino;Universitario en curso;Argentina;Otros;300;Nacional;Analista;Generalista;5;Full time;61000;3;No estoy buscando cambiar;83.89;1;61000;727.1426868518298;1
+Masculino;Universitario completo;Argentina;Hotelería, restauración, turismo;400;Nacional;Responsable;Payroll / Liquidación de sueldos;15;Full time;100000;4;No,  pero escucho ofertas;83.89;1;100000;1192.0371915603766;1
+Femenino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;35;Multinacional;Responsable;Generalista;3;Full time;79000;4;No estoy buscando cambiar;83.89;1;79000;941.7093813326976;1
+Femenino;Universitario completo;Argentina;Servicios de salud;220;Nacional;Responsable;Relaciones laborales;8;Full time;80000;4;No,  pero escucho ofertas;83.89;1;80000;953.6297532483013;1
+Femenino;Maestría completa;Argentina;"Servicios públicos (agua;gas; electricidad)";640;Nacional;Analista;Generalista;3;Full time;68700;4;No estoy buscando cambiar;83.89;1;68700;818.9295506019788;1
+Femenino;Maestría completa;Bolivia;Tecnologías de Información, Sistemas, y afines;2000;Nacional;Gerente;Generalista;6;Full time;17000;4;No,  pero escucho ofertas;6.96;1;17000;2442.5287356321837;1
+Femenino;Universitario completo;Argentina;Otros;6500;Nacional;Analista;People Analytics;8;Full time;69000;3;No,  pero escucho ofertas;83.89;1;69000;822.5056621766599;1
+Masculino;Universitario completo;Argentina;Otros;600;Nacional;Analista;Administración de personal;13;Full time;72000;2;Sí, activamente;83.89;1;72000;858.2667779234712;1
+Femenino;Universitario en curso;Argentina;Industrias químicas;525;Nacional;Jefe;Relaciones laborales;11;Full time;145000;4;No,  pero escucho ofertas;83.89;1;145000;1728.453927762546;1
+Masculino;Universitario completo;Argentina;Comercio;480;Nacional;Jefe;Compensaciones y beneficios;10;Full time;80000;NA;NA;83.89;1;80000;953.6297532483013;1
+Femenino;Universitario en curso;Argentina;Comercio;1500;Nacional;Responsable;Capacitación y desarrollo;6;Full time;63500;3;No,  pero escucho ofertas;83.89;1;63500;756.9436166408392;1
+Femenino;Universitario completo;Argentina;Servicios de consultoría;200;Multinacional;Administrativo;Generalista;12;Part time;20000;3;Sí, activamente;83.89;1.5;30000;357.611157468113;1
+Femenino;Universitario completo;Argentina;Servicios de salud;14000;Nacional;Analista;Payroll / Liquidación de sueldos;4;Full time;50000;2;Sí, activamente;83.89;1;50000;596.0185957801883;1
+Masculino;Maestría en curso;Argentina;Función pública;70;Nacional;Responsable;Generalista;10;Full time;80000;NA;NA;83.89;1;80000;953.6297532483013;1
+Masculino;Universitario en curso;Argentina;Servicios profesionales;3000;Multinacional;Analista;Reclutamiento y selección;8;Full time;70000;1;No,  pero escucho ofertas;83.89;1;70000;834.4260340922636;1
+Femenino;Universitario completo;Argentina;Servicios de salud;70;Nacional;Responsable;Generalista;17;Full time;86000;3;No estoy buscando cambiar;83.89;1;86000;1025.151984741924;1
+Femenino;Maestría completa;Argentina;Otros;110;Nacional;Analista;Generalista;16;Full time;55000;3;No estoy buscando cambiar;83.89;1;55000;655.6204553582072;1
+Femenino;Universitario completo;Argentina;Comercio;1300;Nacional;Responsable;Payroll / Liquidación de sueldos;15;Full time;70000;2;No,  pero escucho ofertas;83.89;1;70000;834.4260340922636;1
+Femenino;Universitario completo;Argentina;Otros;2200;Nacional;Analista;Payroll / Liquidación de sueldos;10;Full time;41500;3;No,  pero escucho ofertas;83.89;1;41500;494.69543449755633;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";22000;Multinacional;Analista;Capacitación y desarrollo;4;Full time;70339;3;No,  pero escucho ofertas;83.89;1;70339;838.4670401716534;1
+Femenino;Universitario completo;Argentina;Otros;2700;Nacional;Responsable;Payroll / Liquidación de sueldos;15;Full time;55000;5;No,  pero escucho ofertas;83.89;1;55000;655.6204553582072;1
+Masculino;Maestría completa;Argentina;"Petróleo y producción de gas; refinación de petróleo";800;Nacional;Gerente;Generalista;30;Full time;210000;3;Sí, activamente;83.89;1;210000;2503.278102276791;1
+Masculino;Universitario completo;Argentina;Otros;500;Nacional;Responsable;Administración de personal;10;Full time;64000;4;No,  pero escucho ofertas;83.89;1;64000;762.903802598641;1
+Femenino;Maestría completa;Argentina;Construcción;300;Multinacional;Analista;Diseño organizacional;25;Full time;70000;3;Sí, activamente;83.89;1;70000;834.4260340922636;1
+Masculino;Maestría en curso;Argentina;Otros;65;Nacional;Responsable;Generalista;8;Full time;70000;4;No,  pero escucho ofertas;83.89;1;70000;834.4260340922636;1
+Femenino;Terciario completo;Argentina;Educación;400000;Nacional;Administrativo;Administración de personal;9;Plazo Fijo;96;NA;NA;83.89;1;96;1.1443557038979617;1
+Femenino;Universitario completo;Argentina;"Petróleo y producción de gas; refinación de petróleo";500;Nacional;Analista;Payroll / Liquidación de sueldos;8;Full time;66200;2;No,  pero escucho ofertas;83.89;1;66200;789.1286208129694;1
+Femenino;Universitario completo;Argentina;"Petróleo y producción de gas; refinación de petróleo";5000;Multinacional;Jefe;Generalista;5;Full time;120000;NA;NA;83.89;1;120000;1430.444629872452;1
+Femenino;Secundario completo;Argentina;Servicios de salud;120;Nacional;Jefe;Todos ellos;10;Full time;150000;5;No estoy buscando cambiar;83.89;1;150000;1788.055787340565;1
+Femenino;Universitario completo;Argentina;Educación;700;Nacional;Analista;Generalista;10;Part time;43875;2;Sí, activamente;83.89;1.5;65812.5;784.5094766956729;1
+Femenino;Universitario en curso;Argentina;Hotelería, restauración, turismo;30;Nacional;Administrativo;apoyo al área de administración;0;Full time;22500;2;Sí, activamente;83.89;1;22500;268.2083681010848;1
+Masculino;Maestría en curso;Argentina;Servicios de salud;140;Nacional;Gerente;Generalista;20;Full time;230000;3;No,  pero escucho ofertas;83.89;1;230000;2741.6855405888664;1
+Femenino;Universitario completo;Argentina;Otros;1100;Nacional;Responsable;Generalista;5;Full time;170000;NA;NA;83.89;1;170000;2026.4632256526404;1
+Masculino;Universitario en curso;Argentina;"Servicios financieros; seguros";140;Nacional;HRBP;Generalista;5;Full time;90000;3;No,  pero escucho ofertas;83.89;1;90000;1072.833472404339;1
+Masculino;Maestría completa;Argentina;Servicios de consultoría;400000;Multinacional;Responsable;People Analytics;8;Full time;95000;5;Sí, activamente;83.89;1;95000;1132.4353319823579;1
+Masculino;Universitario completo;Argentina;"Agricultura; plantaciones,otros sectores rurales";300;Nacional;Gerente;Generalista;12;Full time;150000;3;No,  pero escucho ofertas;83.89;1;150000;1788.055787340565;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;600;Nacional;HRBP;Diseño organizacional;14;Full time;130000;5;No,  pero escucho ofertas;83.89;1;130000;1549.6483490284897;1
+Masculino;Universitario completo;Argentina;Construcción;21000;Multinacional;Analista;Reclutamiento y selección;3;Plazo Fijo;54000;NA;NA;83.89;1;54000;643.7000834426034;1
+Masculino;Universitario completo;Argentina;Servicios de consultoría;300;Multinacional;Analista;Payroll / Liquidación de sueldos;3;Full time;67000;3;No,  pero escucho ofertas;83.89;1;67000;798.6649183454524;1
+Femenino;Maestría completa;Argentina;Tecnologías de Información, Sistemas, y afines;550;Nacional;HRBP;Generalista;6;Full time;84500;3;Sí, activamente;83.89;1;84500;1007.2714268685183;1
+Masculino;Maestría completa;Ecuador;Otros;1100;Multinacional;Gerente;RSE;20;Full time;4000;4;No,  pero escucho ofertas;1;1;4000;4000;1
+Masculino;Universitario completo;Argentina;"Bancos; banca online;";3800;Multinacional;Jefe;Estrategia y control de gestion;7;Full time;210000;3;Sí, activamente;83.89;1;210000;2503.278102276791;1
+Masculino;Secundario completo;Argentina;"Alimentación; bebidas; tabaco";420;Multinacional;Analista;Generalista;12;Full time;102500;NA;NA;83.89;1;102500;1221.838121349386;1
+Femenino;Universitario en curso;Argentina;Otros;135;Nacional;Responsable;Payroll / Liquidación de sueldos;8;Full time;84000;4;No estoy buscando cambiar;83.89;1;84000;1001.3112409107164;1
+Masculino;Universitario en curso;Argentina;Producción de metales básicos;52;Multinacional;Administrativo;Administración de personal;3;Full time;40000;3;Sí, activamente;83.89;1;40000;476.81487662415066;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";180;Nacional;Responsable;Area integral de RH;10;Full time;60500;4;No,  pero escucho ofertas;83.89;1;60500;721.1825008940278;1
+Masculino;Secundario completo;Argentina;"Textiles; vestido; cuero; calzado";150;Nacional;Gerente;Generalista;17;Full time;145000;2;Sí, activamente;83.89;1;145000;1728.453927762546;1
+Masculino;Universitario en curso;Argentina;Servicios profesionales;1200;Multinacional;Analista;Capacitación y desarrollo;4;Full time;90000;NA;NA;83.89;1;90000;1072.833472404339;1
+Femenino;Universitario completo;Argentina;Ingeniería mecánica;60;Nacional;Responsable;Generalista;11;Full time;102000;4;No,  pero escucho ofertas;83.89;1;102000;1215.8779353915843;1
+Masculino;Maestría completa;Perú;Servicios de salud;250;Nacional;Analista;People Analytics;3;Full time;5500;NA;NA;3.615;1;5500;1521.4384508990317;1
+Masculino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";130;Nacional;Jefe;Generalista;15;Full time;85000;4;No,  pero escucho ofertas;83.89;1;85000;1013.2316128263202;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;160;Multinacional;Analista;Generalista;2;Full time;2;3;No,  pero escucho ofertas;83.89;1;2;0.023840743831207534;1
+Femenino;Universitario completo;Argentina;"Servicios financieros; seguros";900;Nacional;Jefe;Compensaciones y beneficios;11;Full time;150000;NA;NA;83.89;1;150000;1788.055787340565;1
+Femenino;Universitario completo;Argentina;Comercio;35;Nacional;Jefe;Administración de personal;10;Part time;76000;3;No,  pero escucho ofertas;83.89;1.5;114000;1358.9223983788295;1
+Femenino;Universitario completo;Argentina;"Servicios financieros; seguros";1000;Nacional;Jefe;Payroll / Liquidación de sueldos;20;Full time;150000;3;No,  pero escucho ofertas;83.89;1;150000;1788.055787340565;1
+Femenino;Universitario en curso;Argentina;Servicios de salud;1300;Nacional;Analista;Generalista;8;Full time;73000;3;No,  pero escucho ofertas;83.89;1;73000;870.187149839075;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";1700;Multinacional;Jefe;Administración de personal;20;Full time;100000;3;No,  pero escucho ofertas;83.89;1;100000;1192.0371915603766;1
+Femenino;Universitario en curso;Argentina;Comercio;115;Nacional;Administrativo;Generalista;4;Full time;45000;2;Sí, activamente;83.89;1;45000;536.4167362021695;1
+Femenino;Universitario completo;Argentina;Industrias químicas;45;Nacional;Analista;Generalista;6;Full time;89000;1;Sí, activamente;83.89;1;89000;1060.9131004887352;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;120;Multinacional;Responsable;Reclutamiento y selección;6;Full time;130000;5;No,  pero escucho ofertas;83.89;1;130000;1549.6483490284897;1
+Femenino;Universitario completo;Uruguay;Tecnologías de Información, Sistemas, y afines;830;Multinacional;Responsable;People Analytics;3;Full time;110000;NA;NA;43.003;1;110000;2557.961072483315;1
+Femenino;Universitario completo;Argentina;"Servicios públicos (agua;gas; electricidad)";450;Multinacional;Jefe;Capacitación y desarrollo;18;Full time;225000;3;No,  pero escucho ofertas;83.89;1;225000;2682.0836810108476;1
+Femenino;Universitario completo;Argentina;Comercio;310;Multinacional;Analista;Comunicación interna;5;Full time;65000;5;No estoy buscando cambiar;83.89;1;65000;774.8241745142449;1
+Femenino;Universitario en curso;Argentina;Servicios de consultoría;130;Nacional;HRBP;Reclutamiento y selección;4.5;Plazo Fijo;67000;4;No,  pero escucho ofertas;83.89;1;67000;798.6649183454524;1
+Femenino;Universitario completo;Argentina;Servicios de salud;1400;Nacional;Administrativo;Generalista;2;Full time;56000;3;No,  pero escucho ofertas;83.89;1;56000;667.5408272738109;1
+Femenino;Universitario en curso;Argentina;Servicios de consultoría;80;Nacional;Analista;Payroll / Liquidación de sueldos;2;Full time;46000;3;No,  pero escucho ofertas;83.89;1;46000;548.3371081177733;1
+Masculino;Maestría completa;Argentina;Terminales automotrices, fábricas autopartistas, y afines;500;Multinacional;HRBP;Payroll / Liquidación de sueldos;11;Full time;120000;NA;NA;83.89;1;120000;1430.444629872452;1
+Femenino;Universitario completo;Argentina;Servicios de consultoría;10;Nacional;Analista;Capacitación y desarrollo;3;Full time;35000;2;Sí, activamente;83.89;1;35000;417.2130170461318;1
+Femenino;Universitario en curso;Argentina;Tecnologías de Información, Sistemas, y afines;46;Multinacional;Analista;Administración de personal;1;Full time;50180;4;No estoy buscando cambiar;83.89;1;50180;598.164262724997;1
+Femenino;Maestría completa;Argentina;Otros;1;Nacional;Director;Administración de personal;4;Full time;0;4;No estoy buscando cambiar;83.89;1;0;0;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";750;Multinacional;Analista;Payroll / Liquidación de sueldos;2;Full time;88000;2;Sí, activamente;83.89;1;88000;1048.9927285731314;1
+Femenino;Universitario completo;Argentina;"Alimentación; bebidas; tabaco";40;Nacional;Gerente;Generalista;25;Full time;55100;4;No estoy buscando cambiar;83.89;1;55100;656.8124925497675;1
+Femenino;Maestría en curso;Perú;"Servicios financieros; seguros";170;Multinacional;Analista;Capacitación y desarrollo;5;Full time;5000;4;No estoy buscando cambiar;3.615;1;5000;1383.1258644536651;1
+Femenino;Universitario completo;Chile;"Servicios financieros; seguros";589;Multinacional;Jefe;Capacitación y desarrollo;15;Full time;3400000;4;No,  pero escucho ofertas;770.45;1;3400000;4413.005386462457;1
+Femenino;Universitario completo;Argentina;Tecnologías de Información, Sistemas, y afines;200;Nacional;Analista;Comunicación interna;3;Full time;75000;5;No,  pero escucho ofertas;83.89;1;75000;894.0278936702825;1
+Femenino;Maestría en curso;Perú;"Servicios financieros; seguros";170;Multinacional;Analista;Capacitación y desarrollo;5;Full time;5000;4;No estoy buscando cambiar;3.615;1;5000;1383.1258644536651;1
+Femenino;Universitario completo;Argentina;Hotelería, restauración, turismo;20;Nacional;Administrativo;Administración de personal;3;Full time;50000;NA;NA;83.89;1;50000;596.0185957801883;1
+Femenino;Universitario completo;Argentina;Comercio;5000;Nacional;Gerente;Diseño organizacional;13;Full time;330000;NA;NA;83.89;1;330000;3933.7227321492433;1
+Masculino;Universitario completo;Argentina;Servicios de salud;130;Nacional;Analista;Generalista;10;Full time;57000;4;No estoy buscando cambiar;83.89;1;57000;679.4611991894147;1
+Femenino;Universitario completo;Argentina;Otros;1100;Nacional;Responsable;Generalista;5;Full time;170000;NA;NA;83.89;1;170000;2026.4632256526404;1
