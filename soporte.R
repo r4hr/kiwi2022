@@ -194,3 +194,32 @@ rh22 <- rh22 %>%
 # Guarda csv rh22
 write_delim(rh22, file = "data/rh_2022.csv",
             delim = ";")
+
+# Creación de dataframe Freelancers -----
+
+freelo22 <- kiwi22 %>% 
+  filter(trabajo == "Freelance")
+
+# Eliminar columnas vacias
+freelo22 <- freelo22 %>% 
+  select(where (~ !all(is.na(.x))), # Elimina columnas con valores NA
+         -trabajo, 
+         -dotacion_rh,
+         -anios_empresa,
+         -anios_rh,
+         -ajuste_porcentaje,
+         -anecdota,
+         -comunidades) 
+
+# Convertir las columnas tipo lista
+freelo22 <- freelo22 %>% 
+  mutate(anios_freelance = as.numeric(unlist(anios_freelance)))
+
+freelo22$coeficiente[[17]] <- as.numeric(freelo22$coeficiente[[17]])
+freelo22$coeficiente[[18]] <- as.numeric(freelo22$coeficiente[[18]])
+freelo22$coeficiente[[21]] <- as.numeric(freelo22$coeficiente[[21]])
+
+freelo22 <- unnest(data = freelo22, cols = coeficiente, keep_empty = TRUE)
+
+# Guardar los datos en un archivo
+write_delim(freelo22, file = "data/freelancers_2022.csv", delim = ";")
