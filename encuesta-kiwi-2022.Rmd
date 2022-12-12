@@ -628,6 +628,485 @@ rh22la %>%
 ```
 
 
+# Análisis por países
+
+En esta sección analizaremos la situación salarial de RRHH únicamente de cuatro países: *Argentina, Paraguay, México y Perú* únicamente, por la cantidad de respuestas. Del resto de los países tenemos menos de 8 respuestas, por lo que es imposible realizar un análisis serio.
+
+## Paraguay
+
+### Análisis por puesto
+
+```{r paraguay1}
+# Preproceso -----
+
+# Filtrar los sueldos extremos
+rh22la_clean <- rh22la %>% 
+  filter(puesto != "Pasante",
+         between(sueldo_dolar, poda_p05, poda_p95)) %>% 
+  mutate(rubro = str_wrap(rubro, width = 30))
+
+# Limpiar datos 2020
+df2020 <-  profiling_num(kiwi20$sueldo_dolar)
+p05_20 <- df2020[1,6]
+p95_20 <- df2020[1,10]
+
+rh20 <- kiwi20 %>% filter(between(sueldo_dolar, p05_20, p95_20)) %>% 
+  mutate(anio = 2020) %>% 
+  select(anio, pais, puesto, funcion = funcion_rh, sueldo_bruto) 
+
+
+# Limpiar datos 2021
+df2021 <- profiling_num(kiwi21$sueldo_dolar)
+p05_21 <- df2021[1,6]
+p95_21 <- df2021[1,10]
+
+rh21 <- kiwi21 %>% filter(between(sueldo_dolar, p05_20, p95_20)) %>% 
+  mutate(anio = 2021) %>% 
+  select(anio, pais, puesto, funcion, sueldo_bruto) 
+
+
+
+# Filtrar por Paraaguay ----
+rh_py <- rh22la_clean %>% 
+  filter(pais == "Paraguay") %>% 
+  mutate(anio = 2022)
+
+rh20py <- rh20 %>% 
+  filter(pais == "Paraguay")
+
+rh21py <- rh21 %>% 
+  filter(pais == "Paraguay")
+
+rh22py <- rh_py %>% 
+    select(anio, pais, puesto, funcion, sueldo_bruto) 
+
+# Para analizar evolución de salarios
+# Evolucion
+historico <- rbind(rh20py, rh21py, rh22py)
+
+# Salario por puesto 
+
+rh_py %>% 
+  group_by(puesto) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>%
+  ungroup() %>% 
+  ggplot(aes(x = fct_rev(puesto), y = mediana)) +
+  geom_col(fill = "#0038a8") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            vjust = 1.2,
+            size = 3, 
+            color = "white") +
+  eje_y_n +
+  estiloh +
+  labs(title = "Mediana Salarial por Puesto",
+       subtitle = "Datos de Paraguay - En Gs.",
+       x = NULL, y = NULL,
+       caption = fuente)
+  
+```
+
+### Análisis por función
+
+```{r paraguay2}
+rh_py %>% 
+  group_by(funcion) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>%
+  ungroup() %>% 
+  ggplot(aes(y = reorder(funcion, mediana), x = mediana)) +
+  geom_col(fill = "#0038a8") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            hjust = 1.2,
+            size = 3, 
+            color = "white") +
+  eje_x_n +
+  estilov +
+  labs(title = "Mediana Salarial por Puesto",
+       subtitle = "Datos de Paraguay - En Gs.",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+
+### Análisis por rubro
+
+```{r paraguay3}
+rh_py %>% 
+  group_by(rubro) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>%
+  ungroup() %>% 
+  ggplot(aes(y = reorder(rubro, mediana), x = mediana)) +
+  geom_col(fill = "#0038a8") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            hjust = 1.2,
+            size = 3, 
+            color = "white") +
+  eje_x_n +
+  estilov +
+  labs(title = "Mediana Salarial por Puesto",
+       subtitle = "Datos de Paraguay - En Gs.",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+
+### Evolución
+
+La evolución de los salarios en moneda local puede ser contraintuitiva dada la baja cantidad de respuestas obtenidas por año.
+
+```{r paraguay4}
+historico %>% 
+  group_by(anio) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>% 
+  ungroup %>% 
+  ggplot(aes(x = anio, y = mediana)) +
+  geom_col(fill = "#0038a8") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            vjust = 1.2) +
+  eje_y_n +
+  estiloh +
+  labs(title = "Mediana Salarial por Año",
+       subtitle = "Datos de Paraguay - En Gs.",
+       x = NULL, y = NULL,
+       caption = fuente)
+
+```
+
+
+## México
+
+### Análisis por puesto
+
+```{r mex1}
+# Filtrar por México ----
+rh_mx <- rh22la_clean %>% 
+  filter(pais == "México") %>% 
+  mutate(anio = 2022)
+
+
+rh_mx <- rh22la %>% 
+  filter(pais == "México") %>% 
+  mutate(anio = 2022)
+
+rh20mx <- rh20 %>% 
+  filter(pais == "México")
+
+rh21mx <- rh21 %>% 
+  filter(pais == "México")
+
+rh22mx <- rh_mx %>% 
+    select(anio, pais, puesto, funcion, sueldo_bruto) 
+
+# Para analizar evolución de salarios
+# Evolucion
+historico <- rbind(rh20mx, rh21mx, rh22mx)
+
+# Salario por puesto 
+
+rh_mx %>% 
+  group_by(puesto) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>%
+  ungroup() %>% 
+  ggplot(aes(x = fct_rev(puesto), y = mediana)) +
+  geom_col(fill = "#006847") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            vjust = 1.2,
+            size = 3, 
+            color = "white") +
+  eje_y_n +
+  estiloh +
+  labs(title = "Mediana Salarial por Puesto",
+       subtitle = "Datos de México - En MX$",
+       x = NULL, y = NULL,
+       caption = fuente)
+  
+```
+
+### Análisis por función
+
+```{r mex2}
+rh_mx %>% 
+  group_by(funcion) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>%
+  ungroup() %>% 
+  ggplot(aes(y = reorder(funcion, mediana), x = mediana)) +
+  geom_col(fill = "#006847") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            hjust = 1.2,
+            size = 3, 
+            color = "white") +
+  eje_x_n +
+  estilov +
+  labs(title = "Mediana Salarial por Puesto",
+       subtitle = "Datos de México - En MX$",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+
+### Análisis por rubro
+
+```{r mex3}
+rh_mx %>% 
+  group_by(rubro) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>%
+  ungroup() %>% 
+  ggplot(aes(y = reorder(rubro, mediana), x = mediana)) +
+  geom_col(fill = "#006847") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            hjust = 1.2,
+            size = 3, 
+            color = "white") +
+  eje_x_n +
+  estilov +
+  labs(title = "Mediana Salarial por Puesto",
+       subtitle = "Datos de México - En MX$",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+
+### Evolución
+
+La evolución de los salarios en moneda local puede ser contraintuitiva dada la baja cantidad de respuestas obtenidas por año.
+
+```{r mex4}
+historico %>% 
+  group_by(anio) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>% 
+  ungroup %>% 
+  ggplot(aes(x = anio, y = mediana)) +
+  geom_col(fill = "#006847") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            vjust = 1.2, 
+            color = "white") +
+  eje_y_n +
+  estiloh +
+  labs(title = "Mediana Salarial por Año",
+       subtitle = "Datos de México - En MX$",
+       x = NULL, y = NULL,
+       caption = fuente)
+
+```
+
+
+## Perú
+
+### Análisis por puesto
+
+```{r peru1}
+# Filtrar por México ----
+rh_pe <- rh22la_clean %>% 
+  filter(pais == "Perú") %>% 
+  mutate(anio = 2022)
+
+
+rh20pe <- rh20 %>% 
+  filter(pais == "Perú")
+
+rh21pe <- rh21 %>% 
+  filter(pais == "Perú")
+
+rh22pe <- rh_pe %>% 
+    select(anio, pais, puesto, funcion, sueldo_bruto) 
+
+# Para analizar evolución de salarios
+# Evolucion
+historico <- rbind(rh20pe, rh21pe, rh22pe)
+
+# Salario por puesto 
+
+rh_pe %>% 
+  group_by(puesto) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>%
+  ungroup() %>% 
+  ggplot(aes(x = fct_rev(puesto), y = mediana)) +
+  geom_col(fill = "#D91023") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            vjust = 1.2,
+            size = 3, 
+            color = "white") +
+  eje_y_n +
+  estiloh +
+  labs(title = "Mediana Salarial por Puesto",
+       subtitle = "Datos de Perú - En S/",
+       x = NULL, y = NULL,
+       caption = fuente)
+  
+```
+
+### Análisis por función
+
+```{r peru2}
+rh_pe %>% 
+  group_by(funcion) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>%
+  ungroup() %>% 
+  ggplot(aes(y = reorder(funcion, mediana), x = mediana)) +
+  geom_col(fill = "#D91023") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            hjust = 1.2,
+            size = 3, 
+            color = "white") +
+  eje_x_n +
+  estilov +
+  labs(title = "Mediana Salarial por Puesto",
+       subtitle = "Datos de Perú - En S/",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+
+### Análisis por rubro
+
+```{r peru3}
+rh_pe %>% 
+  group_by(rubro) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>%
+  ungroup() %>% 
+  ggplot(aes(y = reorder(rubro, mediana), x = mediana)) +
+  geom_col(fill = "#D91023") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            hjust = 1.2,
+            size = 3, 
+            color = "white") +
+  eje_x_n +
+  estilov +
+  labs(title = "Mediana Salarial por Puesto",
+       subtitle = "Datos de Perú - En S/",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+
+### Evolución
+
+La evolución de los salarios en moneda local puede ser contraintuitiva dada la baja cantidad de respuestas obtenidas por año.
+
+```{r peru4}
+historico %>% 
+  group_by(anio) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>% 
+  ungroup %>% 
+  ggplot(aes(x = anio, y = mediana)) +
+  geom_col(fill = "#D91023") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            vjust = 1.2, 
+            color = "white") +
+  eje_y_n +
+  estiloh +
+  labs(title = "Mediana Salarial por Año",
+       subtitle = "Datos de Perú - En S/",
+       x = NULL, y = NULL,
+       caption = fuente)
+
+```
+
+## Argentina
+
+### Análisis por puesto
+
+```{r argentina}
+# Filtrar por Argentina ----
+rh_ar <- rh22la_clean %>% 
+  filter(pais == "Argentina") %>% 
+  mutate(anio = 2022)
+
+
+rh20ar <- rh20 %>% 
+  filter(pais == "Argentina")
+
+rh21ar <- rh21 %>% 
+  filter(pais == "Argentina")
+
+rh22ar <- rh_ar %>% 
+    select(anio, pais, puesto, funcion, sueldo_bruto) 
+
+# Para analizar evolución de salarios
+# Evolucion
+historico <- rbind(rh20ar, rh21ar, rh22ar)
+
+# Salario por puesto 
+
+rh_ar %>% 
+  group_by(puesto) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>%
+  ungroup() %>% 
+  ggplot(aes(x = fct_rev(puesto), y = mediana)) +
+  geom_col(fill = "#75AADB") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            vjust = 1.2,
+            size = 3, 
+            color = "white") +
+  eje_y_n +
+  estiloh +
+  labs(title = "Mediana Salarial por Puesto",
+       subtitle = "Datos de Argentina - En AR$",
+       x = NULL, y = NULL,
+       caption = fuente)
+  
+```
+
+### Análisis por función
+
+```{r argentina1}
+rh_ar %>% 
+  group_by(funcion) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>%
+  ungroup() %>% 
+  ggplot(aes(y = reorder(funcion, mediana), x = mediana)) +
+  geom_col(fill = "#75AADB") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            hjust = 1.2,
+            size = 3, 
+            color = "white") +
+  eje_x_n +
+  estilov +
+  labs(title = "Mediana Salarial por Puesto",
+       subtitle = "Datos de Argentina - En AR$",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+
+### Análisis por rubro
+
+```{r argentina2, fig.height=9}
+rh_ar %>% 
+  group_by(rubro) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>%
+  ungroup() %>% 
+  ggplot(aes(y = reorder(rubro, mediana), x = mediana)) +
+  geom_point(color = azul) +
+  geom_segment(aes(x = 0, xend = mediana, y = rubro, yend = rubro), 
+               color = "#75AADB") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            hjust = -0.2,
+            size = 2.8) +
+  scale_x_continuous(limits = c(0, 700000), labels = comma_format(big.mark = ".", 
+                                                                   decimal.mark = ";")) +
+  estilov +
+  labs(title = "Mediana Salarial por Puesto",
+       subtitle = "Datos de Argentina - En AR$",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+
+### Evolución
+
+
+```{r argentina4}
+historico %>% 
+  group_by(anio) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>% 
+  ungroup %>% 
+  ggplot(aes(x = anio, y = mediana)) +
+  geom_col(fill = "#75AADB") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            vjust = 1.2, 
+            color = "white") +
+  eje_y_n +
+  estiloh +
+  labs(title = "Mediana Salarial por Año",
+       subtitle = "Datos de Argentina - En AR$",
+       x = NULL, y = NULL,
+       caption = fuente)
+
+```
+
+
 # Educación
 
 En esta sección queremos indagar si hay relación entre la formación y la remuneración, y si impacta también el tipo de universidad, pública o privada, en la remuneración y posición. Primero veamos entre los distintos países como se distribuye la muestra entre profesionales provenientes de universidades públicas y privadas.
@@ -1046,8 +1525,9 @@ rh22la %>%
 
 ```
 
+# Diversidad en RRHH
 
-# Liderazgo y género en RRHH
+## Liderazgo y género en RRHH
 
 Analicemos las proporciones de hombres y de mujeres en puesto de liderazgo.
 
