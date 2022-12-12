@@ -1839,5 +1839,59 @@ n_coef %>%
 
 ```
 
+# Otros análisis
+
+## Relación entre satisfacción y sueldos
+Para este análisis nos preguntamos si hay relación entre el nivel salarial y la satisfacción.
+
+Para responder a esta pregunta, cruzamos los sueldos brutos de Argentina, contra los niveles de satisfacción con la actual empresa donde trabajan las personas que respondieron la encuesta.
+
+Los pasos que seguimos fueron los siguientes:
+
+A los sueldos brutos los segmentamos en 4 partes con igual cantidad de registros (cuartiles). Es decir, en el 1° cuartil tenemos el 25% de los datos, en el segundo cuartil tenemos el 50% de los datos, y en el 3° cuartil tenemos el 75% de los datos.
+En el primer cuartil están los sueldos más bajos, y el 4° los más altos.
+Los niveles de satisfacción van del 1 (Totalmente Insatisfecho), al 5, (Totalmente Satisfecho).
+
+```{r}
+library(ggalluvial)
+
+satisf <- rh22la %>% 
+  filter(!is.na(satisfaccion),
+         pais == "Argentina") %>% 
+  select(sueldo_bruto, satisfaccion)
+
+
+p25 <- profiling_num(satisf)[1,7]
+p50 <- profiling_num(satisf)[1,8]
+p75 <- profiling_num(satisf)[1,9]
+
+satisf <- satisf %>% 
+  mutate(cuartil = factor(case_when(
+    sueldo_bruto  <   p25  ~ "1Q",
+    sueldo_bruto > p25 & sueldo_bruto < p50 ~ "2Q",
+    sueldo_bruto > p50 & sueldo_bruto < p75 ~ "3Q",
+    TRUE   ~ "4Q")),
+    satisfaccion = factor(satisfaccion, 
+                             levels = c("1","2","3","4","5")), 
+    cuenta = 1)
+
+
+satisf <- satisf %>% 
+  group_by(satisfaccion, cuartil) %>% 
+  summarise(cant = n())
+
+
+
+ggplot(as.data.frame(satisf), aes(y = cant, axis1 = cuartil, axis2 = satisfaccion)) +
+  geom_alluvium(aes(fill = cuartil), width = 1/12,  alpha = 0.4) +
+  geom_stratum(width = 1/12, fill = "#8882F7") +
+  geom_label(stat = "stratum", aes(label = after_stat(stratum))) +
+  scale_x_discrete(limits = c("Sueldo Bruto por Cuartil", "Nivel de Satisfacción"), expand = c(.05, .05)) +
+  scale_fill_manual(values = c(verde, lila, rosa1, azul)) +
+  theme_void() +
+  labs(title = "Relación entre nivel salarial y satisfacción con la empresa",
+       y = "", caption = fuente, fill = "Cuartil")
+```
+
 
 
