@@ -223,3 +223,17 @@ freelo22 <- unnest(data = freelo22, cols = coeficiente, keep_empty = TRUE)
 
 # Guardar los datos en un archivo
 write_delim(freelo22, file = "data/freelancers_2022.csv", delim = ";")
+
+# Guardar archivo original
+kiwi22$anecdota[[20]] <- as.character(kiwi22$anecdota[[20]])
+kiwi22$anecdota[[191]] <- as.character(kiwi22$anecdota[[191]])
+
+kiwi22 <- unnest(data = kiwi22, cols = anecdota, keep_empty = TRUE)
+
+kiwi22 %>% select(id, anecdota) %>% filter(!is.na(anecdota)) %>% print(n = Inf)
+
+# Borrar anecdotas polémicas 
+kiwi22$anecdota[63] <- NA
+kiwi22$anecdota[217] <- NA
+
+write_delim(kiwi22, file = "data/kiwi_2022.csv", delim = ";")
