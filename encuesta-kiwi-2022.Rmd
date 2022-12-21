@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, fig.retina 
 
 # Librerías ----
 pacman::p_load(tidyverse, funModeling, gt, extrafont, scales, 
-               ggalt, kableExtra, wordcloud, networkD3,
+               ggalt, kableExtra, wordcloud, networkD3, ggpmisc,
                data.table, ggeconodist)
 
 # Configuraciones generales ----
@@ -759,7 +759,7 @@ historico %>%
   ggplot(aes(x = anio, y = mediana)) +
   geom_col(fill = "#0038a8") +
   geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
-            vjust = 1.2) +
+            vjust = 1.2, color = "white") +
   eje_y_n +
   estiloh +
   labs(title = "Mediana Salarial por Año",
@@ -997,6 +997,7 @@ historico %>%
 
 ## Argentina
 
+
 ### Análisis por puesto
 
 ```{r argentina}
@@ -1019,6 +1020,26 @@ rh22ar <- rh_ar %>%
 # Evolucion
 historico <- rbind(rh20ar, rh21ar, rh22ar)
 
+# Unificar nombres de funciones
+historico <- historico %>% 
+  mutate(funcion = fct_collapse(funcion, 
+                                "Cultura y Clima" = c("Cultura y bienestar","Clima & Cultura"),
+                                "Administración de Personal" = c("Administración de personal",
+                                                                 "Administración de Personal"),
+                                "Capacitación y Desarrollo" = c("Capacitación y desarrollo",
+                                                                "Capacitación y desarrollo"),
+                                "Compensaciones y Beneficios" = "Compensaciones y beneficios",
+                                "Comunicación Interna" = c("Comunicación Interna", 
+                                                           "Comunicación interna"),
+                                "Diseño Organizacional" = c("Diseño Organizacional",
+                                                            "Diseño organizacional"),
+                                "Payroll" = c("Payroll",
+                                              "Payroll / Liquidación de sueldos"),
+                                "People Analytics" = c("People Analytics", 
+                                                       "People analytics"),
+                                "Reclutamiento" = c("Reclutamiento",
+                                                    "Reclutamiento y selección"))) 
+
 # Salario por puesto 
 
 rh_ar %>% 
@@ -1040,7 +1061,40 @@ rh_ar %>%
   
 ```
 
+Dado que el puesto de **HRBP** en algunas compañías es un analista senior, y en otras es un puesto gerencial, explicaría el por qué la mediana salarial es mayor que el caso de los **Responsables**, que es una figura que se usa mayormente en empresas con estructuras pequeñas.
+
+### Evolución
+
+
+```{r argentina4}
+historico %>% 
+  group_by(anio) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>% 
+  ungroup %>% 
+  ggplot(aes(x = anio, y = mediana)) +
+  geom_col(fill = "#75AADB") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            vjust = 1.2, 
+            color = "white") +
+  eje_y_n +
+  estiloh +
+  labs(title = "Mediana Salarial por Año",
+       subtitle = "Datos de Argentina - En AR$",
+       x = NULL, y = NULL,
+       caption = fuente)
+
+historico_tabla <- historico %>% 
+  group_by(anio) %>% 
+  summarise(mediana = median(sueldo_bruto)) %>% 
+  ungroup 
+  
+```
+
+La mediana salarial del año 2022 en comparación al 2021 creció un `r percent((pull(historico_tabla[3,2])/pull(historico_tabla[2,2]))-1)` mientras que el año anterior el incremento ha sido de un `r percent((pull(historico_tabla[2,2])/pull(historico_tabla[1,2]))-1)`.
+
 ### Análisis por función
+
+Nuevamente encontramos que los salarios de las funciones más sofisticadas se encuentran dentro de los salarios más altos, mientras que en roles más operativos encontramos salarios más bajos.
 
 ```{r argentina1}
 rh_ar %>% 
@@ -1061,7 +1115,41 @@ rh_ar %>%
        caption = fuente)
 ```
 
+A continuación podemos apreciar el incremento salarial en comparación con el año anterior de los roles en los cuales tenemos información.
+
+```{r}
+historico %>% 
+  filter(anio != 2020,
+         !funcion %in% c("HRIS / Administración de sistemas de RH",
+                         "Control de Gestión",
+                         "Gestión de expatriados")) %>% 
+  group_by(funcion, anio) %>%
+  summarise(mediana = median(sueldo_bruto)) %>% 
+  ungroup %>% 
+  ggplot(aes(y = fct_rev(funcion), x = mediana, fill = factor(anio))) +
+  geom_col(position = "dodge") +
+  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
+            position = position_dodge(0.9),
+            hjust = 1.2,
+            size = 2, 
+            color = "white") +
+  theme(legend.position = "top") +
+  guides(fill = guide_legend(reverse=TRUE)) +
+  scale_fill_manual(values = c(gris, "#75AADB")) +
+  estilov +
+  eje_x_n +
+  labs(title = "Evolución Salarial por Función",
+       subtitle = "En AR$",
+       x = NULL, y = NULL,
+       caption = fuente,
+       fill = "Año")
+```
+
+
 ### Análisis por rubro
+
+Veamos cuáles son los rubros mejor pagos en Argentina.
+
 
 ```{r argentina2, fig.height=9}
 rh_ar %>% 
@@ -1084,26 +1172,237 @@ rh_ar %>%
        caption = fuente)
 ```
 
-### Evolución
+Ahora comparemos los sueldos por rubros y géneros. Aquí podremos apreciar las diferencias entre los sueldos promedios de los hombres y mujeres en cada rubro.
+
+```{r ar_rubro2}
+rubro_ar <- rh_ar %>% 
+  select(rubro, sueldo_ft) %>% 
+  group_by(rubro) %>% 
+  summarise(media_sueldo = mean(sueldo_ft),
+            respuestas = n()) %>% 
+  arrange(-respuestas)
+
+top_rubros <- rubro_ar %>% 
+  filter(rubro != "Otros", respuestas > 10) %>% 
+  pull(rubro)
+
+# Divide el largo de 'rubros' en varias líneas
+rh_ar$rubro <- str_wrap(rh_ar$rubro, width = 40)
 
 
-```{r argentina4}
-historico %>% 
-  group_by(anio) %>% 
-  summarise(mediana = median(sueldo_bruto)) %>% 
-  ungroup %>% 
-  ggplot(aes(x = anio, y = mediana)) +
-  geom_col(fill = "#75AADB") +
-  geom_text(aes(label = comma(mediana, big.mark = ".", decimal.mark = ",")),
-            vjust = 1.2, 
-            color = "white") +
+rh_ar %>% 
+  filter(rubro %in% top_rubros) %>% 
+  select(rubro, sueldo_ft, genero) %>% 
+  group_by(rubro, genero) %>% 
+  summarise(media_sueldo = mean(sueldo_ft),
+            respuestas = n()) %>% 
+  arrange(-respuestas) %>% 
+  ggplot(aes(x = media_sueldo, y = reorder(rubro, media_sueldo), fill = genero)) +
+  geom_col(position = "dodge") +
+  geom_text(aes(label = comma(round(media_sueldo, 0),
+                              big.mark = ".",
+                              decimal.mark = ","),
+                hjust = 1.4, vjust = 0.3),
+            size = 3, 
+            color = "white", 
+            position = position_dodge(width = .9)) +
+  scale_fill_manual(values = genero) +
+  labs(title = "Promedio salarial por rubro y género",
+       subtitle = "Datos de Argentina - en AR$",
+       x = "", y = "", fill = "Género",
+       caption = fuente) +
+  eje_x_n +
+  estilov +
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        plot.title.position = "plot") +
+  guides(fill = guide_legend(reverse=TRUE))  # Invierte el orden de los colores en la leyenda
+
+
+rm(rubro_ar, top_rubros)
+```
+
+Por último, analicemos los sueldos de los 6 rubros con mayor cantidad de respuestas, y visualicemos las distribuciones de los sueldos por puesto y género. En este gráfico podemos ver los cuartiles delimitando las zonas sombreadas, y la mediana con la línea en el centro de la caja. Los puntos violetas y verdes representan a las mujeres y los hombres respectivamente en cada uno de los puestos.
+
+```{r ar_rubros3}
+#| out.width = "90%",
+#| fig.height = 7
+
+rh_ar %>% 
+    filter(genero %in% c("Mujer cis", "Hombre cis"),
+         puesto != "Director",
+         rubro %in% c("Tecnologías de información",
+                      "Servicios de consultoría",
+                      "Servicios de salud",
+                      "Alimentación, bebidas",
+                      "Comercio",
+                      "Servicios profesionales")) %>% 
+  ggplot(aes(x = fct_rev(puesto), y = sueldo_bruto)) +
+  geom_boxplot(width = 0.4, alpha = 0.3, fill = gris) +
+  geom_point(aes(y = sueldo_bruto, color = genero), alpha = 0.4,
+             position = position_jitter(width = 0.25)) +
+  scale_color_manual(values = c(verde, lila)) +
   eje_y_n +
-  estiloh +
-  labs(title = "Mediana Salarial por Año",
-       subtitle = "Datos de Argentina - En AR$",
-       x = NULL, y = NULL,
-       caption = fuente)
+  coord_flip() +
+  facet_wrap(~rubro, ncol = 2) +
+  estilov +
+  labs(title = "Distribución salarial por puesto y rubro",
+       subtitle = "Datos de Argentina - en AR$",
+       x = "", y = "", color = "Género",
+       caption = fuente) +
+  theme(plot.title.position = "plot",
+        legend.position = "top")
+```
 
+
+### Relaciones entre experiencia y sueldo bruto
+
+En esta sección del análisis buscamos identificar cuáles son los factores que influyen en los ingresos (independientemente de la posición), así que empezamos a explorar los datos.
+
+La primera pregunta que nos hicimos fue si los años de trayectoria influyen en el sueldo. Nuestra hipótesis es que a mayor cantidad de años de experiencia, mayor iba a ser el ingreso.
+
+Lo que vamos a ver en el siguiente gráfico de dispersión, es en el eje horizontal, los años de experiencia, y en el eje vertical, el sueldo bruto expresado en pesos argentinos. Luego, vamos a graficar una recta, que nos va a indicar la *fuerza* de esa relación.
+
+```{r reg_lineal_1}
+lm_rh <- lm(sueldo_ft ~ anios_rh, data = rh_ar)
+
+lm_hr_results <- summary(lm_rh)
+
+lm_rh_r2 <- round(lm_hr_results[["r.squared"]],3)
+
+ggplot(rh_ar, aes(x=anios_rh, y = sueldo_ft)) +
+  geom_point(color = "#1FC3AA", alpha = 0.4, size = 2) + 
+  geom_smooth(method = "lm") +
+  theme_minimal() +
+  theme(text = element_text(family = "Roboto")) +
+  labs(title = "Relación entre sueldo y años de experiencia",
+       x = "Años de Experiencia",
+       y = "Sueldo bruto (AR$)", 
+       caption = fuente) +
+  eje_y_n +
+  geom_text(aes(x=-Inf, y=Inf, hjust=0, vjust=1, label= paste0("R2 = ", lm_rh_r2))) 
+
+```
+
+En el gráfico podemos apreciar una recta que va creciendo efectivamente: a medida que nos movemos más hacia la derecha, la recta va subiendo. Pero el $R^2$ = `r lm_rh_r2` nos indica cuánto explica los años de experiencia sobre el sueldo bruto, o dicho de otra manera, en qué medida influye la variable x (años de experiencia), sobre la variable y (sueldo bruto). Una definición más precisa de este valor conocido como **Coeficiente de Determinación** es la proporción de la varianza total de la variable explicada por la regresión.
+
+Este valor puede estar entre 0 y 1, mientras más cerca de 0 está menor es la relación, y mientras más cerca de 1 esté el resultado, indica que la regresión explica la variabilidad de la variable de respuesta. Es por eso que este $R^2$ = `r lm_rh_r2` nos indica que los años de experiencia explican un 20.8% de la variabilidad de los sueldos en RRHH.
+
+#### Relación entre años de experiencia y sueldo bruto por puesto.
+
+Dado que en el gráfico anterior tenemos mezclados los sueldos de administrativos, analistas, jefes y gerentes, decidimos analizar la relación entre los años de experiencia y el sueldo bruto por cada uno de los puestos por separado.
+
+```{r reg_lineal_2, out.width="90%"}
+
+mi.formula <- y ~ x
+
+ggplot(rh_ar, aes(x=anios_rh, y = sueldo_ft)) +
+  geom_point(color = "#1FC3AA", alpha = 0.4, size = 2) + 
+  geom_smooth(method = "lm", formula = mi.formula, se = FALSE) +
+  theme_minimal() +
+  theme(text = element_text(family = "Roboto")) +
+  labs(title = "Relación entre sueldo y años de experiencia",
+       x = "Años de Experiencia",
+       y = "", 
+       caption = fuente) +
+  eje_y_n +
+  stat_poly_eq(formula = mi.formula, 
+               aes(label = paste(..rr.label.., sep = "~~~")), 
+               parse = TRUE) +
+  facet_wrap(~puesto)
+
+```
+
+Como podemos apreciar en los $R^2$ de cada gráfico en el único puesto donde encontramos una fuerte relación entre los años de experiencia y el sueldo bruto es en los **Administrativos**. En el resto de los puestos los años de trayectoria influyen muy poco en los sueldos de cada uno de los puestos. En el caso de los **Directores** también vemos una relación muy fuerte pero negativa. En ambos casos lo podemos atribuir a la baja cantidad de respuestas que afecta la calidad de este análisis.
+
+Ahora bien, la pregunta es, *¿cuál es la variable que más influye en el sueldo en Recursos Humanos?.* Tristemente, la respuesta no sorprende.
+
+```{r}
+rh_ar %>% 
+  filter(genero %in% c("Hombre cis", "Mujer cis")) %>% 
+ggplot(aes(x = genero, y = sueldo_ft, fill = genero)) +
+  geom_boxplot() +
+  eje_y_n +
+  scale_fill_manual(values = c(verde, lila)) +
+  estiloh +
+  labs(title = "Distribución salarial por género",
+       x = "", y = "",
+       fill = "Género", 
+       caption = fuente) +
+  theme(legend.position = "none")
+```
+
+Si bien hay *outliers* entre las mujeres con sueldos muy altos, los salarios de los hombres en general suelen ser más altos que el de las mujeres, por eso vemos que la caja de los hombres es más alta que el de las mujeres.
+
+## Análisis según género
+
+Cuando analizamos la distribución salarial por puesto, apreciamos desigualdades que se repiten de años anteriores. Antes de profundizar, expliquemos brevemente cómo interpretar el gráfico que vemos a continuación que se llama *boxplot*.
+
+En primer lugar, la parte inferior de cada caja indica el valor del **primer cuartil**, es decir el límite donde se encuentra el 25% de los datos. Por otra parte, la parte superior de cada caja indica el **tercer cuartil**, o sea, el 75% de los datos. Esto implica que dentro de la caja nos encontramos con la mitad de los datos. La cantidad de casos dentro de cada mitad es la misma para cada caja.
+
+Un elemento muy importante dentro del gráfico es la línea que observamos dentro de cada caja que representa a la **mediana** que es el valor que divide a la mitad a los datos. Este es el valor que habitualmente utilizamos para comparar salarios porque representa el punto medio para cada grupo y además no es sensible a valores extremos como el promedio. **La mediana es el valor que vamos a usar para comparar los sueldos entre hombres y mujeres**.
+
+Los puntos que observamos en algunos casos indican valores extremos que denominamos **outliers.** Estos valores son atípicos. Las líneas que salen de las cajas indican los límites a partir de los cuales se determina que un valor es atípico o no.
+
+Por último, el tamaño de la caja también es importante porque nos da una idea de la **distribución** de los datos. Si la caja es chiquita quiere decir que los sueldos están en un rango de valores cercano. En cambio si la caja, o una de sus mitades, es larga, eso nos indica que los sueldos tienen un rango más amplio, o sea que los sueldos llegan a valores más altos o más bajos dependiendo el caso, y que se alejan más de la mediana.
+
+```{r}
+rh_ar %>% 
+  filter(genero %in% c("Hombre cis", "Mujer cis"),
+         !puesto %in% c("Director", "Administrativo")) %>% 
+ggplot(aes(x = fct_rev(puesto), y = sueldo_bruto, fill = genero)) +
+  geom_boxplot() +
+  estiloh +
+  scale_fill_manual(values = c(verde, lila)) +
+  eje_y_n +
+  labs(title = "Distribución Salarial según Identidad de Género",
+       subtitle = "En AR$",
+       fill = "Identidad de Género",
+       x = NULL, y = NULL,
+       caption = fuente) +
+  theme(legend.position = "top")
+```
+
+En el gráfico anterior podemos apreciar que las medianas de los sueldos es más alta para los hombres en los roles de **Analista**, **Responsables**, y **Jefes**. En cambio en las mujeres podemos apreciar que las **HBRP** y **Gerentes** tienen medianas salariales más altas.
+
+Analizando el rol de **Analista** podemos ver que en el caso de los hombres, además de observar una mediana salarial más amplia que en el caso de las mujeres, el tamaño de la caja es más amplia, lo que nos indica que los sueldos de los analistas varones tienen un rango más amplio llegando a sueldos más altos que sus pares mujeres. Podemos apreciar varios outliers por encima de los `AR$ 400.000` tanto para hombres y mujeres.
+
+En el rol de **Jefe** apreciamos que las medianas están algo alejadas y el tamaño de la caja nos indica que los rangos de los sueldos de los hombres alcanza valores más altos que en el caso de las mujeres, mientras que la mitad superior de las mujeres está concentrado en un rango de valores muy cercanos. También podemos observar que hay algunos casos de mujeres con sueldos muy altos indicados como *outliers* (puntos) alrededor de los `AR$ 600.000`.
+
+En la tabla a continuación veremos algunos datos que resumen estos hallazgos. Excluimos a los directores y administrativos porque tenemos muy pocas respuestas.
+
+```{r tabla_genero_ar}
+gt(rh_ar %>% 
+  filter(genero %in% c("Hombre cis", "Mujer cis"), 
+         !puesto %in% c("Director", "Administrativo")) %>% 
+  group_by(puesto, genero) %>% 
+  summarise(Rtas = n(),
+            Min = min(sueldo_bruto),
+            Mediana = median(sueldo_bruto),
+            Promedio = mean(sueldo_bruto),
+            Max = max(sueldo_bruto)
+            ) %>% 
+  ungroup() %>% 
+  pivot_longer(cols = c("Rtas", "Min", "Mediana", "Promedio", "Max"),
+               names_to = "Metrica",
+               values_to = "Valor") %>% 
+  pivot_wider(id_cols = c(puesto,genero),
+              names_from = Metrica,
+              values_from = Valor),
+  groupname_col = "puesto") %>% 
+  fmt_currency(columns = c(Min, Mediana, Promedio, Max),
+               currency = "ARS",
+               decimals = 0,
+               sep_mark = ".",
+               dec_mark = ",") %>% 
+  tab_header(title = "Resumen Salarial por Puesto y Género",
+             subtitle = "En AR$") %>% 
+  tab_spanner(label = "Métricas Salariales",
+              columns = c(Min, Mediana, Promedio, Max)) %>% 
+  tab_source_note(source_note = fuente) %>% 
+  cols_label(puesto = "Puesto",
+             genero = "Género") %>% 
+  tab_options(row_group.background.color = "#A3E4D7",)
 ```
 
 
