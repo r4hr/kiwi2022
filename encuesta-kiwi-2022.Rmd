@@ -1369,6 +1369,50 @@ Analizando el rol de **Analista** podemos ver que en el caso de los hombres, ade
 
 En el rol de **Jefe** apreciamos que las medianas están algo alejadas y el tamaño de la caja nos indica que los rangos de los sueldos de los hombres alcanza valores más altos que en el caso de las mujeres, mientras que la mitad superior de las mujeres está concentrado en un rango de valores muy cercanos. También podemos observar que hay algunos casos de mujeres con sueldos muy altos indicados como *outliers* (puntos) alrededor de los `AR$ 600.000`.
 
+Esta es otra opción para visualizar los gaps salariales.
+
+
+```{r}
+brecha <- rh_ar %>% 
+  filter(genero %in% c("Mujer cis", "Hombre cis"), 
+         puesto %in% c("Gerente","Jefe", "HRBP","Responsable", "Analista")) %>% 
+  mutate(puesto = factor(puesto, levels = c("Analista",  
+                                            "HRBP", "Responsable", "Jefe",
+                                            "Gerente","Director"))) %>% 
+  group_by(genero, puesto) %>% 
+  summarise(media_salarial = median(sueldo_bruto, na.rm = TRUE)) %>% 
+  ungroup()
+
+
+brecha_graf <- brecha %>% 
+  pivot_wider(., names_from = genero, values_from = media_salarial) %>% 
+  mutate(brecha = percent((`Hombre cis`-`Mujer cis`)/`Hombre cis`, 1),
+         x = (`Hombre cis` + `Mujer cis`)/2)
+
+ggplot(brecha_graf, 
+       aes(x = `Mujer cis`, xend = `Hombre cis`, y = puesto, 
+           group = puesto, label = brecha)) +
+  geom_dumbbell(color = "#808080",
+                size_x = 3, size_xend = 3,
+                colour_x = colores[1],
+                colour_xend = colores[2]) +
+  geom_text(data = brecha_graf, 
+            aes(x, puesto, label = brecha), size = 3,
+            nudge_y = .2) +
+  labs(title = "Brecha salarial por puestos de RRHH",
+       subtitle = "Mediana en Argentina",
+       x = "",
+       y = NULL, 
+       caption = fuente) +
+  scale_x_continuous(labels = comma_format(big.mark = ".", decimal.mark = ",")) +
+  scale_color_manual(values = colores)
+```
+
+
+Si observamos la mediana salarial para cada puesto vemos que de acuerdo a las respuestas recolectadas las **mujeres** en puesto de **Gerente** tienen un sueldo un 10% mayor que los hombres en el mismo rol. No hay diferencia salarial en el puesto de HRBP.
+
+Finalmente vemos que la brecha salarial en favor de los hombres es de un 16% en el rol de **Jefe**, un 14% para **Responsables** y de un 13% para los **Analistas**.
+
 En la tabla a continuación veremos algunos datos que resumen estos hallazgos. Excluimos a los directores y administrativos porque tenemos muy pocas respuestas.
 
 ```{r tabla_genero_ar}
@@ -1918,7 +1962,933 @@ Con un *p-value* igual a `r round(resultados_test[1,3],3)` podemos afirmar que *
 
 A pesar de que en Recursos Humanos en Argentina, las mujeres cis representan la mayor cantidad de empleados bajo relación de dependencia, y además se forman en mayor proporción que los varones en posgrados, proporcionalmente en comparación con los hombres cis, acceden a menos posiciones de liderazgo.
 
+## Diversidad en RRHH
 
+En esta sección analizaremos qué tan diversa e inclusiva es la función de RRHH en general desde una perspectiva de identidad de género, orientación sexual y discapacidad.
+
+```{r}
+# Cargar los datos 2020 y 2021
+k20 <- googlesheets4::read_sheet("1833xEeRIy1DLke4eHKfEThjjgx01YGX9yQaU6vv15K0", 
+                     skip = 5) %>% 
+  janitor::clean_names()
+
+k21 <- googlesheets4::read_sheet("1LDdXlIwrcsyuywbcS4gdc-1p6wBXfEfL2Y6sNBj-4GM",
+                    skip = 5) %>% 
+  janitor::clean_names()
+
+# Seleccionar las columnas de ambos data frames.
+k20 <- k20 %>% 
+  select(identidad_genero = genero, 
+         diversidad_sexual = te_identificas_como_lgbt_lesbiana_gay_bisexual_transexual_otra_minoria_sexual,
+         rubro = rubro_de_la_empresa,
+         origen_del_capital,
+         puesto = en_que_puesto_trabajas,
+         nivel_formacion = maximo_nivel_de_formacion,
+         idioma = te_exigieron_saber_un_idioma_extranjero_ingles_portugues_etc_para_entrar_a_trabajar_en_tu_empresa,
+         idioma_porcentaje = que_porcentaje_del_tiempo_usas_el_idioma_extranjero_en_tu_puesto_actual,
+         discapacidad,
+         trabajo) %>% 
+  mutate(libertad_ser = 99, 
+         sufrio_acoso = 99,
+         management_femenino = 99,
+         linea_segura = 99,
+         machismo = 99,
+         edicion = 2020) # Añado una columna con un valor = 1 porque esta pregunta no existía en la edición 2020 de la Encuesta
+
+k21 <- k21 %>% 
+  select(identidad_genero = identidad_de_genero,
+         diversidad_sexual = te_identificas_como_lgbtiq_lesbiana_gay_bisexual_transexual_otra_minoria_sexual,
+         rubro = rubro_de_la_empresa,
+         origen_del_capital,
+         puesto = en_que_puesto_trabajas,
+         nivel_formacion = maximo_nivel_de_formacion,
+         idioma = te_exigieron_saber_un_idioma_extranjero_ingles_portugues_etc_para_entrar_a_trabajar_en_tu_empresa,
+         idioma_porcentaje = que_porcentaje_del_tiempo_usas_el_idioma_extranjero_en_tu_puesto_actual,
+         discapacidad = tenes_alguna_discapacidad,
+         trabajo,
+         libertad_ser = en_tu_empresa_puedes_ser_como_realmente_eres_por_ej_expresar_abiertamente_tu_personalidad_tu_identidad_de_genero_orientacion_sexual_etc, 
+         sufrio_acoso = sufriste_alguna_situacion_de_acoso_abuso_o_de_discriminacion_en_algun_trabajo,
+         management_femenino = que_porcentaje_aproximado_del_management_de_tu_empresa_son_mujeres_entiendase_posiciones_de_jefatura_de_gerencia_o_de_direccion, 
+         linea_segura = en_tu_organizacion_existe_una_linea_segura_o_politicas_definidas_para_actuar_frente_a_situaciones_de_acoso_o_discriminacion) %>% 
+  mutate(machismo = 99,
+         edicion = 2021)
+
+k22 <- kiwi %>% 
+  select(identidad_genero = genero,
+         diversidad_sexual,
+         rubro,
+         origen_del_capital = origen_capital,
+         puesto,
+         nivel_formacion,
+         idioma = idioma_exigencia,
+         idioma_porcentaje,
+         discapacidad,
+         trabajo,
+         libertad_ser, 
+         sufrio_acoso,
+         management_femenino = diversidad_management,
+         linea_segura,
+         machismo) %>% 
+  mutate(edicion = 2022)
+
+# Unir los datasets
+div_rh <- rbind(k20, k21, k22)
+
+# Como ya tengo unificados ambos datasets puedo borrar las versiones individuales para ahorrar memoria
+rm(k20, k21, k22)
+
+```
+
+En la edición 2020, nos referíamos a la identidad de género de una manera diferente a la que lo hicimos en la edición del 2021, así que la siguiente parte consiste en consolidar los datos de ambas ediciones.
+
+```{r datos_genero}
+
+# Verificar las distintas formas de referirse al género
+unique(div_rh$identidad_genero)
+```
+
+En los datos encontramos 5 formas diferentes de referirse a los hombres cis, y 5 formas diferentes de referirse a las mujeres cis, así que el siguiente paso es unificar estos valores para simplificar el análisis y la interpretación de los resultados.
+
+> El sufijo *cis* hace referencia a las personas que se identifican con el mismo género asignado al nacer.
+
+```{r}
+div_rh <- div_rh %>% 
+    mutate(identidad_genero = 
+             fct_collapse(identidad_genero,
+                          "Hombre cis" = c("Masculino",
+                                           "Hombre cis",
+                                           "Hombre",
+                                           "Hombre hetero. Que es cis?",
+                                           "Hombre heterosexual",
+                                           "Varon"),
+                          "Mujer cis" = c("Femenino",
+                                          "Mujer cis",
+                                          "mujer",
+                                          "Mujer heterosexual",
+                                          "Mujer"),
+                          "Género diverso" = c("Género diverso (género diverso / género fluido /otras minorías)",
+                                               "No binario",
+                                               "Gay")))
+
+# Ver resultados del proceso anterior
+unique(div_rh$identidad_genero)
+```
+
+```{r}
+div_rh <- div_rh %>% 
+  mutate(rubro = fct_collapse(rubro, "Agro" = c("Agricultura, plantaciones, otros sectores rurales", "Agricultura; plantaciones,otros sectores rurales"),
+                              "Alimentos" = c("Alimentación, bebidas", "Alimentación; bebidas; tabaco"),
+                              "Bancos y Finanzas" = c("Bancos, banca online", "Bancos; banca online;", "Servicios financieros seguros", "Servicios financieros; seguros"),
+                              "Autopartista" = c("Fabricación de material de transporte", "Terminales automotrices, fábricas autopartistas, y afines"), 
+                              "Hotelería" = "Hotelería, restauración, turismo",
+                              "Metalurgia" = c("Industria metalúrgica, metalmecánica", "Producción de metales básicos"), 
+                              "Medios" = c("Medios de comunicación, cultura, gráficos", "Medios de comunicación; cultura; gráficos"),
+                              "Minería" = c("Minería", "Minería (carbón, otra minería)"),
+                              "Oil & Gas" = c("Petróleo y producción de gas, refinación de petróleo", "Petróleo y producción de gas; refinación de petróleo"), 
+                              "Consultoría" = "Servicios de consultoría",
+                              "Correos" = c("Servicios de correos y de telecomunicaciones", "Medios de comunicación; cultura; gráficos"),
+                              "Correos" = c("Servicios de correos y de telecomunicaciones", "Servicios de correos, y de telecomunicaciones"),
+                              "Servicios Públicos" = c("Servicios públicos (agua, gas, electricidad)", "Servicios públicos (agua;gas; electricidad)"),
+                              "Silvicultura" = "Silvicultura; madera; celulosa; papel",
+                              "Tecnología" = c("Tecnologías de información", "Tecnologías de Información, Sistemas, y afines"), 
+                              "Textil" = c("Textiles, vestido, cuero, calzado", "Textiles; vestido; cuero; calzado"),
+                              "Transporte" = c("Transporte (incluyendo aviación civil, ferrocarriles por carretera)", "Transporte (incluyendo aviación civil; ferrocarriles por carretera)", "Transporte marítimo, puertos", "Transporte marítimo; puertos;"
+                                               )))
+
+# Añadimos a los freelancers como servicios de consultoría dentro de la columna Rubro
+div_rh <- div_rh %>% 
+  mutate(rubro = if_else(trabajo == "Freelance", "Consultoría Freelance", as.character(rubro)))
+
+# Limpieza Puesto
+# Descartamos posiciones no relacionadas con RRHH
+div_rh <- div_rh %>% 
+  filter(!puesto %in% c("Juzgado Civil y Comercial", "Programador",
+                        "Cuidado", "Asesor", "Jefe de Proyecto",
+                        "Desarrollador", "Programador", 
+                        "-", "Inspección de calidad", "Jefe de Proyecto",
+                        "Representante", "Técnico", "Asesoramiento", "-")) %>% 
+  mutate(puesto = str_trim(puesto, side = "both")) # Elimina espacios vacíos antes y después de cada palabra
+
+# Reemplazar los valores NA por Consultor Freelance
+div_rh <- div_rh %>% 
+  mutate(puesto = if_else(is.na(puesto), "Consultor Freelance", puesto))
+
+
+# Unificación de Puestos
+div_rh <- div_rh %>% 
+  mutate(puesto = fct_collapse(puesto, "Gerente" = c("Gerente",
+                                                     "Superintendente", 
+                                                     "Director",
+                                                     "Director ( escalafón municipal)"),
+                         "HRBP" = c("HRBP",
+                                    "Senior Consultoría", "specialist",
+                                    "especialista",
+                                    "Specialist",
+                                    "Especialista de selección por un lado (única persona en estas tareas) y HRBP de 2 equipos por otro",
+                                    "Especialista en selección IT", 
+                                    "Recruiter"),
+                        "Responsable" = c("Responsable",
+                                          "Coordinación",
+                                          "coordinación",
+                                          "Coordinador de Payroll",
+                                          "Encargado",
+                                          "Coordinadora",
+                                          "Supervisor",
+                                          "Líder Ágil",
+                                          "Líder de selección"),
+                        "Administrativo" = c("Administrativo",
+                                             "Asistente",
+                                             "Asistente RRHH",
+                                             "Aux", "Auxiliar",
+                                             "consultor jr",
+                                             "El cargo es Asistente de CH, pero leo adelante Comunicación Interna, RSE, Capacitacion",
+                                             "Payroll Assistant"),
+                        "Analista" = c("Analista", 
+                                       "Analista semi senior",
+                                       "Asesoramiento", 
+                                       "Consultor", 
+                                       "Capacitador", 
+                                       "Consultor Ejecutivo",
+                                       "consultor jr",
+                                       "Generalista",
+                                       "Profesional RRHH",
+                                       "Reclutador",
+                                       "Recruiter",
+                                       "Recruiter IT",
+                                       "Reclutadora", 
+                                       "Selectora",
+                                       "Senior",
+                                       "Senior Recruiter",
+                                       "Senior Consultoría",
+                                       "Sourcer (Recruiter)",
+                                       "Sourcer Specialist",
+                                       "talent",
+                                       "Talent Acquisition",
+                                       "IT RECRUITER",
+                                       "Auditor",
+                                       "Tech Recruiter",
+                                       "Analista de People Operations",
+                                       "Specialist")))
+  
+
+```
+
+### Cuanta diversidad de identidades de género y orientaciones sexuales hay en RRHH
+
+En este punto creo que es importante aclarar que entre una edición y otra de la Encuesta KIWI hicimos cambios en el diseño del formulario, y por ejemplo, las preguntas sobre orientación sexual sólo se las hicimos a las personas que trabajan en relación de dependencia, con lo cual no tenemos una continuidad en los datos sobre el total de las personas que participaron, especialmente de quienes trabajan de manera freelance.
+
+En primer lugar, veamos cuántas personas trabajan en RRHH según su identidad de género:
+
+```{r diversidad_1}
+gt(
+div_rh %>% 
+  group_by(edicion, identidad_genero) %>% 
+  count(sort = TRUE) %>% 
+  ungroup() %>% 
+  pivot_wider(names_from = edicion, values_from = n) %>% 
+  mutate(`2020` = coalesce(`2020`, 0),
+         `2021` = coalesce(`2021`, 0),
+         `2022` = coalesce(`2022`, 0),
+         Total = `2020` + `2021` + `2022`,
+         Porcentaje = round(Total/sum(Total),3))
+) %>% 
+  fmt_percent(columns = Porcentaje,
+              decimals = 1) %>% 
+  tab_header(title = "Identidad de Género por Edición") %>% 
+  tab_source_note(source_note = fuente) %>% 
+  cols_label(identidad_genero = "Identidad de Género")
+```
+
+Según la muestra que obtuvimos, **menos del 1% de las personas que trabajan en RRHH son personas no binarias.** Como para quede más claro veamóslo con un gráfico.
+
+```{r diversidad_2}
+div_rh %>% 
+  group_by(identidad_genero) %>% 
+  count(sort = TRUE) %>% 
+  ungroup() %>% 
+  ggplot(aes(y = reorder(identidad_genero, n), x = n, 
+             fill = identidad_genero)) +
+  geom_col() +
+  estilov +
+  geom_text(aes(label = n, hjust = -0.2),
+            size = 3.5,
+            color = c(gris, gris, gris, "black", "black"))+
+  scale_fill_manual(values = c(gris, verde, gris, verde, gris)) +
+  scale_x_continuous(limits = c(0, 1300)) +
+  labs(title = "Cantidad de respuestas según Identidad de Género",
+       x = "", y = "",
+       caption = fuente) +
+  theme(legend.position = "none")
+  
+```
+Por decirlo amablemente: Hay muchas oportunidades de mejora acá.
+
+Y ahora veamos la cantidad de respuestas según la orientación sexual de las personas que participaron de la encuesta. Dado que en la edición 2021 esta era una sección voluntaria, la cantidad de respuestas va a ser distinta que en la tabla anterior. Además, fue algo que no le preguntamos a las personas que trabajan de manera independiente.
+
+La pregunta que hicimos fue **¿Te identificás como LGBTIQ+ (lesbiana, gay, bisexual, transexual, otra minoría sexual)?.** He aquí las respuestas:
+
+```{r diversidad_sexual}
+
+gt(div_rh %>% 
+  filter(!is.na(diversidad_sexual)) %>% 
+  group_by(edicion, diversidad_sexual) %>% 
+  count(sort = TRUE) %>% 
+  ungroup() %>% 
+  pivot_wider(names_from = edicion, 
+              values_from = n) %>% 
+  mutate(Total = `2020` + `2021`,
+         Porcentaje = Total/sum(Total))
+) %>% 
+  fmt_percent(columns = Porcentaje,
+              decimals = 1) %>% 
+  tab_header(title = "Diversidad Sexual por Edición") %>% 
+  tab_source_note(source_note = fuente) %>% 
+  cols_label(diversidad_sexual = "Eres de algún\nColectivo LBGTQ+")
+  
+```
+
+Al menos respecto de esta pregunta, tenemos una mayor representación de diversidades sexuales. Nuevamente, esta muestra no es representativa de todas las personas que trabajan en RRHH, pero esperamos que permita discutir el tema.
+
+```{r diversidad_sexual_plot}
+div_rh %>% 
+  filter(!is.na(diversidad_sexual)) %>%
+  group_by(identidad_genero, diversidad_sexual) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  ggplot(aes(y = identidad_genero, x = n, fill = diversidad_sexual )) +
+  geom_col(position = "fill") +
+  geom_text(aes(label = n), position = position_fill(vjust = 0.5), size = 2.5) +
+  estilov +
+  theme(legend.position = "top") +
+  guides(fill = guide_legend(reverse = T)) +
+  scale_x_continuous(labels = scales::percent_format(accuracy = 1))+
+  labs(title = "Diversidad Sexual según Identidad de Género",
+       subtitle = "Pregunta: ¿Te identificás como LGBTIQ+?", 
+       fill = "Eres de algún Colectivo LGBTIQ+",
+       x = NULL, y = NULL, caption = fuente) +
+  scale_fill_manual(values = c(azul, gris, verde))
+```
+
+El tamaño de las barras reflejan la proporción de cada respuesta según la identidad de género de cada participante. Por ejemplo, en el caso de las personas que se identifican como *Hombres cis*, 46 personas se identifican como parte de la comunidad LGBTIQ+ (un 11.6%). 41 *Mujeres cis* (4.3%) pertenecen a este colectivo.
+
+### En qué rubros se da la mayor tasa de diversidad
+
+Ahora analicemos los rubros. Dado que no tenemos muchas personas con diversas identidades de género, listaremos todos los rubros.
+
+```{r rubros01}
+gt(div_rh %>% 
+  filter(identidad_genero == "Género diverso") %>% 
+  select(Rubro = rubro) %>% 
+  group_by(Rubro) %>% 
+  tally(sort = T, name = "Respuestas") %>% 
+    janitor::adorn_totals()
+)
+```
+
+Ahora, repliquemos el análisis con la pregunta **¿Te identificás como LGBTIQ+ (lesbiana, gay, bisexual, transexual, otra minoría sexual)?.**
+
+```{r rubros_colectivo}
+gt(
+div_rh %>% 
+  filter(diversidad_sexual == "Si") %>% 
+  select(Rubro = rubro) %>% 
+  group_by(Rubro) %>% 
+  tally(sort = T, name = "Respuestas")
+)
+```
+
+Entre los primeros rubros (fuera de *Otros*) nos encontramos con actividades relacionadas con servicios. Recién en el 6° puesto nos encontramos con el primer rubro relacionado con la industria manufacturera (*Alimentos*).
+
+### Qué roles ejercen las personas diversas
+
+Por último, veamos en qué roles se desempeñan las personas que pertenecen a algún colectivo de diversidad dentro de RRHH.
+
+```{r roles}
+# Crear un flag para posiciones de manager (Gerente, Jefe o Responsable)
+div_rh <- div_rh %>% 
+  mutate(manager = if_else(puesto %in% c("Gerente", "Jefe", "Responsable"),
+                           1, 0))
+
+# Si el valor de la columna identidad_genero es igual a Género diverso o el valor de la columna diversidad_sexual es igual a Si, entonces el valor en la nueva columna llamada diversa es 1, de lo contrario poner 0.
+div_rh <- div_rh %>% 
+  mutate(diversa = if_else(identidad_genero == "Género diverso" | diversidad_sexual == "Si",
+                           1, 0))
+
+managers_porcentaje <- div_rh %>% 
+  filter(diversa == 1) %>% 
+  group_by(manager) %>% 
+  count() %>% 
+  ungroup() %>% 
+  mutate(porcentaje = n/sum(n))
+
+puestos_porcentaje <- div_rh %>% 
+  filter(diversa == 1) %>% 
+  group_by(puesto) %>% 
+  count(sort = T) %>% 
+  ungroup() %>% 
+  mutate(porcentaje = n/sum(n))
+
+# Visualización
+ggplot(puestos_porcentaje, aes(x = n, y = reorder(puesto, n))) +
+  geom_col(fill = verde) +
+  geom_text(aes(label = n), 
+            hjust = 1.3,
+            size = 4) +
+  estilov +
+  labs(title = "Roles que ocupan las personas diversas",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+
+Algo interesante de este gráfico es que un `r scales::percent(pull(managers_porcentaje[2,3]))` ocupan algún puesto jerárquico (definidos como `Gerente`, `Jefe`, o `Responsable`) lo cual nos parece algo positivo.
+
+Sólo 6 personas, un `r scales::percent(pull(puestos_porcentaje[6,3]))`, trabajan por su cuenta como `Consultor Freelance`, el cual es un dato alentador mirándolo desde el punto de vista de la formalidad laboral y la estabilidad.
+
+Estos son datos que están sesgados por la muestra de datos, pero la hipótesis inicial que teníamos era que el porcentaje de freelancers sería mayor en este caso.
+
+### Libertad en el trabajo
+
+En las últimas ediciones de la Encuesta KIWI incluimos dos preguntas, una fue si **En tu empresa puedes ser como realmente eres, por ej. expresar abiertamente tu personalizada, tu identidad de género, orientación sexual, etc..** y la otra fue **¿Sufriste alguna situación de acoso, abuso o de discriminación en algún trabajo?**, con las cuales apuntábamos a analizar qué tan abiertos son los lugares de trabajo, y qué tan seguras y libres se sienten las personas con su lugar de trabajo.
+
+En esta sección vamos a comparar los resultados de estas preguntas de acuerdo a si las personas pertenecen a algún colectivo de diversidad o no.
+
+Estas eran preguntas voluntarias en las ediciones del 2021 y del 2022 así que no todas las personas la respondieron, y no estaban incluidas en la edición del 2020.
+
+```{r libertad}
+# Limpiar campos
+libertad <- div_rh %>% 
+  filter(libertad_ser %in% c("De acuerdo", "En desacuerdo", "Ni de acuerdo ni en desacuerdo", 
+                             "Totalmente de acuerdo", "Totalmente en desacuerdo"),
+         !is.na(diversa))
+
+# Ordenar la jerarquía de las respuestas sobre libertad en el trabajo.
+libertad <- libertad %>% 
+  mutate(libertad_ser = factor(libertad_ser, levels = c("Totalmente de acuerdo", "De acuerdo", 
+                                                        "Ni de acuerdo ni en desacuerdo",
+                                                        "En desacuerdo", "Totalmente en desacuerdo"))) 
+```
+
+Comparemos las respuestas según si las personas pertenecen a algún colectivo de diversidad o no.
+
+```{r libertad_1}
+libertad_scores <- libertad %>%
+  mutate(diversa = factor(diversa)) %>% 
+  group_by(diversa, libertad_ser) %>% 
+  summarise(respuestas = n()) %>% 
+  mutate(porcentaje = respuestas/sum(respuestas)) 
+
+ggplot(libertad_scores, aes(y = diversa, x = respuestas, fill = libertad_ser)) +
+  geom_col(position = "fill") +
+  scale_fill_manual(values = c(azul, lila, gris, rosa2, rosa1)) +
+  geom_text(aes(label = scales::percent(porcentaje, accuracy = 1)), position = position_fill(vjust = 0.5), size = 3) +
+  estilo +
+  scale_x_continuous(labels = scales::percent_format(accuracy = 1)) +
+  theme(legend.position = "top",
+        legend.text = element_text(size = 5),
+        legend.background = element_rect(colour = "#FCFCFC")) +
+  guides(fill = guide_legend(reverse = TRUE)) +
+  labs(title = "Niveles de libertad en el trabajo",
+       subtitle = "0: Personas no diversas - 1: Personas diversas",
+       x = NULL, y = NULL, caption = fuente,
+       fill = "Libertad para\nser uno mismo")
+
+```
+
+No hay grandes diferencias entre los resultados de ambos grupos. En la opción *Totalmente de acuerdo* es donde encontramos la mayor diferencia (6%). Si agrupamos las respuestas *Totalmente en desacuerdo* y *En desacuerdo*, la diferencia total es de 9%.
+
+**Me parece muy positivo que 2 de cada 3 personas (el 65%) de colectivos de diversidad sientan que pueden ser como son en sus respectivos trabajos.**
+
+Ahora comparemos las respuestas a la pregunta **¿Sufriste alguna situación de acoso, abuso o de discriminación en algún trabajo?.** Primero, analicemos los resultados según si la persona pertenece a algún colectivo de diversidad o no.
+
+```{r discriminacion}
+div_rh %>% 
+  mutate(sufrio_acoso = 
+           fct_collapse(sufrio_acoso,
+                        "Si" = c("Si", 
+                                 "agresión verbal.", 
+                                 "Mobbing",
+                                 "no en el actual",
+                                 "Sí. Son sutiles pero están.",
+                                  "No. Pero si muchos comentarios marchistas durante mi carrera. No ahora.",
+                                 "Sí claro, abuso de autoridad",
+                                 "Alguna vez sufrí maltrato psicológico",
+                                 "Lo máximo fue \"sos lesbiana porque no te maquillas\""
+                                              ))) %>% 
+  filter(sufrio_acoso %in% c("Si", "No"), 
+         !is.na(diversa)) %>% 
+  group_by(diversa, sufrio_acoso) %>% 
+  summarise(cantidad = n()) %>%
+  mutate(porcentaje = cantidad/sum(cantidad)) %>% 
+  ggplot(aes(x = factor(diversa), y = cantidad, fill = sufrio_acoso)) +
+  geom_col(position = "dodge") +
+  geom_text(aes(label = paste0(cantidad, " (", scales::percent(porcentaje, accuracy = 1), ")")),
+            position = position_dodge(0.9), vjust = -0.3, size = 3) +
+  estiloh +
+  labs(title = "Personas que sufrieron acoso, abuso o discriminación\nsegún colectivo de diversidad",  subtitle = "0: Personas no diversas - 1: Personas diversas",
+       x = NULL, y = NULL, caption = fuente,
+       fill = "Sufrió acoso, abuso o discriminación") +
+  theme(legend.position = "top") +
+  scale_fill_manual(values = c(naranja, gris)) +
+  scale_y_continuous(limits = c(0,450))
+
+```
+
+El 34% de las personas diversas, ya sea por su identidad de género o por su orientación sexual sufrieron alguna situación de acoso, abuso, o discriminación, frente a un 28% de las personas cis y heterosexuales.
+
+Ahora desagreguemos el gráfico anterior según la identidad de género de las personas:
+
+```{r}
+div_rh %>% 
+  mutate(sufrio_acoso = fct_collapse(sufrio_acoso,
+                                     "Si" = c("Si", "agresión verbal.", "Mobbing",
+                                              "no en el actual"))) %>% 
+  filter(sufrio_acoso %in% c("Si", "No")) %>% 
+  group_by(identidad_genero, sufrio_acoso) %>% 
+  summarise(cantidad = n()) %>%
+  mutate(porcentaje = cantidad/sum(cantidad)) %>% 
+  ggplot(aes(x = identidad_genero, y = cantidad, fill = sufrio_acoso)) +
+  geom_col(position = "dodge") +
+  geom_text(aes(label = paste0(cantidad, " (", scales::percent(porcentaje, accuracy = 1), ")")),
+            position = position_dodge(0.9), vjust = -0.3, size = 3) +
+  estiloh +
+  labs(title = "Personas que sufrieron acoso, abuso o discriminación\nsegún su identidad de género",  subtitle = "0: Personas no diversas - 1: Personas diversas",
+       x = NULL, y = NULL, caption = fuente,
+       fill = "Sufrió acoso, abuso o discriminación") +
+  theme(legend.position = "top") +
+  scale_fill_manual(values = c(naranja, gris)) +
+  scale_y_continuous(limits = c(0,320))
+```
+
+En este último gráfico podemos apreciar las distintas realidades de las personas. **Un tercio de las mujeres cis** **sufrió al menos una vez alguna situación de acoso, abuso o discriminación** versus un 15% de los hombres cis. Más allá de la cantidad de respuestas recibidas, las tendencias son claras.
+
+### Machismo
+
+La siguiente pregunta, **¿Sentís que tu entorno laboral es machista?**, la realizamos por primera vez en 2022, así que en primer lugar comparemos los resultados en función de si las personas son diversas o no.
+
+```{r macho_1}
+# Creamos un dataframe específico para este análisis.
+machismo <- div_rh %>% 
+  filter(!is.na(diversa),
+         machismo %in% c("No es un entorno machista",
+                         "Si pero no es tanto",
+                         "Si, es muy machista")) %>% 
+  mutate(machismo = factor(machismo, 
+                           levels = c("No es un entorno machista",
+                                      "Si pero no es tanto",
+                                      "Si, es muy machista")))
+
+machismo_score <- machismo %>%
+  mutate(diversa = factor(diversa)) %>% 
+  group_by(diversa, machismo) %>% 
+  summarise(respuestas = n()) %>% 
+  mutate(porcentaje = respuestas/sum(respuestas)) 
+
+ggplot(machismo_score, aes(y = diversa, x = respuestas, fill = machismo)) +
+  geom_col(position = "fill") +
+  scale_fill_manual(values = c(azul, rosa1, rosa2)) +
+  geom_text(aes(label = scales::percent(porcentaje, accuracy = 1)), position = position_fill(vjust = 0.5), size = 3) +
+  estilo +
+  scale_x_continuous(labels = scales::percent_format(accuracy = 1)) +
+  theme(legend.position = "top",
+        legend.text = element_text(size = 5),
+        legend.background = element_rect(colour = "#FCFCFC")) +
+  guides(fill = guide_legend(reverse = TRUE)) +
+  labs(title = "¿Sentís que tu entorno laboral es machista?",
+       subtitle = "0: Personas no diversas - 1: Personas diversas",
+       x = NULL, y = NULL, caption = fuente,
+       fill = "Respuesta:")
+```
+Entre las personas diversas encontramos respuestas con mayor cantidad de respuestas en los extremos, `r percent(pull(machismo_score[4,4]))` no sienten que su entorno sea machista, y un `r percent(pull(machismo_score[6,4]))` sienten que es muy machista.
+
+Entre las personas heteronormativas un `r percent(pull(machismo_score[2,4]))` que su entorno no es tan machista.
+
+Analizando las respuestas según la identidad de género, no sorprende que las mujeres tengan una percepción mayor que los hombres sobre si el entorno laboral es machista.
+
+```{r}
+machismo_genero <- machismo %>%
+  filter(identidad_genero != "Mujer trans") %>% 
+  group_by(identidad_genero, machismo) %>% 
+  summarise(respuestas = n()) %>% 
+  mutate(porcentaje = respuestas/sum(respuestas)) 
+
+ggplot(machismo_genero, aes(y = identidad_genero, x = respuestas, fill = machismo)) +
+  geom_col(position = "fill") +
+  scale_fill_manual(values = c(azul, rosa1, rosa2)) +
+  geom_text(aes(label = scales::percent(porcentaje, accuracy = 1)), position = position_fill(vjust = 0.5), size = 3) +
+  estilo +
+  scale_x_continuous(labels = scales::percent_format(accuracy = 1)) +
+  theme(legend.position = "top",
+        legend.text = element_text(size = 5),
+        legend.background = element_rect(colour = "#FCFCFC")) +
+  guides(fill = guide_legend(reverse = TRUE)) +
+  labs(title = "¿Sentís que tu entorno laboral es machista?",
+       x = NULL, y = NULL, caption = fuente,
+       fill = "Respuesta:")
+```
+
+
+Analicemos la situación por rubros:
+
+```{r fig.height=7}
+machismo_rubro <- machismo %>%
+  mutate(diversa = factor(diversa)) %>% 
+  group_by(rubro, machismo) %>% 
+  summarise(respuestas = n()) %>% 
+  mutate(porcentaje = respuestas/sum(respuestas)) 
+
+ggplot(machismo_rubro, aes(y = fct_rev(rubro), x = respuestas, fill = machismo)) +
+  geom_col(position = "fill") +
+  scale_fill_manual(values = c(azul, rosa1, rosa2)) +
+  geom_text(aes(label = scales::percent(porcentaje, accuracy = 1)), position = position_fill(vjust = 0.5), size = 3) +
+  estilo +
+  scale_x_continuous(labels = scales::percent_format(accuracy = 1)) +
+  theme(legend.position = "top",
+        legend.text = element_text(size = 5),
+        legend.background = element_rect(colour = "#FCFCFC")) +
+  guides(fill = guide_legend(reverse = TRUE)) +
+  labs(title = "¿Sentís que tu entorno laboral es machista?",
+       x = NULL, y = NULL, caption = fuente,
+       fill = "Respuesta:")
+```
+En la visualización anterior podemos ver que los rubros que hay menor percepción de machismo, son en *Servicios profesionales*, *Medios*, y *Consultoría*. En el otro extremo, por cantidad de respuestas, nos encontramos que los rubros *Alimentos*, *Tecnología*, y *Servicios de Salud*.
+
+```{r}
+machismo_rubro %>% 
+  select(-porcentaje) %>% 
+  pivot_wider(names_from = machismo, values_from = respuestas) %>% 
+  mutate(`No es un entorno machista` = coalesce(`No es un entorno machista`, 0),
+         `Si pero no es tanto` = coalesce(`Si pero no es tanto`, 0),
+         `Si, es muy machista` = coalesce(`Si, es muy machista`, 0),
+         Total = `No es un entorno machista` + `Si pero no es tanto` + `Si, es muy machista`) %>% 
+  rename(Rubro = rubro) %>% 
+      arrange(-Total) %>% 
+  kbl(caption = "Percepción de Machismo por Rubro") %>% 
+  kable_styling(full_width = F, position = "center",
+              bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>% 
+  scroll_box(height = "500px")
+```
+## Discapacidad
+
+```{r discapacidad_1}
+disc_rh <- div_rh %>%
+  filter(!is.na(discapacidad)) %>% 
+  mutate(discapacidad = 
+           fct_collapse(discapacidad, 
+                        "Sin discapacidad" = 
+                          c("No tengo ninguna discapacidad",
+                            "creo no tener jajaja", 
+                            "Visual???")),
+    tiene_discapacidad = if_else(discapacidad %in% c("Sin discapacidad", "Prefiero no responder"), 0, 1))
+```
+
+Veamos cuántas personas con alguna discapacidad participaron de la edición actual:
+
+```{r}
+kiwi <- kiwi %>% 
+  mutate(discapacidad = 
+           fct_collapse(discapacidad,
+                        "Sin discapacidad" = 
+                          c("No tengo ninguna discapacidad",
+                            "creo no tener jajaja",
+                            "Visual???")),
+         tiene_discapacidad = factor(if_else(discapacidad == "Sin discapacidad", 0, 1)))
+
+div <- kiwi %>% 
+  filter(!is.na(discapacidad)) %>% 
+  select(tiene_discapacidad) %>% 
+  group_by(tiene_discapacidad) %>% 
+  summarise (n = n()) %>% 
+  mutate(freq = n/sum(n)) %>% 
+  arrange(-n)
+
+# Compute the cumulative percentages (top of each rectangle)
+div$ymax <- cumsum(div$freq)
+
+# Compute the bottom of each rectangle
+div$ymin <- c(0, head(div$ymax, n=-1))
+
+# Compute label position
+div$labelPosition <- (div$ymax + div$ymin) / 2
+
+# Compute a good label
+div$label <- paste0(div$genero, "\n Cant: ", div$n)
+
+# Make the plot
+ggplot(div, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=tiene_discapacidad)) +
+  geom_rect() +
+  coord_polar(theta="y") + # Try to remove that to understand how the chart is built initially
+  xlim(c(2, 4)) +# Try to remove that to see how to make a pie chart
+  scale_fill_manual(values = c(gris, naranja)) +
+  theme_void() +
+  theme(legend.position = "top",
+        panel.background = element_blank(),
+        plot.title.position = "plot",
+        text = element_text(family = "Roboto")) +
+  labs(title = "Respuestas según discapacidad",
+       subtitle = "1: Tiene alguna discapacidad - 0: Sin discapacidad",
+       fill = "Discapacidad", 
+       caption = fuente)
+```
+
+```{r}
+gt(kiwi %>% 
+  filter(!is.na(discapacidad)) %>% 
+  group_by(tiene_discapacidad) %>% 
+  tally(name = "Respuestas") %>% 
+  ungroup() %>% 
+  mutate(Porcentaje = Respuestas/sum(Respuestas),
+         tiene_discapacidad = factor(tiene_discapacidad,
+                                      levels = c(0, 1),
+                                      labels = c("No", "Si")))) %>% 
+  cols_label(tiene_discapacidad = "Con Discapacidad") %>% 
+  summary_rows(columns = c(Respuestas, Porcentaje),
+    fns = list(Total = "sum")) %>% 
+  fmt_percent(columns = Porcentaje,
+              decimals = 1) %>% 
+  tab_header(title = "Respuestas según discapacidad",
+             subtitle = "Relación de Dependencia") %>% 
+  tab_source_note(source_note = fuente)
+
+```
+En la actual edición contamos sólo con un 2.8% de colegas con alguna discapacidad trabajando en RRHH, las cuales son las siguientes:
+
+```{r}
+kiwi %>% 
+  filter(!is.na(discapacidad),
+         tiene_discapacidad == 1) %>% 
+  group_by(discapacidad) %>% 
+  summarise(cant = n()) %>% 
+  ungroup() %>% 
+  ggplot(aes(x = cant, y = reorder(discapacidad, cant))) +
+  geom_col(fill = naranja) +
+  estilov +
+  labs(title = "Tipos de Discapacidad",
+       subtitle = "Relación de Dependencia",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+
+
+Veamos cómo fue la evolución de esta respuesta a lo largo de las ediciones de esta encuesta.
+
+```{r}
+disc_rh %>% 
+  filter(tiene_discapacidad == 1) %>% 
+  group_by(edicion) %>% 
+  summarise(cant = n()) %>% 
+  ungroup() %>% 
+  ggplot(aes(x = factor(edicion), y = cant)) +
+  geom_col(fill = naranja) +
+  geom_text(aes(label = cant),
+            vjust = 1.2,
+            size = 3) +
+  estiloh +
+  labs(title = "Respuestas de Personas con Discapacidad",
+       subtitle = "Relación de Dependencia",
+       x = NULL, y = NULL,
+       caption = fuente)
+
+```
+
+### Puestos
+
+Si bien la mayor cantidad de personas con discapacidad históricamente se desempeñan en roles de Analista, es interesante apreciar que en total tenemos prácticamente la misma cantidad (18) en roles de liderazgo (Gerente, Jefe o Resposable).
+
+Esto nos parece positivo porque es una muestra no sólo de diversidad, sino también de inclusión. Consideramos que no sólo es importante contratar personas con discapacidad, sino también darles las oportunidades de desarrollo que le daríamos a cualquier persona de la compañía.
+
+```{r disc_puesto}
+gt(disc_rh %>% 
+  filter(!is.na(discapacidad),
+         !is.na(puesto),
+         tiene_discapacidad == 1) %>% 
+  group_by(edicion, puesto) %>% 
+  summarise(cant = n()) %>% 
+  ungroup() %>% 
+    pivot_wider(names_from = edicion,
+                values_from = cant) %>% 
+  mutate(`2020` = coalesce(`2020`, 0),
+         `2021` = coalesce(`2021`, 0),
+         `2022` = coalesce(`2022`, 0),
+         Total = `2020`+`2021`+`2022`)) %>% 
+  cols_label(puesto = "Puesto") %>% 
+  tab_header(title = "Puestos de Personas con Discapacidad") %>% 
+  tab_source_note(source_note = fuente)
+```
+
+### Contratación de personas con discapacidad
+
+En esta edición incluimos la pregunta **En lo que va del año, ¿han contratado en tu empresa a personas con discapacidad?** para analizar si las empresas están activamente tomando acciones de inclusión.
+
+
+```{r}
+kiwi %>% 
+  filter(!is.na(contrata_discapacidad)) %>% 
+  group_by(contrata_discapacidad) %>% 
+  summarise(cant = n()) %>% 
+  ungroup() %>% 
+  ggplot(aes(x = contrata_discapacidad, y = cant, fill = contrata_discapacidad)) +
+  geom_col() +
+  geom_text(aes(label = cant),
+            vjust = 1.2, 
+            color = "white",
+            size = 3) +
+  scale_fill_manual(values = c(gris, gris, naranja)) +
+  estiloh +
+  labs(title = "Contrataron personas con discapacidad",
+       x = NULL, y = NULL,
+       caption = fuente) +
+  theme(legend.position = "none")
+
+contrata_disc <- kiwi %>% 
+  filter(!is.na(contrata_discapacidad)) %>% 
+  group_by(contrata_discapacidad) %>% 
+  summarise(cant = n()) %>% 
+  ungroup() %>% 
+  mutate(porcentaje = cant/sum(cant))
+```
+
+En esta edición, `r pull(contrata_disc[3,2])` (un `r percent(pull(contrata_disc[3,3]))`) afirmaron que en sus empresas han contratado personas con discapacidad en sus organizaciones. Esto nos lleva a la siguientes preguntas: estas compañías, ¿son nacionales o multinacionales?, ¿Qué tamaño tienen las empresas?
+
+```{r}
+kiwi %>% 
+  filter(contrata_discapacidad == "Si") %>% 
+  group_by(origen_capital) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  ggplot(aes(x = origen_capital, y = n)) +
+  geom_col(fill = naranja) +
+  geom_text(aes(label = n),
+            vjust = 1.2,
+            size = 3) +
+  estiloh +
+  labs(title = "Origen del Capital de Empresas\nque Contrataron Personas con Discapacidad",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+
+En base a las respuestas recibidas, las empresas nacionales han contratado más personas con discapacidad que las multinacionales.
+
+```{r}
+kiwi %>% 
+  filter(contrata_discapacidad == "Si") %>%
+  mutate(dotacion = factor(dotacion,
+                           levels = c("1 - 50",
+                                      "51 - 100",
+                                      "101 - 250",
+                                      "251 - 500",
+                                      "501 - 1.000",
+                                      "1.001 - 2.500",
+                                      "2.501 - 5.000",
+                                      "5.001 - 10.000",
+                                      "10.001 o más"))) %>% 
+  group_by(dotacion) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  ggplot(aes(x = dotacion, y = n)) +
+  geom_col(fill = naranja) +
+  geom_text(aes(label = n),
+            vjust = 1.1,
+            size = 3) +
+  scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
+  labs(title = "Empresas que Contrataron Personas con Discapacidad\nsegún Tamaño de la Empresa",
+       x = "Dotación de la Empresa", y = NULL,
+       caption = fuente) +
+  estiloh
+
+```
+Si bien en total vemos que las empresas con más de 1.000 empleados son las que contratan más personas con discapacidad, no vemos un patrón claro en función de la dotación de la organización porque por ejemplo las empresas que tienen entre *101 y 250* empleados han contratado personas con discapacidad en la misma medidad que las organizaciones con *5.001 - 10.000* empleados. 
+
+## Edad
+
+La discriminación por edad, también conocida como **edadismo** es un problema que afecta a la empleabilidad de las personas de mayor edad. Es habitual encontrar avisos de empleo donde el límite de edad es de 40 años. 
+
+En la presente edición de la encuesta incluimos la pregunta **"En lo que va del año, ¿han contratado en tu empresa a personas mayores de 50 años?"** para analizar cuál es la tendencia en contratación de personas senior.
+
+```{r}
+kiwi %>% 
+  filter(!is.na(contrata_senior)) %>% 
+  group_by(contrata_senior) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  ggplot(aes(x = contrata_senior, y = n, fill = contrata_senior)) +
+  geom_col() +
+  geom_text(aes(label = n),
+            vjust = 1.2,
+            size = 3, 
+            color = "white") +
+  estiloh +
+  labs(title = "Empresas que han Contratado \nPersonas de Más de 50 Años",
+       x = NULL, y = NULL,
+       caption = fuente) +
+  scale_fill_manual(values = c(gris, gris, rosa1)) +
+  theme(legend.position = "none")
+
+contrata_sr <- kiwi %>% 
+  filter(!is.na(contrata_senior)) %>% 
+  group_by(contrata_senior) %>% 
+  summarise(cant = n()) %>% 
+  ungroup() %>% 
+  mutate(porcentaje = cant/sum(cant))
+```
+
+En esta edición, `r pull(contrata_sr[3,2])` (un `r percent(pull(contrata_sr[3,3]))`) afirmaron que en sus empresas han contratado personas de más de 50 años.
+
+A continuación reiteraremos los análisis en función del origen del capital y del tamaño de las empresas.
+
+
+```{r}
+kiwi %>% 
+  filter(contrata_senior == "Si") %>% 
+  group_by(origen_capital) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  ggplot(aes(x = origen_capital, y = n)) +
+  geom_col(fill = rosa1) +
+  geom_text(aes(label = n),
+            vjust = 1.2,
+            size = 3,
+            color = "white") +
+  estiloh +
+  labs(title = "Origen del Capital de Empresas\nque Contrataron Personas de Más de 50 Años",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+
+En base a las respuestas recibidas, nuevamente apreciamos que las empresas nacionales han contratado más personas de más de 50 años que las multinacionales.
+
+```{r}
+kiwi %>% 
+  filter(contrata_senior == "Si") %>%
+  mutate(dotacion = factor(dotacion,
+                           levels = c("1 - 50",
+                                      "51 - 100",
+                                      "101 - 250",
+                                      "251 - 500",
+                                      "501 - 1.000",
+                                      "1.001 - 2.500",
+                                      "2.501 - 5.000",
+                                      "5.001 - 10.000",
+                                      "10.001 o más"))) %>% 
+  group_by(dotacion) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  ggplot(aes(x = dotacion, y = n)) +
+  geom_col(fill = rosa1) +
+  geom_text(aes(label = n),
+            vjust = 1.2,
+            size = 3,
+            color = "white") +
+  scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
+  labs(title = "Empresas que Personas de Más de 50 Años\nsegún Tamaño de la Empresa",
+       x = "Dotación de la Empresa", y = NULL,
+       caption = fuente) +
+  estiloh
+
+```
+
+A contrario de los que vimos en el análisis de discapacidad, las empresas más chicas tienden a contratar personas de más de 50 años que las empresas más grandes.
+
+Lo que podemos apreciar en todos estos análisis es que la diversidad e inclusión depende más de la visión de una organización y su compromiso genuino, que el tamaño de la compañía, o el origen de su capital.
 
 # Freelancers
 
