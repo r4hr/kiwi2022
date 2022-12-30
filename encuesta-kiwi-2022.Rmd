@@ -107,12 +107,25 @@ kiwi20 <- read.csv("https://raw.githubusercontent.com/r4hr/kiwi2021/main/data/rh
 
 # Agrupar puestos
 rh22 <- rh22 %>% 
-  mutate(puesto = fct_collapse(puesto, "Analista" = c("Analista", "Analista de People Operations", "Consultor",
-                                                      "IT RECRUITER", "Specialist", "Profesional RRHH", "Recruiter IT"),
-                               "Responsable" = c("Responsable", "Coordinadora", "Líder Ágil", "Supervisor", 
-                                                 "Líder de selección")),
-         puesto = factor(puesto, levels = c("Director", "Gerente", "Jefe", "Responsable", "HRBP", 
-                         "Analista", "Administrativo", "Pasante")))
+  mutate(puesto = 
+           fct_collapse(puesto, 
+                        "Analista" = c("Analista", 
+                                       "Analista de People Operations",
+                                       "Consultor",
+                                       "IT RECRUITER", 
+                                       "Specialist",
+                                       "Profesional RRHH", 
+                                       "Recruiter IT"),
+                        "Responsable" = c("Responsable", 
+                                          "Coordinadora", 
+                                          "Líder Ágil", 
+                                          "Supervisor",
+                                          "Líder de selección")),
+         puesto = factor(puesto, levels = c("Director", "Gerente",
+                                            "Jefe", "Responsable",
+                                            "HRBP", "Analista",
+                                            "Administrativo",
+                                            "Pasante")))
 
 ## Agrupar funciones ----
 rh22 <-  rh22 %>% 
@@ -2891,6 +2904,89 @@ A contrario de los que vimos en el análisis de discapacidad, las empresas más 
 
 Lo que podemos apreciar en todos estos análisis es que la diversidad e inclusión depende más de la visión de una organización y su compromiso genuino, que el tamaño de la compañía, o el origen de su capital.
 
+### Nuevos Empleados
+
+Otra forma de analizar la empleabilidad de las personas, podría ser comparando cuántas personas tienen **menos de 2 años** en su empresa actual por rango de edad.
+
+```{r}
+# Respuestas por Edad
+resp_edad <- rh22 %>% 
+  group_by(edad) %>% 
+  tally() %>% 
+  ungroup()
+
+# Nuevos Empleados
+resp_ne <- rh22 %>% 
+  filter(anios_empresa < 2) %>% 
+  group_by(edad) %>% 
+  tally(name = "nuevos") %>% 
+  ungroup()
+
+resp_edad <- left_join(resp_edad, resp_ne, by = "edad") %>% 
+  mutate(nuevos = coalesce(nuevos, 0))
+
+
+ggplot(resp_ne, aes(x = edad, y = nuevos)) +
+  geom_col(fill = rosa1) +
+  geom_text(aes(label = nuevos), 
+            vjust = -0.5,
+            size = 3) +
+  scale_y_continuous(limits = c(0,65)) +
+  estiloh +
+  labs(title = "Personas con menos de 2 años de antigüedad\nen su actual empresa",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+En el gráfico anterior podemos apreciar que las personas con menos de dos años de antigüedad en sus empresas empieza a decrecer luego de los 30 años.
+
+
+```{r}
+gt(
+  resp_edad %>% 
+    select(edad, nuevos, n) %>% 
+    mutate(porcentaje = nuevos/n) 
+) %>% 
+  fmt_percent(columns = porcentaje,
+              decimals = 1) %>% 
+  tab_header(title = "Porcentaje de Nuevos Empleados según Edad",
+             subtitle = "Nuevo Empleado = Antigüedad < 2 años") %>% 
+  tab_source_note(source_note = fuente) %>% 
+  cols_label(edad = "Edad",
+             n = "Total",
+             nuevos = "Empleados Nuevos",
+             porcentaje = "Porcentaje") 
+```
+
+De la tabla anterior podemos ver que:
+
+* Casi dos tercios de las personas menores de 30 años está en sus empresas hace menos de dos años.
+* Casi la mitad de las personas mayores de 30 años y menores de 45 años que respondieron la encuesta tienen menos de dos años de experiencia en su empleo actual.
+* A partir de los 46 años el porcentaje de empleados nuevos decrece.
+
+Hay una parte de esta movilidad en función de la edad que la podemos explicar por el afán de buscar mejores oportunidades laborales (o las primeras oportunidades en los más jóvenes) mientras uno tiene menores responsabilidades, y a medida que las personas crecemos nos interesa más la estabilidad o el retiro.
+
+Algo interesante para analizar sería la tasa de desempleo por rangos de edad de profesionales de RRHH y cuánto tiempo estuvieron buscando trabajo o si las personas estuvieron desempleadas antes de su actual empleo o no, pero son datos con los que no contamos y que exceden este trabajo.
+
+Finalmente veamos en qué puestos se desarrollan las personas con menos de dos años de antigüedad según su rango de edad
+
+```{r fig.height=7}
+rh22 %>% 
+  filter(anios_empresa < 2) %>% 
+  group_by(edad, puesto) %>% 
+  tally() %>% 
+  ungroup %>% 
+  ggplot(aes(x = fct_rev(puesto), y = n)) +
+  geom_col(fill = rosa1) +
+  facet_wrap(~edad, ncol = 2,scales = "free_y") +
+  theme(axis.text.x = element_text(angle = 90)) +
+  estiloh +
+  labs(title = "Puestos de Trabajadores Nuevos por Edad",
+       x = NULL, y = NULL,
+       caption = fuente)
+```
+
+
+
 # Freelancers
 
 En este relevamiento participan colegas que trabajan en relación de dependencia y también de manera freelance. Este es el análisis desarrollado en base a las respuestas de las personas que trabajan de manera independiente o en sus propias empresas.
@@ -4083,3 +4179,129 @@ En líneas generales apreciamos que los niveles de estrés de las personas que t
 Un aspecto positivo es que en comparación con el 2021, mayormente los niveles de estrés son más bajos. Probablemente podamos atribuir ese resultado a la salida de las cuarentenas estrictas y al regreso a una vida más o menos similar a la que teníamos antes de la pandemia.
 
 De todas maneras este es un tema que merece un estudio más a fondo hecho por personas más idóneas que nosotros. Si te sentís abrumada o abrumado, animate a pedir ayuda y a hablar con alguien de confianza. Lo peor del estrés es la sensación de soledad.
+
+## Comunidades
+
+R4HR es una comunidad abierta y gratuita. ¿Qué quiere decir esto? Que es es un espacio donde cualquier persona puede participar de la comunidad, sepa de R o no sepa nada, y además no hay que pagar nada por formar parte. También es un espacio seguro en el que cuidamos que haya acoso, insultos o abusos.
+
+Las comunidades son una gran forma de construir conocimiento, de aprender, de generar relaciones, para resolver consultas, y también, por qué no, de hacer buenos amigos. Así que en esta sección nos proponemos ver cuáles son las comunidades más frecuentadas por las personas que participaron de la Encuesta.
+
+```{r comunidad}
+comunidad <- rh22 %>% 
+  select(pais, provincia, comunidad, comunidades)
+
+div <- comunidad %>% 
+  select(comunidad) %>% 
+  filter(!is.na(comunidad)) %>% 
+  group_by(comunidad) %>% 
+  summarise (n = n()) %>% 
+  mutate(freq = n/sum(n)) %>% 
+  arrange(-n)
+
+# Compute the cumulative percentages (top of each rectangle)
+div$ymax <- cumsum(div$freq)
+
+# Compute the bottom of each rectangle
+div$ymin <- c(0, head(div$ymax, n=-1))
+
+# Compute label position
+div$labelPosition <- (div$ymax + div$ymin) / 2
+
+# Compute a good label
+div$label <- paste0(div$comunidad, "\n Cant: ", div$n)
+
+# Make the plot
+ggplot(div, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=comunidad)) +
+  geom_rect() +
+  coord_polar(theta="y") + # Try to remove that to understand how the chart is built initially
+  xlim(c(2, 4)) +# Try to remove that to see how to make a pie chart
+  scale_fill_manual(values = c(gris, azul)) +
+  theme_void() +
+  theme(legend.position = "top",
+        panel.background = element_blank(),
+        plot.title.position = "plot",
+        text = element_text(family = "Roboto")) +
+  labs(title = "Participás de Alguna Comunidad",
+       fill = "Respuesta", 
+       caption = fuente)
+```
+
+Del total de respuestas, `r percent(pull(div[2,3]))` (`r pull(div[2,2])`) participan de alguna comunidad. Estas son las comunidades mencionadas.
+
+En la tabla a continuación ponemos todas las comunidades que nos nombraron. No ponemos la cantidad de respuestas que obtuvo cada una porque no es una competencia. 
+
+> Tené en cuenta lo siguiente: Para crear una comunidad sólo hace falta tener ganas de hacerlo. Lo mejor de las comunidades es que hay mucha gente dispuesta a compartir.
+
+```{r comunidades}
+comunidad <- comunidad %>% 
+  filter(!is.na(comunidades), 
+         comunidad == "Si") %>% 
+  select(pais, comunidades)
+
+comunidad <- comunidad %>% 
+  mutate(comunidades = str_replace(comunidades, "whats app|Whatsapp|Wsapp|wsp|whatsapp", "WhatsApp"),
+         comunidades = str_replace(comunidades, "Adrha|Adhra|ADHRA", "ADRHA"),
+         comunidades = str_replace(comunidades, "Data 4 hr|Data4hr|DATA4HR", "Data 4HR"),
+         comunidades = str_replace(comunidades, "Bench.Club|Benchclub|Bench", "Bench Club"),
+         comunidades = str_replace(comunidades, "Aprhnoa", "APRHNOA"),
+         comunidades = str_replace(comunidades, "Bench ClubClub", "Bench Club"),
+         comunidades = str_replace(comunidades, "Aparh", "APARH"),
+         comunidades = str_replace(comunidades, "slack tech recruiters arg|tech.recruiters.arg|Tech Recruiter", "Tech Recruiters Arg"),
+         comunidades = str_replace(comunidades, "LinkdIn|Linkedin", "LinkedIn"),
+         comunidades = str_replace(comunidades, "Uba", "UBA"),
+         comunidades = str_replace(comunidades, "Interempresa Cordoba|Recursos Humanos Inter Empresas CBA", "RRHH Interempresas"),
+         comunidades = str_replace(comunidades, "grupo", "Grupo"),
+         comunidades = str_replace(comunidades, "Capital humano Talento femenino", "Capital Humano Talento Femenino"),
+         comunidades = str_replace(comunidades, "Tendencia de Recursos Humanos Bolivia", "Tendencias en Recursos Humanos Bolivia"),
+         comunidades = str_replace(comunidades, "PAS", "People Analytics Spain"),
+         comunidades = str_replace(comunidades, "Grupos de Whatsapp", "Grupos de WhatsApp"),
+         comunidades = str_replace(comunidades, "Grupos Whatsapp", "Grupos de WhatsApp")) 
+
+# Reemplazo manual de comunidades
+comunidad[2,2] <- "Grupos de WhatsApp, ADRHA"
+comunidad[6,2] <- "Bench Club, ADRHA"
+comunidad[7,2] <- "Grupos de WhatsApp"
+comunidad[9,2] <- "Grupos en LinkedIn, Grupos de WhatsApp"
+comunidad[12,2] <- "Grupos de WhatsApp"
+comunidad[13,2] <- "Grupo de WhatsApp Córdoba"
+comunidad[14,2] <- "Club de R para RH, Grupo de WhatsApp Córdoba"
+comunidad[17,2] <- "Club de R para RH"
+comunidad[21,2] <- "Grupos de WhatsApp, Grupo Local, LinkedIn"
+comunidad[22,2] <- "Grupos de LinkedIn"
+comunidad[25,2] <- "Grupos de WhatsApp, LinkedIn"
+comunidad[28,2] <- "Instagram, Grupos de WhatsApp"
+comunidad[29,2] <- "ADRHA, Comunidad HR"
+comunidad[42,2] <- "ADRHA, LinkedIn"
+comunidad[48,2] <- "Tendencias en Recursos Humanos Bolivia, ASOBOGH"
+comunidad[53,2] <- "Comunidad HR, Grupos de diferentes Universidades"
+comunidad[59,2] <- "Grupos de Whatsapp, LinkedIn"
+comunidad[64,2] <- "Red de RRHH, Grupo de WhatsApp Mar del Plata"
+comunidad[69,2] <- "Grupo de Colegas RRHH (Consultora MJG) Buenos Aires y Latinoamerica"
+comunidad[70,2] <- "ADRHA, Grupos Regionales"
+comunidad[73,2] <- "Club de R para RH, Data 4HR, RRHH Interempresas, Reclutadores CBA"
+comunidad[80,2] <- "Compensaciones, Bench Club"
+comunidad[83,2] <- "Total Rewards Compensaciones"
+
+# Separamos las comunidades en columnas y luego pivoteamos para agruparlas
+comunidad %>% 
+  separate(col = comunidades, into = c("c1", "c2", "c3", "c4"), 
+           sep = ",", fill = "right", remove = TRUE) %>% 
+  mutate(across(c("c1", "c2", "c3", "c4"), str_trim)) %>% 
+  pivot_longer(cols = c(c1:c4),
+    names_to = "columna",
+    values_to = "comunidad") %>% 
+  filter(!is.na(comunidad)) %>% 
+  filter(comunidad != "etc") %>% 
+  group_by(pais, comunidad) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  select(-n) %>% 
+  rename("País" = pais,
+         "Comunidad" = comunidad) %>% 
+  kable("html", escape=F) %>% 
+  kable_styling(full_width = TRUE, 
+                bootstrap_options = 
+                  c("striped","hover","condensed" )) %>% 
+  row_spec(0, bold=T, color="white", background = azul)
+```
+
